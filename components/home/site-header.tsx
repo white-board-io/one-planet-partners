@@ -18,7 +18,7 @@ export function SiteHeader() {
           />
         </Link>
 
-        {/* <nav aria-label="Primary" className="hidden md:block">
+        <nav aria-label="Primary" className="hidden md:block">
           <ul className="flex items-center gap-7 text-[13px] font-medium tracking-[-0.01em] text-[#252525] lg:gap-10 lg:text-[14px]">
             {navigationItems.map((item) => (
               <li key={item}>
@@ -28,7 +28,7 @@ export function SiteHeader() {
               </li>
             ))}
           </ul>
-        </nav> */}
+        </nav>
       </div>
 
       {/* <nav aria-label="Mobile primary" className="border-t border-black/8 px-4 py-3 md:hidden">
