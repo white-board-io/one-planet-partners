@@ -1,0 +1,23 @@
+package.json
+  183458d84b16ba0c 17-21,23-24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.23",
+  "base_commit_sha": "93bb16eb4e425ec7d72a2b80e69c63782ab216da",
+  "prompts": {
+    "183458d84b16ba0c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019dc2fb-45e7-77d1-9503-37bdbdce3ef0",
+        "model": "unknown"
+      },
+      "human_author": "Arun Selva Kumar <arun@joinassembly.com>",
+      "messages": [],
+      "total_additions": 7,
+      "total_deletions": 7,
+      "accepted_lines": 7,
+      "overriden_lines": 0
+    }
+  }
+}
