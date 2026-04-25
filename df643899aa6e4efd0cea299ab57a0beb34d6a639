@@ -1,0 +1,53 @@
+app/layout.tsx
+  f6ad91564dd95843 2-4,6-21,29-33
+app/globals.css
+  84843abcbfce9881 11-13,18-42
+  8552bb2a12841e57 14-15
+  f6ad91564dd95843 16-17,58
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.23",
+  "base_commit_sha": "df643899aa6e4efd0cea299ab57a0beb34d6a639",
+  "prompts": {
+    "84843abcbfce9881": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3cc9bb74-b294-4da5-8d31-138978dd8d22",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Arun Selva Kumar <arun@joinassembly.com>",
+      "messages": [],
+      "total_additions": 67,
+      "total_deletions": 26,
+      "accepted_lines": 28,
+      "overriden_lines": 0
+    },
+    "8552bb2a12841e57": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019dc3da-008d-74c3-a6f4-053080573f5a",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Arun Selva Kumar <arun@joinassembly.com>",
+      "messages": [],
+      "total_additions": 2,
+      "total_deletions": 0,
+      "accepted_lines": 2,
+      "overriden_lines": 0
+    },
+    "f6ad91564dd95843": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019dc30d-1d4c-76a0-a08f-242b32e1573a",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Arun Selva Kumar <arun@joinassembly.com>",
+      "messages": [],
+      "total_additions": 28,
+      "total_deletions": 19,
+      "accepted_lines": 28,
+      "overriden_lines": 0
+    }
+  }
+}
