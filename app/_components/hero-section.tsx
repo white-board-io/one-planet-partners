@@ -13,28 +13,24 @@ const statementText = statementLines.join(" ");
 export function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const viewportRef = useRef<HTMLDivElement>(null);
+  const statementRef = useRef<HTMLDivElement>(null);
   const backgroundRef = useRef<HTMLDivElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
-  const statementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const section = sectionRef.current;
     const viewport = viewportRef.current;
+    const statement = statementRef.current;
     const background = backgroundRef.current;
     const headline = headlineRef.current;
-    const statement = statementRef.current;
 
     if (!section || !viewport || !background || !headline || !statement) {
       return;
     }
 
     const context = gsap.context(() => {
-      const statementRevealLines = gsap.utils.toArray<HTMLElement>(
-        "[data-statement-reveal-line]",
-      );
-      const prefersReducedMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)",
-      ).matches;
+      const statementRevealLines = gsap.utils.toArray<HTMLElement>("[data-statement-reveal-line]");
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
       if (prefersReducedMotion) {
         gsap.set(headline, { opacity: 1, yPercent: 0 });
@@ -51,10 +47,10 @@ export function HeroSection() {
       const timeline = gsap.timeline({
         defaults: { ease: "none" },
         scrollTrigger: {
+          scrub: 0.7,
           trigger: section,
           start: "top top",
           end: "bottom bottom",
-          scrub: 0.7,
           invalidateOnRefresh: true,
         },
       });
@@ -80,14 +76,10 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative isolate bg-black"
-      style={{ minHeight: "340vh" }}
-    >
+    <section ref={sectionRef} className="relative isolate bg-black" style={{ minHeight: "340vh" }}>
       <div
         ref={viewportRef}
-        className="sticky top-0 h-[100svh] min-h-155 overflow-hidden sm:min-h-175"
+        className="sticky top-0 h-svh min-h-155 overflow-hidden sm:min-h-175"
       >
         <div ref={backgroundRef} className="absolute inset-0">
           <Image
@@ -101,7 +93,7 @@ export function HeroSection() {
         </div>
 
         <div className="relative z-10 flex h-full items-center px-6 py-16 sm:px-10 sm:py-20 lg:px-18">
-          <div className="max-w-190 overflow-hidden py-2">
+          <div className="overflow-hidden py-2">
             <h1
               ref={headlineRef}
               className="text-[3.55rem] leading-[0.92] tracking-normal text-white sm:text-[4.75rem] md:text-[5.7rem] lg:text-[6.6rem]"
