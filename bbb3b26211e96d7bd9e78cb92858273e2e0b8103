@@ -1,0 +1,25 @@
+next.config.ts
+  5e0fc07976887a61 4-5
+package.json
+  5e0fc07976887a61 9-10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.23",
+  "base_commit_sha": "bbb3b26211e96d7bd9e78cb92858273e2e0b8103",
+  "prompts": {
+    "5e0fc07976887a61": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019dc2fa-d54a-79d3-a1f6-411eeb570260",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Arun Selva Kumar <arun@joinassembly.com>",
+      "messages": [],
+      "total_additions": 4,
+      "total_deletions": 2,
+      "accepted_lines": 4,
+      "overriden_lines": 0
+    }
+  }
+}
