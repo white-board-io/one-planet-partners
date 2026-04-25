@@ -4,11 +4,23 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { cn } from "@/lib/utils";
+import { Container } from "@/app/_components/container";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const statementLines = ["This is how we", "help ambitious", "companies", "succeed."];
+const statementLines = [
+  "One Planet Partners is an",
+  "India-focused private equity firm",
+  "investing in mid-market",
+  "businesses where active ownership,",
+  "operational rigor, and climate",
+  "intelligence create enduring value.",
+];
+
 const statementText = statementLines.join(" ");
+const statementHiddenClip = "inset(-18% 100% -28% 0%)";
+const statementVisibleClip = "inset(-18% 0% -28% 0%)";
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -35,13 +47,13 @@ export function HeroSection() {
       if (prefersReducedMotion) {
         gsap.set(headline, { opacity: 1, yPercent: 0 });
         gsap.set(statement, { opacity: 1, y: 0 });
-        gsap.set(statementRevealLines, { clipPath: "inset(0% 0% 0% 0%)" });
+        gsap.set(statementRevealLines, { clipPath: statementVisibleClip });
         return;
       }
 
       gsap.set(statement, { opacity: 0, y: 72 });
       gsap.set(statementRevealLines, {
-        clipPath: "inset(0% 100% 0% 0%)",
+        clipPath: statementHiddenClip,
       });
 
       const timeline = gsap.timeline({
@@ -63,7 +75,7 @@ export function HeroSection() {
         .to(
           statementRevealLines,
           {
-            clipPath: "inset(0% 0% 0% 0%)",
+            clipPath: statementVisibleClip,
             duration: 0.22,
             stagger: 0.28,
           },
@@ -77,10 +89,7 @@ export function HeroSection() {
 
   return (
     <section ref={sectionRef} className="relative isolate bg-black" style={{ minHeight: "340vh" }}>
-      <div
-        ref={viewportRef}
-        className="sticky top-0 h-svh min-h-155 overflow-hidden sm:min-h-175"
-      >
+      <div ref={viewportRef} className="sticky top-0 h-svh min-h-155 overflow-hidden sm:min-h-175">
         <div ref={backgroundRef} className="absolute inset-0">
           <Image
             fill
@@ -92,45 +101,44 @@ export function HeroSection() {
           />
         </div>
 
-        <div className="relative z-10 flex h-full items-center px-6 py-16 sm:px-10 sm:py-20 lg:px-18">
-          <div className="overflow-hidden py-2">
-            <h1
-              ref={headlineRef}
-              className="text-[3.55rem] leading-[0.92] tracking-normal text-white sm:text-[4.75rem] md:text-[5.7rem] lg:text-[6.6rem]"
-            >
-              <span className="block">{"Invest in India's"}</span>
-              <span className="block">
-                Rapidly <em className="italic">Growing</em>
+        <Container className="relative z-10 flex h-full items-center">
+          <div className="overflow-hidden py-2 text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl font-sans-brand">
+            <h1 ref={headlineRef} className="text-white">
+              <span className="block font-light">{"Invest in India's"}</span>
+              <span className="block font-light">
+                Rapidly <em className="italic font-semibold">Growing</em>
               </span>
-              <span className="block italic">Mid-Market.</span>
+              <span className="block italic font-semibold">Mid-Market.</span>
             </h1>
           </div>
-        </div>
+        </Container>
 
-        <div className="pointer-events-none absolute inset-0 z-20 flex h-full items-center justify-center px-6 py-16 text-center sm:px-10 sm:py-20 lg:px-18">
-          <div
-            ref={statementRef}
-            className="relative max-w-250 text-[3rem] leading-[1.02] tracking-normal sm:text-[4rem] md:text-[5.25rem] lg:text-[6.25rem]"
-            style={{ opacity: 0 }}
-          >
-            <h2 aria-label={statementText}>
-              {statementLines.map((line) => (
-                <span key={line} aria-hidden="true" className="relative block">
-                  <span className="text-transparent">{line}</span>
+        <div className="pointer-events-none absolute inset-0 z-20 flex h-full items-center py-8 font-sans-brand text-3xl md:text-4xl xl:text-5xl">
+          <Container>
+            <div ref={statementRef} className="text-white" style={{ opacity: 0 }}>
+              <h2 aria-label={statementText}>
+                {statementLines.map((line, index) => (
                   <span
-                    data-statement-reveal-line
-                    className="absolute inset-0 text-white"
-                    style={{
-                      clipPath: "inset(0% 100% 0% 0%)",
-                      willChange: "clip-path",
-                    }}
+                    key={line}
+                    aria-hidden="true"
+                    className={cn("relative block my-3", index < 3 ? "italic" : "font-light")}
                   >
-                    {line}
+                    <span className="text-transparent">{line}</span>
+                    <span
+                      data-statement-reveal-line
+                      className="absolute inset-0 text-white"
+                      style={{
+                        willChange: "clip-path",
+                        clipPath: statementHiddenClip,
+                      }}
+                    >
+                      {line}
+                    </span>
                   </span>
-                </span>
-              ))}
-            </h2>
-          </div>
+                ))}
+              </h2>
+            </div>
+          </Container>
         </div>
       </div>
     </section>
