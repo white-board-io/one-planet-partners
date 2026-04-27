@@ -13,7 +13,6 @@
 
   --container-8xl: 90rem;
 
-  --font-sans-brand: var(--font-source-sans);
   --font-serif-brand: var(--font-source-serif);
 
   --text-display-2xl: 8.75rem;
@@ -55,7 +54,7 @@ body {
   min-height: 100vh;
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-source-sans), "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-source-serif), Georgia, "Times New Roman", serif;
 }
 
 a {

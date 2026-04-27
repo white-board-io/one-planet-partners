@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { cn } from "@/lib/utils";
@@ -91,18 +90,21 @@ export function HeroSection() {
     <section ref={sectionRef} className="relative isolate bg-black" style={{ minHeight: "340vh" }}>
       <div ref={viewportRef} className="sticky top-0 h-svh min-h-155 overflow-hidden sm:min-h-175">
         <div ref={backgroundRef} className="absolute inset-0">
-          <Image
-            fill
-            alt=""
-            priority
-            sizes="100vw"
-            src="/images/svg/hero-bg.svg"
-            className="object-cover object-center"
-          />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            aria-hidden="true"
+            className="h-full w-full object-cover object-center"
+          >
+            <source src="/videos/HCC%20Sea%20Link%20Drone%202.mp4" type="video/mp4" />
+          </video>
         </div>
 
         <Container className="relative z-10 flex h-full items-center">
-          <div className="overflow-hidden py-2 text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl font-sans-brand">
+          <div className="overflow-hidden py-2 font-serif-brand text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl">
             <h1 ref={headlineRef} className="text-white">
               <span className="block font-light">{"Invest in India's"}</span>
               <span className="block font-light">
@@ -113,7 +115,7 @@ export function HeroSection() {
           </div>
         </Container>
 
-        <div className="pointer-events-none absolute inset-0 z-20 flex h-full items-center py-8 font-sans-brand text-3xl md:text-4xl xl:text-5xl">
+        <div className="pointer-events-none absolute inset-0 z-20 flex h-full items-center py-8 font-serif-brand text-3xl md:text-4xl xl:text-5xl">
           <Container>
             <div ref={statementRef} className="text-white" style={{ opacity: 0 }}>
               <h2 aria-label={statementText}>
