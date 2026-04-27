@@ -156,7 +156,7 @@ export function HeroSection() {
           </div>
         </Container>
 
-        <div className="pointer-events-none absolute inset-0 z-20 flex h-full items-center py-8 font-serif-brand text-3xl md:text-4xl xl:text-5xl">
+        <div className="pointer-events-none absolute inset-0 z-20 flex h-full translate-y-9 items-center py-8 font-serif-brand text-2xl leading-[1.08] md:translate-y-10 md:text-3xl xl:text-5xl">
           <Container>
             <div ref={statementRef} className="text-white" style={{ opacity: 0 }}>
               <h2>
@@ -164,7 +164,7 @@ export function HeroSection() {
                   <span
                     key={line}
                     data-statement-line
-                    className={cn("block my-3", index < 3 ? "italic" : "font-light")}
+                    className={cn("block my-1.5", index < 3 ? "italic" : "font-light")}
                   >
                     {line}
                   </span>
