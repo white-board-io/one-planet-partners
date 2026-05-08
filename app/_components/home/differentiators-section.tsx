@@ -22,7 +22,10 @@ const differentiators = [
 
 export function DifferentiatorsSection() {
   return (
-    <section id="edge" className="scroll-mt-24 bg-black pt-12 pb-13 text-white md:pt-[5.625rem] md:pb-10">
+    <section
+      id="edge"
+      className="scroll-mt-24 bg-black pt-12 pb-13 text-white md:pt-[5.625rem] md:pb-10"
+    >
       <Container className="max-w-none px-0 sm:px-0 lg:px-0">
         <div className="mx-auto w-full">
           <div className="mb-8 text-center md:mb-[5.5rem]">

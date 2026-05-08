@@ -74,14 +74,9 @@ export function LeadershipSection() {
   const closestIndex =
     mouseX === null || distances.length === 0
       ? null
-      : distances.reduce(
-          (best, d, i) => (d < distances[best] ? i : best),
-          0,
-        );
+      : distances.reduce((best, d, i) => (d < distances[best] ? i : best), 0);
   const hoveredIndex =
-    closestIndex !== null && distances[closestIndex] < DOCK_INFLUENCE_PX
-      ? closestIndex
-      : null;
+    closestIndex !== null && distances[closestIndex] < DOCK_INFLUENCE_PX ? closestIndex : null;
   const activeIndex = focusedIndex ?? hoveredIndex;
 
   return (
@@ -127,8 +122,7 @@ export function LeadershipSection() {
                   mouseX === null || center === undefined
                     ? Number.POSITIVE_INFINITY
                     : Math.abs(mouseX - center);
-                const scale =
-                  focusedIndex === index ? DOCK_MAX_SCALE : dockScale(distance);
+                const scale = focusedIndex === index ? DOCK_MAX_SCALE : dockScale(distance);
                 const zIndex = Math.round(scale * 10);
                 return (
                   <figure

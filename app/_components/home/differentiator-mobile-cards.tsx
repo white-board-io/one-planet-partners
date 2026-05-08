@@ -46,7 +46,9 @@ export function DifferentiatorMobileCards({ items }: { items: Differentiator[] }
                   aria-hidden="true"
                   className={cn(
                     "size-3.5 rotate-45 border-white transition-transform duration-200",
-                    isOpen ? "translate-y-0.5 border-t-2 border-l-2" : "-translate-y-0.5 border-r-2 border-b-2",
+                    isOpen
+                      ? "translate-y-0.5 border-t-2 border-l-2"
+                      : "-translate-y-0.5 border-r-2 border-b-2",
                   )}
                 />
               </button>
