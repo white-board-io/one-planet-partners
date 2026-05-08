@@ -108,7 +108,7 @@ export function LeadershipSection() {
           <div className="md:w-[35rem] md:justify-self-end">
             <div
               ref={dockRef}
-              className="mb-16 flex min-h-[14rem] items-start justify-center pt-4 md:min-h-[23rem] md:justify-center"
+              className="mb-4 flex min-h-[14rem] items-start justify-center pt-4 md:min-h-[23rem] md:justify-center"
               onMouseMove={(event) => {
                 const dock = dockRef.current;
                 if (!dock) return;

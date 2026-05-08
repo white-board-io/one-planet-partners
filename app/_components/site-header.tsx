@@ -1,8 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/app/_components/container";
+import { MobileNav } from "@/app/_components/mobile-nav";
 
-const navLinks = [
+export type NavLink = {
+  label: string;
+  href: string;
+};
+
+export const navLinks: NavLink[] = [
   { label: "The Opportunity", href: "#opportunity" },
   { label: "Our Focus", href: "#focus" },
   { label: "Leadership", href: "#leadership" },
@@ -14,7 +20,7 @@ const navLinks = [
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-black/8 bg-white">
-      <Container className="flex items-center justify-between py-5">
+      <Container className="relative flex items-center justify-between py-5">
         <Link href="/" aria-label="One Planet Partners home" className="shrink-0">
           <Image
             priority
@@ -39,6 +45,7 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
+        <MobileNav links={navLinks} />
       </Container>
     </header>
   );

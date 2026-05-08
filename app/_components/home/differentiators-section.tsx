@@ -2,21 +2,24 @@ import Image from "next/image";
 import { Container } from "@/app/_components/container";
 import { DifferentiatorMobileCards } from "@/app/_components/home/differentiator-mobile-cards";
 
+const differentiatorCopy =
+  "We take ownership stakes and act like owners. Capital is only the starting point. What we bring beyond that — strategic insight, operational discipline, governance, and access to deep networks — is where the value is built. We are not advisors on the sidelines, but partners with skin in the game.";
+
 const differentiators = [
   {
     title: "Business Builders, Not Passive Capital",
     image: "/images/svg/differentiaror-image1.svg",
-    copy: "We work alongside founders and management teams to turn strategy into measurable execution, operational focus, and durable growth.",
+    copy: differentiatorCopy,
   },
   {
     title: "Institutional, Yet Entrepreneurial",
     image: "/images/svg/differentiator-image2.svg",
-    copy: "We bring institutional discipline, governance, and networks while staying hands-on, pragmatic, and fast-moving with every business.",
+    copy: differentiatorCopy,
   },
   {
     title: "Climate Positive DNA",
     image: "/images/svg/differentiator-image3.svg",
-    copy: "We treat climate as a commercial advantage, helping businesses improve efficiency, resilience, and long-term value creation.",
+    copy: differentiatorCopy,
   },
 ];
 
@@ -58,7 +61,7 @@ export function DifferentiatorsSection() {
                     <h3 className="max-w-80 font-serif-brand text-3xl leading-[1.08] font-light md:text-4xl">
                       {item.title}
                     </h3>
-                    <p className="mt-6 max-w-96 font-sans-brand text-base leading-7 text-white/78 md:text-lg">
+                    <p className="mt-6 max-w-96 font-sans-brand text-sm leading-5 font-light text-white/78 lg:text-base lg:leading-6">
                       {item.copy}
                     </p>
                   </div>
