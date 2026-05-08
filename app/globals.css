@@ -14,6 +14,7 @@
   --container-8xl: 90rem;
 
   --font-serif-brand: var(--font-source-serif);
+  --font-sans-brand: var(--font-source-sans);
 
   --text-display-2xl: 8.75rem;
   --text-display-2xl--line-height: 9.375rem;
