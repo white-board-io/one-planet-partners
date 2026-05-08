@@ -1,5 +1,6 @@
 import { SiteHeader } from "@/app/_components/site-header";
 import { HeroSection } from "@/app/_components/hero-section";
+import { HomeSections } from "@/app/_components/home-sections";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,6 +13,7 @@ export default function Home() {
     <main className="min-h-screen bg-background text-foreground">
       <SiteHeader />
       <HeroSection />
+      <HomeSections />
     </main>
   );
 }
