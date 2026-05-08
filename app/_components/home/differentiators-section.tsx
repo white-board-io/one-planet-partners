@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Container } from "@/app/_components/container";
+import { DifferentiatorMobileCards } from "@/app/_components/home/differentiator-mobile-cards";
 
 const differentiators = [
   {
@@ -21,15 +22,16 @@ const differentiators = [
 
 export function DifferentiatorsSection() {
   return (
-    <section id="edge" className="scroll-mt-24 bg-black py-16 text-white md:pt-[5.625rem] md:pb-10">
+    <section id="edge" className="scroll-mt-24 bg-black pt-12 pb-13 text-white md:pt-[5.625rem] md:pb-10">
       <Container className="max-w-none px-0 sm:px-0 lg:px-0">
         <div className="mx-auto w-full">
-          <div className="mb-16 text-center md:mb-[5.5rem]">
-            <h2 className="font-serif-brand text-4xl leading-[1.1] font-light md:text-[3.5rem]">
+          <div className="mb-8 text-center md:mb-[5.5rem]">
+            <h2 className="font-serif-brand text-[1.375rem] leading-[1.05] font-light md:text-[3.5rem] md:leading-[1.1]">
               What Sets Us Apart
             </h2>
           </div>
-          <div className="grid gap-8 px-6 sm:px-10 md:grid-cols-3 md:gap-9 md:px-0">
+          <DifferentiatorMobileCards items={differentiators} />
+          <div className="hidden gap-8 px-6 sm:px-10 md:grid md:grid-cols-3 md:gap-9 md:px-0">
             {differentiators.map((item) => (
               <article
                 key={item.title}

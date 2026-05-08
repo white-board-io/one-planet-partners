@@ -1,0 +1,73 @@
+"use client";
+
+import Image from "next/image";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+
+type Differentiator = {
+  title: string;
+  image: string;
+  copy: string;
+};
+
+export function DifferentiatorMobileCards({ items }: { items: Differentiator[] }) {
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
+
+  return (
+    <div className="grid gap-9 px-4 md:hidden">
+      {items.map((item, index) => {
+        const isOpen = activeIndex === index;
+        const contentId = `differentiator-mobile-copy-${index}`;
+
+        return (
+          <article key={item.title} className="overflow-hidden rounded-md bg-[#050505]">
+            <div className="relative aspect-[606/648] overflow-hidden rounded-md">
+              <Image
+                fill
+                sizes="calc(100vw - 2rem)"
+                src={item.image}
+                alt=""
+                loading="eager"
+                className="object-cover"
+              />
+              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/88 via-black/38 to-transparent" />
+              <h3 className="absolute right-12 bottom-5 left-4 max-w-[11.5rem] font-serif-brand text-[1.125rem] leading-[1.05] font-semibold text-white">
+                {item.title}
+              </h3>
+              <button
+                type="button"
+                aria-expanded={isOpen}
+                aria-controls={contentId}
+                aria-label={`${isOpen ? "Hide" : "Show"} ${item.title}`}
+                onClick={() => setActiveIndex(isOpen ? null : index)}
+                className="absolute top-3 right-3 grid size-8 place-items-center rounded-full text-white transition-colors hover:bg-white/10 focus-visible:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/80"
+              >
+                <span
+                  aria-hidden="true"
+                  className={cn(
+                    "size-3.5 rotate-45 border-white transition-transform duration-200",
+                    isOpen ? "translate-y-0.5 border-t-2 border-l-2" : "-translate-y-0.5 border-r-2 border-b-2",
+                  )}
+                />
+              </button>
+            </div>
+            <div
+              id={contentId}
+              aria-hidden={!isOpen}
+              className={cn(
+                "grid transition-[grid-template-rows] duration-300 ease-out",
+                isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
+              )}
+            >
+              <div className="overflow-hidden">
+                <p className="px-4 pt-3 pb-5 font-sans-brand text-[0.8125rem] leading-[1.25] text-white/78">
+                  {item.copy}
+                </p>
+              </div>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  );
+}

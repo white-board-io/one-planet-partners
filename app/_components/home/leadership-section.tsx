@@ -2,9 +2,17 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Container } from "@/app/_components/container";
 import { cn } from "@/lib/utils";
+
+const DOCK_INFLUENCE_PX = 280;
+const DOCK_MAX_SCALE = 2.0;
+
+function dockScale(distance: number) {
+  const t = Math.max(0, 1 - distance / DOCK_INFLUENCE_PX);
+  return 1 + (DOCK_MAX_SCALE - 1) * Math.pow(t, 1.4);
+}
 
 const leaders = [
   {
@@ -36,7 +44,45 @@ const stats = [
 ];
 
 export function LeadershipSection() {
-  const [activeLeader, setActiveLeader] = useState<number | null>(null);
+  const dockRef = useRef<HTMLDivElement>(null);
+  const itemRefs = useRef<Array<HTMLElement | null>>([]);
+  const [centers, setCenters] = useState<number[]>([]);
+  const [mouseX, setMouseX] = useState<number | null>(null);
+  const [focusedIndex, setFocusedIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    const measure = () => {
+      const dock = dockRef.current;
+      if (!dock) return;
+      const dockLeft = dock.getBoundingClientRect().left;
+      setCenters(
+        itemRefs.current.map((el) => {
+          if (!el) return 0;
+          const r = el.getBoundingClientRect();
+          return r.left + r.width / 2 - dockLeft;
+        }),
+      );
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, []);
+
+  const distances = centers.map((c) =>
+    mouseX === null ? Number.POSITIVE_INFINITY : Math.abs(mouseX - c),
+  );
+  const closestIndex =
+    mouseX === null || distances.length === 0
+      ? null
+      : distances.reduce(
+          (best, d, i) => (d < distances[best] ? i : best),
+          0,
+        );
+  const hoveredIndex =
+    closestIndex !== null && distances[closestIndex] < DOCK_INFLUENCE_PX
+      ? closestIndex
+      : null;
+  const activeIndex = focusedIndex ?? hoveredIndex;
 
   return (
     <section id="leadership" className="scroll-mt-24 bg-white py-18 text-black md:py-24">
@@ -66,49 +112,68 @@ export function LeadershipSection() {
 
           <div className="md:w-[35rem] md:justify-self-end">
             <div
-              className="mb-16 flex min-h-[14rem] items-start justify-center pt-4 md:justify-center"
-              onMouseLeave={() => setActiveLeader(null)}
+              ref={dockRef}
+              className="mb-16 flex min-h-[14rem] items-start justify-center pt-4 md:min-h-[23rem] md:justify-center"
+              onMouseMove={(event) => {
+                const dock = dockRef.current;
+                if (!dock) return;
+                setMouseX(event.clientX - dock.getBoundingClientRect().left);
+              }}
+              onMouseLeave={() => setMouseX(null)}
             >
-              {leaders.map((leader, index) => (
-                <figure
-                  key={leader.name}
-                  aria-label={`${leader.name}, ${leader.designation}`}
-                  tabIndex={0}
-                  onFocus={() => setActiveLeader(index)}
-                  onBlur={() => setActiveLeader(null)}
-                  onMouseEnter={() => setActiveLeader(index)}
-                  className={cn(
-                    "relative z-0 -ml-3 flex w-[5.75rem] shrink-0 flex-col items-center text-center first:ml-0 focus-visible:outline-none md:-ml-4 md:w-[6.25rem]",
-                    activeLeader === index ? "z-20" : null,
-                  )}
-                >
-                  <div
-                    className={cn(
-                      "relative size-[4.75rem] origin-top overflow-hidden rounded-full bg-black/8 ring-4 ring-white transition-transform duration-300 ease-out md:size-[6rem]",
-                      activeLeader === index ? "scale-[1.8] md:scale-[1.8]" : "scale-100",
-                    )}
+              {leaders.map((leader, index) => {
+                const center = centers[index];
+                const distance =
+                  mouseX === null || center === undefined
+                    ? Number.POSITIVE_INFINITY
+                    : Math.abs(mouseX - center);
+                const scale =
+                  focusedIndex === index ? DOCK_MAX_SCALE : dockScale(distance);
+                const zIndex = Math.round(scale * 10);
+                return (
+                  <figure
+                    key={leader.name}
+                    ref={(el) => {
+                      itemRefs.current[index] = el;
+                    }}
+                    aria-label={`${leader.name}, ${leader.designation}`}
+                    tabIndex={0}
+                    onFocus={() => setFocusedIndex(index)}
+                    onBlur={() => setFocusedIndex(null)}
+                    style={{ zIndex }}
+                    className="relative -ml-2 flex w-[4.75rem] shrink-0 flex-col items-center text-center first:ml-0 focus-visible:outline-none md:-ml-2 md:w-[9rem]"
                   >
-                    <Image
-                      fill
-                      sizes="(max-width: 768px) 9rem, 10rem"
-                      src={leader.image}
-                      alt={leader.name}
-                      className="object-cover"
-                    />
-                  </div>
-                  <figcaption
-                    className={cn(
-                      "pointer-events-none absolute left-1/2 top-[9.75rem] w-[13rem] -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-300 ease-out md:top-[12.5rem]",
-                      activeLeader === index ? "translate-y-0 opacity-100" : null,
-                    )}
-                  >
-                    <p className="font-serif-brand text-base leading-tight font-semibold underline decoration-black/45 underline-offset-2">
-                      {leader.name}
-                    </p>
-                    <p className="mt-2 text-xs leading-snug text-black/65">{leader.designation}</p>
-                  </figcaption>
-                </figure>
-              ))}
+                    <div
+                      style={{
+                        transform: `scale(${scale})`,
+                        backgroundColor: activeIndex === index ? "#DCDCDC" : "#D9D5D0",
+                      }}
+                      className="relative size-[4.75rem] origin-top overflow-hidden rounded-full transition-[transform,background-color] duration-150 ease-out md:size-[9rem]"
+                    >
+                      <Image
+                        fill
+                        sizes="(max-width: 768px) 9rem, 10rem"
+                        src={leader.image}
+                        alt={leader.name}
+                        className="object-cover"
+                      />
+                    </div>
+                    <figcaption
+                      className={cn(
+                        "pointer-events-none absolute left-1/2 top-[10rem] w-[13rem] -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-300 ease-out md:top-[19rem]",
+                        activeIndex === index ? "translate-y-0 opacity-100" : null,
+                      )}
+                    >
+                      <p className="font-serif-brand text-base leading-tight font-semibold underline decoration-black/45 underline-offset-2">
+                        {leader.name}
+                      </p>
+                      <p className="mt-2 text-xs leading-snug text-black/65">
+                        {leader.designation}
+                      </p>
+                    </figcaption>
+                  </figure>
+                );
+              })}
             </div>
             <div className="grid md:grid-cols-3">
               {stats.map((stat, index) => (
