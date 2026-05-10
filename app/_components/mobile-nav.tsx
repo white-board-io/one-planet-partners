@@ -46,7 +46,7 @@ export function MobileNav({ links }: MobileNavProps) {
         aria-controls="mobile-primary-navigation"
         aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
         onClick={() => setIsOpen((current) => !current)}
-        className="flex size-11 items-center justify-center border border-black/15 bg-white text-brand-black transition-colors hover:border-black/35 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+        className="flex size-11 items-center justify-center bg-white text-brand-black transition-colors hover:border-black/35 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
       >
         <span className="flex w-5 flex-col gap-1.5" aria-hidden="true">
           <span className="h-0.5 w-full bg-current" />

@@ -42,10 +42,10 @@ export function OpportunitySection() {
                   alt={card.alt}
                   className="mb-10 h-auto w-full rounded-sm"
                 />
-                <h3 className="mb-7 font-serif-brand text-[2rem] leading-[2.5rem] font-normal tracking-normal">
+                <h3 className="mb-7 font-serif-brand text-[32px] leading-[2.5rem] font-normal tracking-normal">
                   {card.title}
                 </h3>
-                <p className="font-sans-brand text-[1.125rem] leading-[1.55rem] font-light tracking-normal text-black/80">
+                <p className="font-sans-brand text-[22px] leading-[1.55rem] font-light tracking-normal text-black/80">
                   {card.copy}
                 </p>
               </article>
