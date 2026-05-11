@@ -1,0 +1,37 @@
+app/leadership/_components/data.ts
+  eda1a6457a41b8d5 1-165
+app/leadership/[id]/_components/person-detail.tsx
+  eda1a6457a41b8d5 1-9,11-13,15-29,31-121
+app/leadership/_components/leadership-hero.tsx
+  eda1a6457a41b8d5 1-8,10-27
+app/leadership/_components/leadership-grid.tsx
+  eda1a6457a41b8d5 1-56
+app/leadership/page.tsx
+  eda1a6457a41b8d5 1-24
+app/leadership/[id]/page.tsx
+  eda1a6457a41b8d5 1-43
+app/_components/site-header.tsx
+  eda1a6457a41b8d5 14-18,39
+app/leadership/_components/senior-advisors.tsx
+  eda1a6457a41b8d5 1-50
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.23",
+  "base_commit_sha": "9ceefde18a623d8bff9b5b1ad811a1c5910dd5c5",
+  "prompts": {
+    "eda1a6457a41b8d5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "89a00811-d6e0-4bb1-a4a2-0556aab38ea0",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Arun Selva Kumar <arun@joinassembly.com>",
+      "messages": [],
+      "total_additions": 575,
+      "total_deletions": 85,
+      "accepted_lines": 488,
+      "overriden_lines": 3
+    }
+  }
+}
