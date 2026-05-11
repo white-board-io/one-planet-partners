@@ -11,7 +11,11 @@ const navLinks = [
   { label: "Contact", href: "#contact" },
 ];
 
-export function SiteHeader() {
+type SiteHeaderProps = {
+  basePath?: string;
+};
+
+export function SiteHeader({ basePath = "" }: SiteHeaderProps) {
   return (
     <header className="sticky top-0 z-50 border-b border-black/8 bg-white">
       <Container className="flex items-center justify-between py-5">
@@ -32,7 +36,7 @@ export function SiteHeader() {
           {navLinks.map((link) => (
             <Link
               key={link.href}
-              href={link.href}
+              href={`${basePath}${link.href}`}
               className="text-sm leading-none text-brand-black transition-colors hover:text-black/60"
             >
               {link.label}
