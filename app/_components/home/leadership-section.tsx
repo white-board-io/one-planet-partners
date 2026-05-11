@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Container } from "@/app/_components/container";
 import { cn } from "@/lib/utils";
 
-const HOVER_SCALE = 255 / 144;
+const HOVER_SCALE = 192 / 144;
 
 const leaders = [
   {
@@ -32,9 +32,13 @@ const leaders = [
 ];
 
 const stats = [
-  { value: "25+", label: "years of collaboration" },
-  { value: "USD 15+", label: "billion deal experience" },
-  { value: "65+", label: "transactions across sectors and cycles" },
+  { value: "25+", label: "years of collaboration", desktopLabel: ["years of", "collaboration"] },
+  { value: "USD 15+", label: "billion deal experience", desktopLabel: ["billion deal", "experience"] },
+  {
+    value: "65+",
+    label: "transactions across sectors and cycles",
+    desktopLabel: ["transactions", "across sectors", "and cycles"],
+  },
 ];
 
 export function LeadershipSection() {
@@ -104,38 +108,42 @@ export function LeadershipSection() {
 
           <Link
             href="#team"
-            className="inline-flex items-center rounded-full border border-black px-7 py-2 font-serif-brand text-[1.625rem] leading-none font-normal tracking-[0.03em] transition hover:bg-black hover:text-white"
+            className="inline-flex items-center rounded-full border border-black px-7 py-2 font-serif-brand text-[1.625rem] leading-[1.75] font-normal tracking-[0.03em] text-black transition hover:border-[#47a685] hover:text-[#47a685]"
           >
-            Meet the Team
+            Meet Our People
           </Link>
         </div>
 
-        <div className="mx-auto hidden max-w-6xl gap-12 md:grid md:grid-cols-[1.1fr_0.9fr] md:items-center">
+        <div className="hidden w-full gap-12 md:grid md:grid-cols-[1.1fr_0.9fr] md:items-center">
           <div>
             <h2 className="font-serif-brand text-[5rem] leading-[5.625rem] font-normal tracking-[0] text-black">
               Leadership
             </h2>
-            <div className="mt-12 w-full max-w-sm">
-              <h3 className="[font-family:var(--font-source-sans)] text-base leading-tight font-semibold tracking-[0] text-wrap">
+            <div className="mt-18 w-full max-w-[34rem]">
+              <h3 className="font-sans-brand text-[1.5rem] leading-[2.0625rem] font-semibold tracking-[0] whitespace-nowrap">
                 A Proven Team Building Together Again
               </h3>
-              <p className="mt-8 [font-family:var(--font-source-sans)] text-lg leading-7 font-normal tracking-[0] text-wrap text-black/70">
-                Belief in India&apos;s entrepreneurship unites us. We bring strong investment and
-                value-creation expertise, deep history of working together, and marquee
-                relationships across India&apos;s business landscape.
+              <p className="mt-5 font-sans-brand text-[1.5rem] leading-[2.0625rem] font-light tracking-[0] text-black/70">
+                Belief in India&apos;s entrepreneurship unites us. We bring
+                <br />
+                strong investment and value-creation expertise, deep
+                <br />
+                history of working together, and marquee relationships
+                <br />
+                across India&apos;s business landscape.
               </p>
             </div>
             <Link
               href="#team"
-              className="mt-18 inline-flex items-center rounded-full border border-black px-7 py-2 font-serif-brand text-[1.625rem] leading-none font-normal tracking-[0.03em] transition hover:bg-black hover:text-white"
+              className="mt-18 inline-flex items-center rounded-full border border-black px-7 py-2 font-serif-brand text-[1.625rem] leading-[1.75] font-normal tracking-[0.03em] text-black transition hover:border-[#47a685] hover:text-[#47a685]"
             >
-              Meet the Team
+              Meet Our People
             </Link>
           </div>
 
-          <div className="w-[35rem] justify-self-end">
+          <div className="w-[35rem] justify-self-en mr-16">
             <div
-              className="mb-4 flex min-h-[22rem] items-start justify-center pt-4"
+              className="flex min-h-[22rem] items-start justify-center pt-4"
               onMouseLeave={() => setActiveIndex(null)}
             >
               {leaders.map((leader, index) => {
@@ -168,7 +176,7 @@ export function LeadershipSection() {
                     </div>
                     <figcaption
                       className={cn(
-                        "pointer-events-none absolute left-1/2 top-[17rem] w-[13rem] -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-300 ease-out",
+                        "pointer-events-none absolute left-1/2 top-[13rem] w-[13rem] -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-300 ease-out",
                         isActive ? "translate-y-0 opacity-100" : null,
                       )}
                     >
@@ -183,7 +191,7 @@ export function LeadershipSection() {
                 );
               })}
             </div>
-            <div className="grid grid-cols-3">
+            <div className="grid grid-cols-[0.75fr_1.5fr_0.75fr]">
               {stats.map((stat, index) => (
                 <div
                   key={stat.value}
@@ -192,11 +200,15 @@ export function LeadershipSection() {
                     index < stats.length - 1 ? "border-r border-black/70" : null,
                   )}
                 >
-                  <p className="font-serif-brand text-[2.75rem] leading-[3rem] font-normal tracking-[0] whitespace-nowrap">
+                  <p className="font-serif-brand text-[3.75rem] leading-[3rem] font-normal tracking-[0] whitespace-nowrap">
                     {stat.value}
                   </p>
-                  <p className="mx-auto mt-3 max-w-36 text-base leading-6 text-black/62">
-                    {stat.label}
+                  <p className="mx-auto mt-3 max-w-44 font-sans-brand text-[1.5rem] leading-[2.125rem] font-light tracking-[0] text-black/62">
+                    {stat.desktopLabel.map((line) => (
+                      <span key={line} className="block">
+                        {line}
+                      </span>
+                    ))}
                   </p>
                 </div>
               ))}

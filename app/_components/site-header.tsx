@@ -33,13 +33,13 @@ export function SiteHeader() {
         </Link>
         <nav
           aria-label="Primary navigation"
-          className="hidden items-center gap-6 font-sans lg:flex"
+          className="hidden items-center gap-6 font-sans-brand lg:flex"
         >
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm leading-none text-brand-black transition-colors hover:text-black/60"
+              className="text-right text-body-sm font-normal tracking-normal text-brand-black not-italic transition-colors hover:text-black/60"
             >
               {link.label}
             </Link>
