@@ -31,9 +31,6 @@ export function DifferentiatorMobileCards({ items }: { items: Differentiator[] }
                 className="object-cover"
               />
               <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/88 via-black/38 to-transparent" />
-              <h3 className="absolute right-12 bottom-5 left-4 max-w-[11.5rem] font-serif-brand text-[1.125rem] leading-[1.05] font-semibold text-white">
-                {item.title}
-              </h3>
               <button
                 type="button"
                 aria-expanded={isOpen}
@@ -63,10 +60,10 @@ export function DifferentiatorMobileCards({ items }: { items: Differentiator[] }
             >
               <div className="overflow-hidden">
                 <div className="bg-white px-8 pt-10 pb-16 text-black">
-                  <h4 className="font-serif-brand text-[2.625rem] leading-[1.04] font-semibold text-black">
+                  <h4 className="font-serif-brand text-5xl leading-none font-semibold text-black">
                     {item.title}
                   </h4>
-                  <p className="mt-9 font-sans-brand text-[1.125rem] leading-[1.375rem] font-light tracking-normal text-black">
+                  <p className="mt-9 font-sans-brand text-lg leading-6 font-light tracking-normal text-black">
                     {item.copy}
                   </p>
                 </div>

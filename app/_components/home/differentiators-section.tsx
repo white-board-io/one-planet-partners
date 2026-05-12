@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Container } from "@/app/_components/container";
+import { DifferentiatorDesktopCards } from "@/app/_components/home/differentiator-desktop-cards";
 import { DifferentiatorMobileCards } from "@/app/_components/home/differentiator-mobile-cards";
 
 const differentiatorCopy =
@@ -25,50 +25,16 @@ const differentiators = [
 
 export function DifferentiatorsSection() {
   return (
-    <section
-      id="edge"
-      className="scroll-mt-24 bg-black pt-12 pb-13 text-white md:pt-[5.625rem] md:pb-10"
-    >
+    <section id="edge" className="scroll-mt-24 bg-black pt-20 pb-21 text-white md:pt-30 md:pb-18">
       <Container className="max-w-none px-0 sm:px-0 lg:px-0">
         <div className="mx-auto w-full">
-          <div className="mb-8 text-center md:mb-[5.5rem]">
-            <h2 className="font-serif-brand text-[1.375rem] leading-[1.05] font-light md:text-[3.5rem] md:leading-[1.1]">
+          <div className="mb-8 text-center md:mb-22">
+            <h2 className="font-serif-brand text-2xl leading-none font-normal md:text-7xl md:leading-none">
               What Sets Us Apart
             </h2>
           </div>
           <DifferentiatorMobileCards items={differentiators} />
-          <div className="hidden gap-8 px-6 sm:px-10 md:grid md:grid-cols-3 md:gap-9 md:px-0">
-            {differentiators.map((item) => (
-              <article
-                key={item.title}
-                aria-label={item.title}
-                tabIndex={0}
-                className="group relative aspect-[606/648] bg-white/5 [perspective:1200px]"
-              >
-                <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus:[transform:rotateY(180deg)] motion-reduce:transition-none">
-                  <div className="absolute inset-0 overflow-hidden rounded-md [backface-visibility:hidden]">
-                    <Image
-                      fill
-                      sizes="(max-width: 768px) calc(100vw - 3rem), 33vw"
-                      src={item.image}
-                      alt=""
-                      loading="eager"
-                      className="object-cover"
-                    />
-                    <h3 className="sr-only">{item.title}</h3>
-                  </div>
-                  <div className="absolute inset-0 flex flex-col justify-end overflow-hidden rounded-md bg-[#101010] p-8 text-white [backface-visibility:hidden] [transform:rotateY(180deg)] md:p-10">
-                    <h3 className="max-w-80 font-serif-brand text-3xl leading-[1.08] font-light md:text-4xl">
-                      {item.title}
-                    </h3>
-                    <p className="mt-6 max-w-96 font-sans-brand text-sm leading-5 font-light text-white/78 lg:text-base lg:leading-6">
-                      {item.copy}
-                    </p>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
+          <DifferentiatorDesktopCards items={differentiators} />
         </div>
       </Container>
     </section>

@@ -9,13 +9,13 @@ const focusItems = [
   {
     title: "Energy",
     copy: "We partner with platforms helping India expand cleaner, more reliable power. Our focus is on businesses that improve efficiency, strengthen distributed infrastructure, and make the energy transition commercially durable.",
-    image: "/images/svg/opportunity-image3.svg",
+    image: "/images/svg/focus-image2.png",
     alt: "Solar power infrastructure and clean energy systems",
   },
   {
     title: "Mobility",
     copy: "We back companies moving people, goods, and critical supply chains with greater reliability. These businesses benefit from India's infrastructure buildout, digitized logistics, and the shift toward lower-carbon transport.",
-    image: "/images/svg/opportunity-image1.svg",
+    image: "/images/svg/focus-image1.png",
     alt: "Road and logistics infrastructure across an industrial corridor",
   },
   {
@@ -36,9 +36,7 @@ function renderFocusCopy(title: string, copy: string) {
       <span className="xl:block xl:whitespace-nowrap">
         We partner with category leaders in discrete
       </span>{" "}
-      <span className="xl:block xl:whitespace-nowrap">
-        manufacturing, serving India and global
-      </span>{" "}
+      <span className="xl:block xl:whitespace-nowrap">manufacturing, serving India and global</span>{" "}
       <span className="xl:block xl:whitespace-nowrap">
         markets — businesses with the competitive
       </span>{" "}
@@ -47,7 +45,7 @@ function renderFocusCopy(title: string, copy: string) {
       </span>{" "}
       <span className="xl:block xl:whitespace-nowrap">
         decade and a clear{" "}
-        <em className="font-serif-brand text-[24px] leading-[34px] font-semibold text-white italic">
+        <em className="font-serif-brand text-2xl leading-9 font-semibold text-white italic">
           pathway to green
         </em>{" "}
         that
@@ -74,23 +72,20 @@ export function FocusSection() {
   };
 
   return (
-    <section
-      id="focus"
-      className="scroll-mt-24 bg-[#000000] py-14 text-white md:pt-[100px] md:pb-0"
-    >
+    <section id="focus" className="scroll-mt-24 bg-black py-24 text-white md:pt-33 md:pb-0">
       <Container>
         <div className="mx-auto">
-          <div className="mx-auto mb-10 text-center md:mb-[62px]">
-            <h2 className="font-serif-brand text-[2rem] leading-[2.5rem] font-normal text-white md:text-[80px] md:leading-[90px]">
+          <div className="mx-auto mb-10 text-center md:mb-16">
+            <h2 className="font-serif-brand text-3xl leading-10 font-normal text-white md:mb-8 md:text-7xl md:leading-18">
               Our Focus
             </h2>
             <div
               aria-label="Focus sectors"
-              className="mt-2 flex flex-nowrap items-center justify-center gap-x-3 text-center font-serif-brand text-[1rem] leading-[2rem] font-normal tracking-normal whitespace-nowrap text-white md:mt-0 md:gap-x-[28px] md:text-[30px] md:leading-[74px]"
+              className="flex flex-nowrap items-center justify-center gap-x-3 text-center font-serif-brand text-base leading-8 font-normal tracking-normal whitespace-nowrap text-white md:mt-0 md:gap-x-7 md:text-5xl md:leading-19"
               role="group"
             >
               {focusItems.map((item, index) => (
-                <div key={item.title} className="flex items-center gap-x-3 md:gap-x-[28px]">
+                <div key={item.title} className="flex items-center gap-x-3 md:gap-x-7">
                   {index > 0 ? (
                     <span aria-hidden="true" className="text-white">
                       |
@@ -107,20 +102,39 @@ export function FocusSection() {
                 </div>
               ))}
             </div>
-            <p className="mx-auto mt-5 max-w-[15.5rem] font-sans-brand text-[0.75rem] leading-[1.08rem] font-light text-white md:mt-0 md:max-w-[1328px] md:text-[24px] md:leading-[34px]">
-              We invest in established{" "}
-              <em className="font-serif-brand text-[0.82rem] font-semibold text-white md:text-[24px] md:leading-[34px]">
-                mid-market businesses
-              </em>{" "}
-              positioned to benefit from India’s industrial growth, infrastructure buildout, rising
-              domestic consumption, and transition toward a more sustainable economy. Strong micro
-              in a supportive macro.
+            <p
+              aria-label="We invest in established mid-market businesses positioned to benefit from India’s industrial growth, infrastructure buildout, rising domestic consumption, and transition toward a more sustainable economy. Strong micro in a supportive macro."
+              className="mx-auto mt-5 max-w-62 font-sans-brand text-xs leading-4 font-light text-white md:mt-0 md:max-w-332 md:text-2xl md:leading-7"
+            >
+              <span className="md:hidden">
+                We invest in established{" "}
+                <em className="font-serif-brand font-semibold text-white italic">
+                  mid-market businesses
+                </em>{" "}
+                positioned to benefit from India’s industrial growth, infrastructure buildout,
+                rising domestic consumption, and transition toward a more sustainable economy.
+                Strong micro in a supportive macro.
+              </span>
+              <span aria-hidden="true" className="hidden md:block">
+                <span className="block whitespace-nowrap">
+                  We invest in established{" "}
+                  <em className="font-serif-brand font-semibold text-white italic">
+                    mid-market businesses
+                  </em>{" "}
+                  positioned to benefit from India’s industrial growth, infrastructure buildout,
+                  rising domestic
+                </span>
+                <span className="block whitespace-nowrap">
+                  consumption, and transition toward a more sustainable economy. Strong micro in a
+                  supportive macro.
+                </span>
+              </span>
             </p>
           </div>
 
           <p
             aria-live="polite"
-            className="mb-5 text-center font-serif-brand text-[1.65rem] leading-[2rem] font-normal tracking-normal md:hidden"
+            className="mb-5 text-center font-serif-brand text-2xl leading-8 font-normal tracking-normal md:hidden"
           >
             {activeFocus.title}
           </p>
@@ -129,14 +143,14 @@ export function FocusSection() {
             <div className="order-2 flex flex-col pb-0 md:order-1 md:block md:min-h-0 md:pb-0">
               <p
                 aria-live="polite"
-                className="mb-8 hidden font-serif-brand text-[2.625rem] leading-[2.75rem] font-normal tracking-normal md:block md:text-[60px] md:leading-[40px]"
+                className="mb-8 hidden font-serif-brand text-5xl leading-11 font-normal tracking-normal md:block md:text-6xl md:leading-10"
               >
                 {activeFocus.title}
               </p>
-              <p className="mx-auto mt-9 max-w-[15rem] text-center font-sans-brand text-[0.86rem] leading-[1.07rem] font-light tracking-normal text-white md:mx-0 md:mt-0 md:min-h-[204px] md:max-w-[470px] md:text-left md:text-[24px] md:leading-[34px]">
+              <p className="mx-auto mt-9 max-w-60 text-center font-sans-brand text-sm leading-4 font-light tracking-normal text-white md:mx-0 md:mt-16 md:min-h-51 md:max-w-118 md:text-left md:text-2xl md:leading-7">
                 {renderFocusCopy(activeFocus.title, activeFocus.copy)}
               </p>
-              <div className="mt-9 flex items-center justify-center gap-6 text-white md:mt-[56px] md:justify-start md:gap-4 xl:w-[300px] xl:justify-between xl:gap-0">
+              <div className="mt-9 flex items-center justify-center gap-6 text-white md:mt-24 md:justify-start md:gap-4 xl:w-75 xl:justify-between xl:gap-0">
                 <button
                   type="button"
                   aria-label="Previous focus"
@@ -175,7 +189,7 @@ export function FocusSection() {
                 </button>
               </div>
             </div>
-            <div className="relative order-1 mx-auto aspect-[239/110] w-full max-w-[24rem] overflow-hidden rounded-sm bg-white/5 md:order-2 md:mx-0 md:aspect-[762/665] md:h-auto md:min-h-0 md:max-w-[762px] md:rounded-t-[6px] md:rounded-b-none">
+            <div className="relative order-1 mx-auto aspect-[239/110] w-full max-w-sm overflow-hidden rounded-sm bg-white/5 md:order-2 md:mx-0 md:aspect-[762/665] md:h-auto md:min-h-0 md:max-w-190 md:rounded-t-md md:rounded-b-none">
               <Image
                 key={activeFocus.image}
                 fill

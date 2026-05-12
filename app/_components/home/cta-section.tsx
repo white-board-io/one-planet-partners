@@ -6,11 +6,11 @@ export function CtaSection() {
   return (
     <section
       id="contact"
-      className="scroll-mt-24 bg-black pt-[100px] pb-[120px] text-center text-white md:min-h-[600px] md:pt-[168px] md:pb-24"
+      className="scroll-mt-24 bg-black pt-33 pb-38 text-center text-white md:min-h-150 md:pt-30 md:pb-30"
     >
       <Container>
-        <div className="mx-auto max-w-[920px]">
-          <p className="mx-auto max-w-[360px] text-center font-serif-brand text-[1.625rem] leading-[1.22] font-normal tracking-[0] text-balance md:max-w-none md:text-[60px] md:leading-[70px]">
+        <div className="mx-auto max-w-230">
+          <p className="mx-auto max-w-90 text-center font-serif-brand text-2xl leading-tight font-normal tracking-normal text-balance md:max-w-none md:text-6xl md:py-14 md:leading-15">
             <span className="block">Let&rsquo;s build the next generation</span>
             <span className="block">
               of responsible
@@ -19,7 +19,7 @@ export function CtaSection() {
               <em className="font-semibold italic">market-leaders... together.</em>
             </span>
           </p>
-          <p className="mx-auto mt-[43px] max-w-[260px] text-center font-sans-brand text-[1.0625rem] leading-[1.34] font-light tracking-[0] text-white md:max-w-[820px] md:text-[24px] md:leading-[34px]">
+          <p className="mx-auto max-w-65 text-center font-sans-brand text-base leading-snug font-light tracking-normal text-white md:max-w-205 md:text-xl md:leading-7">
             We welcome conversations with partners
             <br className="hidden md:block" />
             who share our conviction in
@@ -32,14 +32,14 @@ export function CtaSection() {
           </p>
           <Link
             href="mailto:info@oneplanetpartners.com"
-            className="mt-[102px] inline-flex max-w-full transition-opacity hover:opacity-80 md:mt-[45px]"
+            className="group mt-26 inline-flex max-w-full transition-opacity hover:opacity-80 md:mt-15"
           >
             <Image
-              width={796}
-              height={94}
+              width={646}
+              height={74}
               alt="info@oneplanetpartners.com"
               src="/images/svg/info.svg"
-              className="h-auto w-[min(100%,796px)]"
+              className="h-auto transition-transform duration-300 ease-out group-hover:scale-150 group-focus-visible:scale-150"
             />
           </Link>
         </div>
