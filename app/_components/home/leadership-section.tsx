@@ -2,17 +2,12 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { Container } from "@/app/_components/container";
 import { cn } from "@/lib/utils";
 
-const DOCK_INFLUENCE_PX = 280;
-const DOCK_MAX_SCALE = 2.0;
-
-function dockScale(distance: number) {
-  const t = Math.max(0, 1 - distance / DOCK_INFLUENCE_PX);
-  return 1 + (DOCK_MAX_SCALE - 1) * Math.pow(t, 1.4);
-}
+const HOVER_SCALE = 192 / 144;
+const DEFAULT_ACTIVE_INDEX = 2;
 
 const leaders = [
   {
@@ -38,115 +33,147 @@ const leaders = [
 ];
 
 const stats = [
-  { value: "25+", label: "years of collaboration" },
-  { value: "USD 15+", label: "billion deal experience" },
-  { value: "65+", label: "transactions across sectors and cycles" },
+  { value: "25+", label: "years of collaboration", desktopLabel: ["years of", "collaboration"] },
+  {
+    value: "USD 15+",
+    label: "billion deal experience",
+    desktopLabel: ["billion deal", "experience"],
+  },
+  {
+    value: "65+",
+    label: "transactions across sectors and cycles",
+    desktopLabel: ["transactions", "across sectors", "and cycles"],
+  },
 ];
 
 export function LeadershipSection() {
-  const dockRef = useRef<HTMLDivElement>(null);
-  const itemRefs = useRef<Array<HTMLElement | null>>([]);
-  const [centers, setCenters] = useState<number[]>([]);
-  const [mouseX, setMouseX] = useState<number | null>(null);
-  const [focusedIndex, setFocusedIndex] = useState<number | null>(null);
-
-  useEffect(() => {
-    const measure = () => {
-      const dock = dockRef.current;
-      if (!dock) return;
-      const dockLeft = dock.getBoundingClientRect().left;
-      setCenters(
-        itemRefs.current.map((el) => {
-          if (!el) return 0;
-          const r = el.getBoundingClientRect();
-          return r.left + r.width / 2 - dockLeft;
-        }),
-      );
-    };
-    measure();
-    window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
-  }, []);
-
-  const distances = centers.map((c) =>
-    mouseX === null ? Number.POSITIVE_INFINITY : Math.abs(mouseX - c),
-  );
-  const closestIndex =
-    mouseX === null || distances.length === 0
-      ? null
-      : distances.reduce((best, d, i) => (d < distances[best] ? i : best), 0);
-  const hoveredIndex =
-    closestIndex !== null && distances[closestIndex] < DOCK_INFLUENCE_PX ? closestIndex : null;
-  const activeIndex = focusedIndex ?? hoveredIndex;
+  const [activeIndex, setActiveIndex] = useState(DEFAULT_ACTIVE_INDEX);
 
   return (
-    <section id="leadership" className="scroll-mt-24 bg-white py-18 text-black md:py-24">
+    <section id="leadership" className="scroll-mt-24 bg-white py-32 text-black md:py-40">
       <Container>
-        <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+        <div className="flex flex-col items-center gap-10 text-center md:hidden">
+          <h2 className="font-serif-brand text-5xl leading-none font-normal tracking-normal">
+            Leadership
+          </h2>
+
+          <div className="flex flex-col gap-6">
+            <h3 className="[font-family:var(--font-source-sans)] text-base leading-tight font-semibold tracking-normal">
+              A Proven Team Building Together Again
+            </h3>
+            <p className="[font-family:var(--font-source-sans)] text-sm leading-6 font-normal tracking-normal text-black/80">
+              Belief in India&apos;s entrepreneurship unites us. We bring strong investment and
+              value-creation expertise, deep history of working together, and marquee relationships
+              across India&apos;s business landscape.
+            </p>
+          </div>
+
+          <div className="grid w-full grid-cols-3">
+            {stats.map((stat, index) => (
+              <div
+                key={stat.value}
+                className={cn(
+                  "px-1 text-center",
+                  index < stats.length - 1 ? "border-r border-black/70" : null,
+                )}
+              >
+                <p className="font-serif-brand text-3xl leading-none font-normal whitespace-nowrap">
+                  {stat.value}
+                </p>
+                <p className="mx-auto mt-2 text-xs leading-snug text-black/62">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid w-full max-w-xs grid-cols-2 gap-x-8 gap-y-10 pt-2">
+            {leaders.map((leader) => (
+              <figure
+                key={leader.name}
+                aria-label={`${leader.name}, ${leader.designation}`}
+                className="flex flex-col items-center text-center"
+              >
+                <div className="relative size-22 overflow-hidden rounded-full bg-[#D9D5D0]">
+                  <Image
+                    fill
+                    sizes="6rem"
+                    src={leader.image}
+                    alt={leader.name}
+                    className="object-cover"
+                  />
+                </div>
+                <figcaption className="mt-3 px-1">
+                  <p className="font-serif-brand text-base leading-tight font-semibold underline decoration-black/45 underline-offset-2">
+                    {leader.name}
+                  </p>
+                  <p className="mt-1 text-xs leading-snug text-black/65">{leader.designation}</p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+
+          <Link
+            href="#team"
+            className="inline-flex items-center rounded-full border border-black px-7 py-2 font-serif-brand text-2xl leading-relaxed font-normal tracking-wide text-black transition hover:border-[#47a685] hover:!text-[#47a685]"
+          >
+            Meet Our People
+          </Link>
+        </div>
+
+        <div className="hidden w-full gap-12 md:grid md:grid-cols-[1.1fr_0.9fr] md:items-center">
           <div>
-            <h2 className="font-serif-brand text-[5rem] leading-[5.625rem] font-normal tracking-[0] text-black">
+            <h2 className="font-serif-brand text-7xl leading-16 font-normal tracking-normal text-black">
               Leadership
             </h2>
-            <div className="mt-12 w-full max-w-[17.5rem] sm:max-w-sm">
-              <h3 className="[font-family:var(--font-source-sans)] text-base leading-tight font-semibold tracking-[0] text-wrap">
+            <div className="mt-18 w-full max-w-136">
+              <h3 className="font-sans-brand text-2xl leading-8 font-semibold tracking-normal whitespace-nowrap">
                 A Proven Team Building Together Again
               </h3>
-              <p className="mt-8 [font-family:var(--font-source-sans)] text-lg leading-7 font-normal tracking-[0] text-wrap text-black/70">
-                Belief in India&apos;s entrepreneurship unites us. We bring strong investment and
-                value-creation expertise, deep history of working together, and marquee
-                relationships across India&apos;s business landscape.
+              <p className="mt-5 font-sans-brand text-2xl leading-7 font-light tracking-normal text-black/70">
+                Belief in India&apos;s entrepreneurship unites us. We bring
+                <br />
+                strong investment and value-creation expertise, deep
+                <br />
+                history of working together, and marquee relationships
+                <br />
+                across India&apos;s business landscape.
               </p>
             </div>
             <Link
               href="#team"
-              className="mt-18 inline-flex items-center rounded-full border border-black px-7 py-2 font-serif-brand text-[1.625rem] leading-none font-normal tracking-[0.03em] transition hover:bg-black hover:text-white"
+              className="mt-12 inline-flex items-center rounded-full border-1 border-black px-7 py-2 font-serif-brand text-xl leading-7 font-normal text-black transition hover:border-[#47a685] hover:!text-[#47a685]"
             >
-              Meet the Team
+              Meet Our People
             </Link>
           </div>
 
-          <div className="md:w-[35rem] md:justify-self-end">
+          <div className="w-140 justify-self-en mr-16">
             <div
-              ref={dockRef}
-              className="mb-16 flex min-h-[14rem] items-start justify-center pt-4 md:min-h-[23rem] md:justify-center"
-              onMouseMove={(event) => {
-                const dock = dockRef.current;
-                if (!dock) return;
-                setMouseX(event.clientX - dock.getBoundingClientRect().left);
-              }}
-              onMouseLeave={() => setMouseX(null)}
+              className="flex min-h-88 items-start justify-center pt-4"
+              onMouseLeave={() => setActiveIndex(DEFAULT_ACTIVE_INDEX)}
             >
               {leaders.map((leader, index) => {
-                const center = centers[index];
-                const distance =
-                  mouseX === null || center === undefined
-                    ? Number.POSITIVE_INFINITY
-                    : Math.abs(mouseX - center);
-                const scale = focusedIndex === index ? DOCK_MAX_SCALE : dockScale(distance);
-                const zIndex = Math.round(scale * 10);
+                const isActive = activeIndex === index;
                 return (
                   <figure
                     key={leader.name}
-                    ref={(el) => {
-                      itemRefs.current[index] = el;
-                    }}
                     aria-label={`${leader.name}, ${leader.designation}`}
                     tabIndex={0}
-                    onFocus={() => setFocusedIndex(index)}
-                    onBlur={() => setFocusedIndex(null)}
-                    style={{ zIndex }}
-                    className="relative -ml-2 flex w-[4.75rem] shrink-0 flex-col items-center text-center first:ml-0 focus-visible:outline-none md:-ml-2 md:w-[9rem]"
+                    onMouseEnter={() => setActiveIndex(index)}
+                    onFocus={() => setActiveIndex(index)}
+                    onBlur={() => setActiveIndex(DEFAULT_ACTIVE_INDEX)}
+                    style={{ zIndex: isActive ? 20 : 10 }}
+                    className="relative -ml-2 flex w-36 shrink-0 flex-col items-center text-center first:ml-0 focus-visible:outline-none"
                   >
                     <div
                       style={{
-                        transform: `scale(${scale})`,
-                        backgroundColor: activeIndex === index ? "#DCDCDC" : "#D9D5D0",
+                        transform: `scale(${isActive ? HOVER_SCALE : 1})`,
+                        backgroundColor: isActive ? "#DCDCDC" : "#D9D5D0",
                       }}
-                      className="relative size-[4.75rem] origin-top overflow-hidden rounded-full transition-[transform,background-color] duration-150 ease-out md:size-[9rem]"
+                      className="relative size-36 origin-top overflow-hidden rounded-full transition-[transform,background-color] duration-200 ease-out"
                     >
                       <Image
                         fill
-                        sizes="(max-width: 768px) 9rem, 10rem"
+                        sizes="10rem"
                         src={leader.image}
                         alt={leader.name}
                         className="object-cover"
@@ -154,8 +181,8 @@ export function LeadershipSection() {
                     </div>
                     <figcaption
                       className={cn(
-                        "pointer-events-none absolute left-1/2 top-[10rem] w-[13rem] -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-300 ease-out md:top-[19rem]",
-                        activeIndex === index ? "translate-y-0 opacity-100" : null,
+                        "pointer-events-none absolute left-1/2 top-52 w-52 -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-300 ease-out",
+                        isActive ? "translate-y-0 opacity-100" : null,
                       )}
                     >
                       <p className="font-serif-brand text-base leading-tight font-semibold underline decoration-black/45 underline-offset-2">
@@ -169,20 +196,24 @@ export function LeadershipSection() {
                 );
               })}
             </div>
-            <div className="grid md:grid-cols-3">
+            <div className="-mt-15 grid grid-cols-[0.75fr_1fr_0.75fr]">
               {stats.map((stat, index) => (
                 <div
                   key={stat.value}
                   className={cn(
-                    "px-0 text-center md:px-4",
-                    index < stats.length - 1 ? "md:border-r md:border-black/70" : null,
+                    "px-4 text-center",
+                    index < stats.length - 1 ? "border-r border-black/70" : null,
                   )}
                 >
-                  <p className="font-serif-brand text-[2.75rem] leading-[3rem] font-normal tracking-[0] whitespace-nowrap">
+                  <p className="font-serif-brand text-4xl leading-10 font-normal tracking-normal whitespace-nowrap">
                     {stat.value}
                   </p>
-                  <p className="mx-auto mt-3 max-w-36 text-base leading-6 text-black/62">
-                    {stat.label}
+                  <p className="mx-auto mt-3 max-w-44 font-sans-brand text-2xl leading-7 font-light tracking-normal text-black/62">
+                    {stat.desktopLabel.map((line) => (
+                      <span key={line} className="block">
+                        {line}
+                      </span>
+                    ))}
                   </p>
                 </div>
               ))}
