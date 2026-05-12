@@ -2,24 +2,21 @@ import { Container } from "@/app/_components/container";
 import { DifferentiatorDesktopCards } from "@/app/_components/home/differentiator-desktop-cards";
 import { DifferentiatorMobileCards } from "@/app/_components/home/differentiator-mobile-cards";
 
-const differentiatorCopy =
-  "We take ownership stakes and act like owners. Capital is only the starting point. What we bring beyond that — strategic insight, operational discipline, governance, and access to deep networks — is where the value is built. We are not advisors on the sidelines, but partners with skin in the game.";
-
 const differentiators = [
   {
-    title: "Business Builders, Not Passive Capital",
+    title: "Business builders, not passive capital",
     image: "/images/svg/differentiaror-image1.svg",
-    copy: differentiatorCopy,
+    copy: "We take meaningful stakes and act as owners. Capital is just the start. What we bring beyond that — strategic insight, value creation mindset, operational expertise, governance, and deep networks — is where the value is built.",
   },
   {
-    title: "Institutional, Yet Entrepreneurial",
+    title: "Institutional, yet entrepreneurial",
     image: "/images/svg/differentiator-image2.svg",
-    copy: differentiatorCopy,
+    copy: "We combine big-firm discipline with start-up energy. Institutional rigour and governance, and entrepreneurial speed and flexibility.",
   },
   {
     title: "Climate Positive DNA",
     image: "/images/svg/differentiator-image3.svg",
-    copy: differentiatorCopy,
+    copy: "We build businesses that outperform financially, with the firm conviction that good businesses are also responsible businesses.",
   },
 ];
 
