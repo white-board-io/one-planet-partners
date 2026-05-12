@@ -1,9 +1,4 @@
-export const navigationItems = [
-  "Leadership",
-  "Investment Philosophy",
-  "Value Creation",
-  "Contact",
-];
+export const navigationItems = ["Leadership", "Investment Philosophy", "Value Creation", "Contact"];
 
 export const heroContent = {
   title: {
