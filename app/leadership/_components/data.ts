@@ -22,10 +22,10 @@ export const people: Person[] = [
     designation: "Founder & General Partner",
     image: "/images/leadership/Mukund%20Rajan.png",
     bio: [
-      "Dr. Rajan is one of India's earliest and best recognized professionals in sustainability and climate. Previously, he was Chairman of the Tata Global Sustainability Council and member of the apex Group Executive Council of the Tata Group.",
-      "In 2019, he founded ECube Investment Advisors, which evangelizes sustainability practices in India. Mukund mentors the Environment & Climate Change Committee of FICCI (Federation of Indian Chambers of Commerce & Industry) and has served as Commissioner of the global Energy Transitions Commission. He has authored 2 books on climate policy and sustainability.",
-      "In his 23 years with the Tata group, he worked closely with successive Tata Group Chairpersons, served on multiple Tata boards, and was the youngest CEO of a listed Tata company. He led Tata's private equity business (AUM of USD 1 Bn) as its first Managing Partner where he set up the mid-market focused Tata Opportunities Fund with Bobby in 2010-11.",
-      "Dr Rajan holds an M.Phil and D.Phil in International Relations as a Rhodes Scholar at Oxford University and a B.Tech from IIT Delhi.",
+      "Mukund is one of India's earliest and best recognized professionals in sustainability and climate. Previously, he was Chairman of the Tata Global Sustainability Council, member of the apex Group Executive Council, and the first Brand Custodian of the Tata Group.",
+      "In 2019, he founded ECube Investment Advisors, which evangelizes sustainability practices in India. Mukund is a member of the Steering Committee of FICCI (Federation of Indian Chambers of Commerce & Industry). He has served as Commissioner of the global Energy Transitions Commission, and has authored two books on climate policy and sustainability.",
+      "In his 23 years with the Tata Group, he worked closely with successive Tata Group Chairpersons, served on multiple Tata boards, and was the youngest CEO of a major listed Tata company. He led Tata's private equity business (AUM of USD 1 Bn+) and set up the mid-market focused Tata Opportunities Fund with Bobby in 2010-11, where he served as the founding Managing Partner.",
+      "Mukund holds an M.Phil and D.Phil in International Relations as a Rhodes Scholar at Oxford University and a B.Tech from IIT Delhi.",
     ],
     social: {
       linkedin: "https://linkedin.com/in/mukundrajan",
@@ -40,9 +40,9 @@ export const people: Person[] = [
     designation: "Founder & General Partner",
     image: "/images/leadership/Bobby%20Pauly.png",
     bio: [
-      "Bobby Pauly brings over two decades of private equity experience across India's mid-market landscape. He has been instrumental in building value across multiple investment cycles and sectors.",
-      "Prior to One Planet Partners, Bobby co-led the Tata Opportunities Fund alongside Dr. Mukund Rajan, where he oversaw a portfolio of high-growth mid-market businesses across India.",
-      "Bobby holds an MBA from a leading business school and has deep expertise in operational value creation, board governance, and strategic exits.",
+      "Bobby brings two decades of private equity leadership in India. He co-founded Tata's pioneering private equity business in 2007 as its first employee, having earlier authored the business plan adopted by Tata Capital. In 2010, he partnered with Mukund to launch the ~USD 600 Mn Tata Opportunities Fund (TOF) — a mid-market growth and buyout fund backed by marquee global investors with average commitments of USD 75 Mn. Bobby spent 15 years building a multi-strategy platform at Tata PE, leading landmark investments across industrials, automotive, logistics, hospitality and mobility, and serving on market-leading portfolio boards as Managing Partner.",
+      "Earlier, Bobby was a senior leader at Tata Strategic Management Group, where he built new consumer and retail ventures for Tata and drove deep strategic initiatives across mobility, manufacturing, industrials and energy in India and overseas. He also led the firm's private equity practice.",
+      "Bobby holds a management degree from IIM Calcutta and graduated from the Mechanical Engineering program of College of Engineering, Guindy.",
     ],
     social: {
       linkedin: "https://linkedin.com/in/bobbypauly",
@@ -55,9 +55,10 @@ export const people: Person[] = [
     designation: "Founder & General Partner",
     image: "/images/leadership/Mrinalini%20Mirchandani.png",
     bio: [
-      "Mrinalini Mirchandani is a seasoned investment professional with extensive experience in private equity across emerging markets, with a particular focus on India's high-growth sectors.",
-      "She has led several landmark transactions across consumer, healthcare, and technology sectors, bringing both financial acumen and operational expertise to portfolio companies.",
-      "Mrinalini is passionate about sustainability-linked value creation and plays a central role in integrating ESG practices across the One Planet Partners investment process.",
+      "Mrinalini brings over two decades of experience advising leading Indian and global organizations on strategy, private equity, M&A, talent & business transformation.",
+      "She is the first and only woman to be elected Senior Partner in McKinsey's 34-year history in India. Over 15+ years at the firm, she held multiple leadership roles, including heading McKinsey's Private Equity practice in India. In that capacity, she advised leading global and Indian PE funds on investment diligence and portfolio value creation.",
+      "Earlier, Mrinalini led Healthcare and Consumer Investment Banking for Merrill Lynch in India as well as Healthcare recruiting for Egon Zehnder in India. In 2018, she featured in the Economic Times list of India's 40 Under Forty Young Business Leaders.",
+      "Mrinalini holds a management degree from IIM Calcutta and a B.Com from Mumbai University.",
     ],
     social: {
       linkedin: "https://linkedin.com/in/mrinalinim",
@@ -67,12 +68,12 @@ export const people: Person[] = [
   {
     id: "sheetal",
     name: "Sheetal Thakkar",
-    designation:"Founder & General Partner",
+    designation: "Founder & General Partner",
     image: "/images/leadership/Sheetal%20Thakkar.png",
     bio: [
-      "Sheetal Thakkar leads investor relations at One Planet Partners, bringing a deep understanding of LP relationships and fund strategy communications built over many years in the financial services industry.",
-      "She has extensive experience working with institutional investors, family offices, and sovereign wealth funds across Asia, the Middle East, and global markets.",
-      "Sheetal is committed to building transparent, long-term partnerships with investors and plays a critical role in articulating One Planet Partners' investment thesis and impact story.",
+      "Sheetal is an investment professional with over 15 years of experience in private equity investing and leveraged finance across the US and Emerging Markets. She worked with The Blackstone Group and Odyssey Investment Partners in New York, before moving to Mumbai to join Tata's inaugural Private Equity team along with Bobby and Mukund.",
+      "More recently, Sheetal helped build the Global Sustainability Leadership Practice at Russell Reynolds in Washington DC, where she worked at the intersection of private equity and climate. She serves on the Steering Committee of Allocator Collective, where she leads initiatives enhancing diversity in asset management.",
+      "Sheetal holds an MBA from the Wharton School and a BS from NYU's Stern School of Business.",
     ],
     social: {
       linkedin: "https://linkedin.com/in/sheetalthakkar",
