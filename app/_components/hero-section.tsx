@@ -13,8 +13,8 @@ const statementLines = [
   "India-focused private equity firm",
   "investing in mid-market",
   "businesses where active ownership,",
-  "operational rigor, and climate",
-  "intelligence create enduring value.",
+  "operational expertise, and climate",
+  "insight create enduring value.",
 ];
 
 const STATEMENT_REVEAL_TIME = 0.5;
@@ -140,7 +140,7 @@ export function HeroSection() {
           className="pointer-events-none absolute inset-0 z-5"
           style={{
             background:
-              "linear-gradient(90.16deg, #000000 -17.28%, rgba(0, 0, 0, 0.5) 64.26%, rgba(0, 0, 0, 0) 99.86%)",
+              "linear-gradient(90.16deg, rgba(0, 0, 0, 0.58) -17.28%, rgba(0, 0, 0, 0.28) 64.26%, rgba(0, 0, 0, 0) 99.86%)",
           }}
         />
 
@@ -164,7 +164,12 @@ export function HeroSection() {
                   <span
                     key={line}
                     data-statement-line
-                    className={cn("block my-1.5", index < 3 ? "italic" : "font-light")}
+                    className={cn(
+                      "block my-1.5",
+                      index < 3
+                        ? "italic"
+                        : "[font-family:var(--font-source-sans)] font-light tracking-normal not-italic",
+                    )}
                   >
                     {line}
                   </span>
