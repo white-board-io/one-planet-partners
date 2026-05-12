@@ -36,10 +36,16 @@
   --text-body-lg--line-height: 2.25rem;
   --text-body-md: 1.5rem;
   --text-body-md--line-height: 2.125rem;
-  --text-body-sm: 1.25rem;
+  --text-body-sm: 1.2rem;
   --text-body-sm--line-height: 2rem;
   --text-body-xs: 1.125rem;
   --text-body-xs--line-height: 1.5rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.2rem;
+  --text-4xl: 3.1rem;
+  --text-5xl: 1.5rem;
+  --text-6xl: 3.2rem;
+  --text-7xl: 3.5rem;
 }
 
 * {

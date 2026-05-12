@@ -137,7 +137,7 @@ export function HeroSection() {
         </div>
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-[5]"
+          className="pointer-events-none absolute inset-0 z-5"
           style={{
             background:
               "linear-gradient(90.16deg, #000000 -17.28%, rgba(0, 0, 0, 0.5) 64.26%, rgba(0, 0, 0, 0) 99.86%)",
@@ -156,7 +156,7 @@ export function HeroSection() {
           </div>
         </Container>
 
-        <div className="pointer-events-none absolute inset-0 z-20 flex h-full translate-y-9 items-center py-8 font-serif-brand text-2xl leading-[1.08] md:translate-y-10 md:text-3xl xl:text-5xl">
+        <div className="pointer-events-none absolute inset-0 z-20 flex h-full translate-y-9 items-center py-8 font-serif-brand text-2xl leading-none md:translate-y-10 md:text-3xl xl:text-5xl">
           <Container>
             <div ref={statementRef} className="text-white" style={{ opacity: 0 }}>
               <h2>

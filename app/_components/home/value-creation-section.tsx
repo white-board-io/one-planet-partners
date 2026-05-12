@@ -3,7 +3,8 @@ import Image from "next/image";
 import { Container } from "@/app/_components/container";
 import { cn } from "@/lib/utils";
 
-type ValueIcon = ComponentType<SVGProps<SVGSVGElement>>;
+type ValueIconProps = Pick<SVGProps<SVGSVGElement>, "className" | "aria-hidden">;
+type ValueIcon = ComponentType<ValueIconProps>;
 
 const valueItems: Array<{ copy: string; icon: ValueIcon; copyClassName?: string }> = [
   {
@@ -25,11 +26,11 @@ const valueItems: Array<{ copy: string; icon: ValueIcon; copyClassName?: string 
   {
     copy: "Better reporting, tighter controls and stronger governance. Climate integrated.",
     icon: ReportingIcon,
-    copyClassName: "max-w-[13.25rem]",
+    copyClassName: "max-w-53",
   },
   {
     copy: "Step-up exit maturity, multiply pathways to exit.",
-    icon: ExitIcon,
+    icon: FootprintIcon,
   },
 ];
 
@@ -37,7 +38,7 @@ export function ValueCreationSection() {
   return (
     <section
       id="value-creation"
-      className="scroll-mt-24 bg-white pt-[8.2rem] pb-28 text-black md:min-h-screen md:py-36 lg:py-[11.25rem]"
+      className="scroll-mt-24 bg-white pt-41 pb-36 text-black md:min-h-screen md:py-44 lg:py-53"
     >
       <Container>
         <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
@@ -46,27 +47,32 @@ export function ValueCreationSection() {
             alt="One Planet Partners"
             width={84}
             height={84}
-            className="size-[3.25rem] md:size-[5.25rem]"
+            className="size-13 md:size-21"
             priority={false}
           />
 
-          <h2 className="mt-6 max-w-[14.75rem] font-serif-brand text-[2.45rem] leading-[2.55rem] font-normal tracking-normal text-black md:mt-8 md:max-w-none md:text-[3.75rem] md:leading-[4.1rem]">
+          <h2 className="mt-6 max-w-59 font-serif-brand text-4xl leading-10 font-normal tracking-normal text-black md:mt-8 md:max-w-none md:text-7xl md:leading-16">
             How We Create Value
           </h2>
 
-          <p className="mt-8 max-w-[21.5rem] font-sans-brand text-[1.16rem] leading-[1.62rem] font-light text-black/72 md:mt-5 md:max-w-[53rem] md:text-base md:leading-[1.65rem]">
-            We approach every investment with an owner’s mindset. Tailored to mid-market businesses,
-            our value creation framework unlocks stronger growth, greater resilience, climate
-            positivity and higher-quality exits.
+          <p className="mt-8 font-sans-brand text-xl leading-8 font-light text-black md:mt-5 md:text-xl lg:text-2xl lg:leading-7">
+            <span className="block">
+              We approach every investment with an owner’s mindset. Tailored to mid-market
+              businesses, our value creation framework
+            </span>
+            <span className="block">
+              unlocks stronger growth, greater resilience, climate positivity and higher-quality
+              exits.
+            </span>
           </p>
 
-          <div className="mt-[4.35rem] grid w-full grid-cols-2 gap-x-7 gap-y-[4.4rem] sm:gap-x-12 md:mt-[4.5rem] md:grid-cols-3 md:gap-x-20 md:gap-y-24">
+          <div className="mt-17 grid w-full grid-cols-2 gap-x-7 gap-y-18 sm:gap-x-12 md:mt-18 md:grid-cols-3 md:gap-x-20 md:gap-y-24">
             {valueItems.map(({ copy, icon: Icon, copyClassName }) => (
               <div key={copy} className="flex flex-col items-center">
                 <Icon aria-hidden="true" className="h-8 w-8 text-black/85" />
                 <p
                   className={cn(
-                    "mt-9 max-w-[11.5rem] font-serif-brand text-[1.45rem] leading-[1.5rem] font-normal text-black md:mt-6 md:max-w-[16rem] md:text-[1.45rem] md:leading-[1.9rem]",
+                    "mt-9 max-w-46 font-serif-brand text-2xl leading-6 font-normal text-black md:mt-6 md:max-w-64 md:text-3xl md:leading-8",
                     copyClassName,
                   )}
                 >
@@ -81,7 +87,7 @@ export function ValueCreationSection() {
   );
 }
 
-function StrategyIcon(props: SVGProps<SVGSVGElement>) {
+function StrategyIcon(props: ValueIconProps) {
   return (
     <svg viewBox="0 0 32 32" fill="none" {...props}>
       <path
@@ -102,44 +108,69 @@ function StrategyIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-function GrowthIcon(props: SVGProps<SVGSVGElement>) {
+function GrowthIcon(props: ValueIconProps) {
   return (
-    <svg viewBox="0 0 32 32" fill="none" {...props}>
-      <path
-        d="M4 25h4V13m6 12V6m6 19V16m-3 9 9-9"
-        stroke="currentColor"
-        strokeWidth="3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M25 16h4v4"
-        stroke="currentColor"
-        strokeWidth="3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
+    <svg
+      width="40"
+      height="40"
+      viewBox="0 0 48 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <mask
+        id="mask0_1297_993"
+        style={{ maskType: "alpha" }}
+        maskUnits="userSpaceOnUse"
+        x="0"
+        y="0"
+        width="48"
+        height="48"
+      >
+        <rect width="48" height="48" fill="#D9D9D9" />
+      </mask>
+      <g mask="url(#mask0_1297_993)">
+        <path
+          d="M15.5992 27.6502V11.7002H20.6992V27.4002L18.1492 25.0502L15.5992 27.6502ZM25.5992 31.9502V3.4502H30.6492V26.8502L25.5992 31.9502ZM5.64922 37.5002V20.0002H10.6992V32.4502L5.64922 37.5002ZM4.69922 42.6002L18.2492 29.0502L25.6992 35.6002L39.1992 22.1002H34.9992V17.9502H46.2992V29.1502H42.1492V25.0002L25.7492 41.4002L18.3992 34.6502L10.4992 42.6002H4.69922Z"
+          fill="#1C1B1F"
+        />
+      </g>
     </svg>
   );
 }
 
-function CapitalIcon(props: SVGProps<SVGSVGElement>) {
+function CapitalIcon(props: ValueIconProps) {
   return (
-    <svg viewBox="0 0 32 32" fill="none" {...props}>
-      <rect x="6" y="5" width="20" height="14" rx="2" stroke="currentColor" strokeWidth="3" />
-      <circle cx="16" cy="12" r="2.5" fill="currentColor" />
-      <path
-        d="M7 25h18m0 0-4-4m4 4-4 4m-14-4 4-4m-4 4 4 4"
-        stroke="currentColor"
-        strokeWidth="3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
+    <svg
+      width="40"
+      height="40"
+      viewBox="0 0 48 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <mask
+        id="mask0_1374_304"
+        style={{ maskType: "alpha" }}
+        maskUnits="userSpaceOnUse"
+        x="0"
+        y="0"
+        width="48"
+        height="48"
+      >
+        <rect width="48" height="48" fill="#D9D9D9" />
+      </mask>
+      <g mask="url(#mask0_1374_304)">
+        <path
+          d="M12 48.2L2.75 38.9L12 29.7L15.3 33.05L11.8 36.55H36.2L32.7 33.05L36.1 29.7L45.3 38.925L36.05 48.2L32.7 44.85L36.3 41.25H11.8L15.3 44.85L12 48.2ZM23.988 19.6C22.596 19.6 21.4167 19.1127 20.45 18.138C19.4833 17.1637 19 15.9803 19 14.588C19 13.2293 19.4873 12.0583 20.462 11.075C21.4363 10.0917 22.6197 9.6 24.012 9.6C25.404 9.6 26.5833 10.0957 27.55 11.087C28.5167 12.078 29 13.253 29 14.612C29 16.004 28.5127 17.1833 27.538 18.15C26.5637 19.1167 25.3803 19.6 23.988 19.6ZM9.4 28.3C8.10733 28.3 7.00083 27.8348 6.0805 26.9045C5.16017 25.9745 4.7 24.8563 4.7 23.55V5.7C4.7 4.40767 5.16017 3.30117 6.0805 2.3805C7.00083 1.46017 8.10733 1 9.4 1H38.55C39.8563 1 40.9745 1.46017 41.9045 2.3805C42.8348 3.30117 43.3 4.40767 43.3 5.7V23.55C43.3 24.8563 42.8348 25.9745 41.9045 26.9045C40.9745 27.8348 39.8563 28.3 38.55 28.3H9.4ZM13.85 24.1H34.1C34.1 22.7333 34.5917 21.5583 35.575 20.575C36.5583 19.5917 37.7333 19.1 39.1 19.1V10.1C37.7333 10.1 36.5583 9.61667 35.575 8.65C34.5917 7.68333 34.1 6.5 34.1 5.1H13.8395C13.8395 6.5 13.3578 7.68333 12.3945 8.65C11.4315 9.61667 10.25 10.1 8.85 10.1V19.1C10.25 19.1 11.4333 19.5917 12.4 20.575C13.3667 21.5583 13.85 22.7333 13.85 24.1Z"
+          fill="#1C1B1F"
+        />
+      </g>
     </svg>
   );
 }
 
-function TalentIcon(props: SVGProps<SVGSVGElement>) {
+function TalentIcon(props: ValueIconProps) {
   return (
     <svg viewBox="0 0 32 32" fill="none" {...props}>
       <circle cx="16" cy="15" r="3.25" stroke="currentColor" strokeWidth="3" />
@@ -154,7 +185,7 @@ function TalentIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-function ReportingIcon(props: SVGProps<SVGSVGElement>) {
+function ReportingIcon(props: ValueIconProps) {
   return (
     <svg viewBox="0 0 32 32" fill="none" {...props}>
       <circle cx="16" cy="16" r="5" fill="currentColor" />
@@ -168,20 +199,15 @@ function ReportingIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-function ExitIcon(props: SVGProps<SVGSVGElement>) {
+function FootprintIcon({ className, "aria-hidden": ariaHidden }: ValueIconProps) {
   return (
-    <svg viewBox="0 0 32 32" fill="none" {...props}>
-      <path
-        d="M11.5 5c4 0 5.5 12 1.5 12S7.5 5 11.5 5Zm9 10c4 0 4 12 0 12s-4-12 0-12Z"
-        stroke="currentColor"
-        strokeWidth="3"
-      />
-      <path
-        d="M13 17c1.6 2.8 4 4.2 7 4.2"
-        stroke="currentColor"
-        strokeWidth="3"
-        strokeLinecap="round"
-      />
-    </svg>
+    <Image
+      src="/images/svg/footprint.svg"
+      alt=""
+      width={32}
+      height={32}
+      className={className}
+      aria-hidden={ariaHidden}
+    />
   );
 }
