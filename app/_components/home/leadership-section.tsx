@@ -112,7 +112,7 @@ export function LeadershipSection() {
           </div>
 
           <Link
-            href="#team"
+            href="/leadership"
             className="inline-flex items-center rounded-full border border-black px-7 py-2 font-serif-brand text-2xl leading-relaxed font-normal tracking-wide text-black transition hover:border-[#47a685] hover:!text-[#47a685]"
           >
             Meet Our People
@@ -139,7 +139,7 @@ export function LeadershipSection() {
               </p>
             </div>
             <Link
-              href="#team"
+              href="/leadership"
               className="mt-12 inline-flex items-center rounded-full border-1 border-black px-7 py-2 font-serif-brand text-xl leading-7 font-normal text-black transition hover:border-[#47a685] hover:!text-[#47a685]"
             >
               Meet Our People

@@ -28,19 +28,19 @@ export function FooterSection() {
     <footer className="border-t border-white/25 bg-black text-white">
       <div className="border-b border-white/20">
         <Container>
-          <div className="grid pt-25 pb-21 md:grid-cols-[340px_1fr_309px] md:items-start md:gap-0 md:pt-25 md:pb-25">
-            <div className="order-2 mt-11 w-full max-w-full border-white/50 md:order-1 md:mt-0 md:border-y">
+          <div className="grid pt-25 pb-21 lg:grid-cols-[minmax(0,25rem)_minmax(12rem,1fr)_minmax(18rem,26rem)] lg:items-start lg:gap-0 lg:pt-25 lg:pb-25">
+            <div className="order-2 mt-11 w-full max-w-full border-white/50 lg:order-1 lg:mt-0 lg:border-y">
               {socialLinks.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
                   aria-label={item.label}
-                  className="grid h-17 grid-cols-[1fr_auto] items-center border-b border-white/50 font-sans-brand text-base leading-none text-white transition-colors hover:text-white/70 md:h-15 md:grid-cols-[122px_1fr] md:text-5xl md:last:border-b-0"
+                  className="grid h-17 grid-cols-[2.5rem_minmax(0,1fr)] items-center border-b border-white/50 font-sans-brand text-base leading-none text-white transition-colors hover:text-white/70 lg:h-15 lg:grid-cols-[3.5rem_minmax(0,1fr)] lg:text-[1.75rem] lg:last:border-b-0 xl:text-[2rem]"
                 >
-                  <span className="flex h-6 w-6 items-center justify-start md:h-7 md:w-7">
+                  <span className="flex h-6 w-6 items-center justify-start lg:h-7 lg:w-7">
                     {item.icon}
                   </span>
-                  <span>{item.handle}</span>
+                  <span className="min-w-0 truncate pl-2 lg:pl-14">{item.handle}</span>
                 </Link>
               ))}
             </div>
@@ -48,7 +48,7 @@ export function FooterSection() {
             <Link
               href="/"
               aria-label="One Planet Partners home"
-              className="order-1 justify-self-center md:order-2"
+              className="order-1 justify-self-center lg:order-2"
             >
               <Image
                 width={366}
@@ -59,7 +59,7 @@ export function FooterSection() {
               />
             </Link>
 
-            <address className="order-3 w-full border-white/30 pt-7 not-italic md:mt-1 md:border-y md:py-7">
+            <address className="order-3 w-full border-white/30 pt-7 not-italic lg:mt-1 lg:border-y lg:py-7">
               <div className="flex items-start gap-5">
                 <MapPinIcon />
                 <div>
