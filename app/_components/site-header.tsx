@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/app/_components/container";
 import { MobileNav } from "@/app/_components/mobile-nav";
+import { PrimaryNav } from "@/app/_components/primary-nav";
 
 export type NavLink = {
   label: string;
@@ -35,21 +36,8 @@ export function SiteHeader({ basePath = "" }: SiteHeaderProps) {
             className="h-auto w-37.5"
           />
         </Link>
-        <nav
-          aria-label="Primary navigation"
-          className="hidden items-center gap-6 font-sans-brand lg:flex"
-        >
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={`${basePath}${link.href}`}
-              className="text-right text-body-sm font-normal tracking-normal text-brand-black not-italic transition-colors hover:text-black/60"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-        <MobileNav links={navLinks} />
+        <PrimaryNav basePath={basePath} links={navLinks} />
+        <MobileNav basePath={basePath} links={navLinks} />
       </Container>
     </header>
   );

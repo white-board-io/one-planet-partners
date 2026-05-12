@@ -23,17 +23,15 @@ export function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const viewportRef = useRef<HTMLDivElement>(null);
   const statementRef = useRef<HTMLDivElement>(null);
-  const backgroundRef = useRef<HTMLDivElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
     const section = sectionRef.current;
     const viewport = viewportRef.current;
     const statement = statementRef.current;
-    const background = backgroundRef.current;
     const headline = headlineRef.current;
 
-    if (!section || !viewport || !background || !headline || !statement) {
+    if (!section || !viewport || !headline || !statement) {
       return;
     }
 
@@ -108,7 +106,6 @@ export function HeroSection() {
       });
 
       scrollTimeline
-        .to(background, { scale: 1.08, yPercent: -7, duration: 1 }, 0)
         .to(headline, { yPercent: -118, duration: 0.42 }, 0.04)
         .to(headline, { opacity: 0, duration: 0.18 }, 0.28)
         .to(statement, { opacity: 1, y: 0, duration: 0.08 }, 0.42)
@@ -120,8 +117,11 @@ export function HeroSection() {
 
   return (
     <section ref={sectionRef} className="relative isolate bg-black" style={{ minHeight: "180vh" }}>
-      <div ref={viewportRef} className="sticky top-0 h-svh min-h-155 overflow-hidden sm:min-h-175">
-        <div ref={backgroundRef} className="absolute inset-0">
+      <div
+        ref={viewportRef}
+        className="sticky top-[5.5rem] h-[calc(100svh-5.5rem)] overflow-hidden"
+      >
+        <div className="absolute inset-0">
           <video
             autoPlay
             muted

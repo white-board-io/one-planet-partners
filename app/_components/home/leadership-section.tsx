@@ -11,21 +11,25 @@ const DEFAULT_ACTIVE_INDEX = 0;
 
 const leaders = [
   {
+    id: "mukund",
     name: "Dr. Mukund Rajan",
     designation: "Founder & General Partner",
     image: "/images/svg/leadership-image1.svg",
   },
   {
+    id: "bobby",
     name: "Mr. Bobby Pauly",
     designation: "Founder & General Partner",
     image: "/images/svg/leadership-image2.svg",
   },
   {
+    id: "mrinalini",
     name: "Mrinalini Mirchandani",
     designation: "Founder & General Partner",
     image: "/images/svg/leadership-image3.svg",
   },
   {
+    id: "sheetal",
     name: "Sheetal Thakkar",
     designation: "Founder & General Partner",
     image: "/images/svg/leadership-image4.svg",
@@ -88,11 +92,15 @@ export function LeadershipSection() {
           <div className="grid w-full max-w-xs grid-cols-2 gap-x-8 gap-y-10 pt-2">
             {leaders.map((leader) => (
               <figure
-                key={leader.name}
+                key={leader.id}
                 aria-label={`${leader.name}, ${leader.designation}`}
                 className="flex flex-col items-center text-center"
               >
-                <div className="relative size-22 overflow-hidden rounded-full bg-[#D9D5D0]">
+                <Link
+                  href={`/leadership/${leader.id}`}
+                  aria-label={`Read ${leader.name}'s bio`}
+                  className="relative block size-22 overflow-hidden rounded-full bg-[#D9D5D0]"
+                >
                   <Image
                     fill
                     sizes="6rem"
@@ -100,11 +108,15 @@ export function LeadershipSection() {
                     alt={leader.name}
                     className="object-cover"
                   />
-                </div>
+                </Link>
                 <figcaption className="mt-3 px-1">
-                  <p className="font-serif-brand text-base leading-tight font-semibold underline decoration-black/45 underline-offset-2">
+                  <Link
+                    href={`/leadership/${leader.id}`}
+                    aria-label={`Read ${leader.name}'s bio`}
+                    className="font-serif-brand text-base leading-tight font-semibold underline decoration-black/45 underline-offset-2"
+                  >
                     {leader.name}
-                  </p>
+                  </Link>
                   <p className="mt-1 text-xs leading-snug text-black/65">{leader.designation}</p>
                 </figcaption>
               </figure>
@@ -155,7 +167,7 @@ export function LeadershipSection() {
                 const isActive = activeIndex === index;
                 return (
                   <figure
-                    key={leader.name}
+                    key={leader.id}
                     aria-label={`${leader.name}, ${leader.designation}`}
                     tabIndex={0}
                     onMouseEnter={() => setActiveIndex(index)}
@@ -171,23 +183,33 @@ export function LeadershipSection() {
                       }}
                       className="relative size-36 origin-center overflow-hidden rounded-full transition-[transform,background-color] duration-200 ease-out"
                     >
-                      <Image
-                        fill
-                        sizes="10rem"
-                        src={leader.image}
-                        alt={leader.name}
-                        className="object-cover"
-                      />
+                      <Link
+                        href={`/leadership/${leader.id}`}
+                        aria-label={`Read ${leader.name}'s bio`}
+                        className="absolute inset-0 block"
+                      >
+                        <Image
+                          fill
+                          sizes="10rem"
+                          src={leader.image}
+                          alt={leader.name}
+                          className="object-cover"
+                        />
+                      </Link>
                     </div>
                     <figcaption
                       className={cn(
-                        "pointer-events-none absolute left-1/2 top-48 w-52 -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-300 ease-out",
+                        "absolute left-1/2 top-48 w-52 -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-300 ease-out",
                         isActive ? "translate-y-0 opacity-100" : null,
                       )}
                     >
-                      <p className="font-serif-brand text-base leading-tight font-semibold underline decoration-black/45 underline-offset-2">
+                      <Link
+                        href={`/leadership/${leader.id}`}
+                        aria-label={`Read ${leader.name}'s bio`}
+                        className="font-serif-brand text-base leading-tight font-semibold underline decoration-black/45 underline-offset-2"
+                      >
                         {leader.name}
-                      </p>
+                      </Link>
                       <p className="text-xs leading-snug text-black/65">{leader.designation}</p>
                     </figcaption>
                   </figure>

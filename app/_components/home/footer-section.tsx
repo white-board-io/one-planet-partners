@@ -25,7 +25,7 @@ const socialLinks = [
 
 export function FooterSection() {
   return (
-    <footer className="border-t border-white/25 bg-black text-white">
+    <footer id="contact" className="scroll-mt-24 border-t border-white/25 bg-black text-white">
       <div className="border-b border-white/20">
         <Container>
           <div className="grid pt-25 pb-21 lg:grid-cols-[minmax(0,25rem)_minmax(12rem,1fr)_minmax(18rem,26rem)] lg:items-start lg:gap-0 lg:pt-25 lg:pb-25">
@@ -81,7 +81,7 @@ export function FooterSection() {
       </div>
 
       <Container className="max-w-307">
-        <p className="py-12 font-sans-brand text-xs leading-4 text-white md:py-8 md:text-sm">
+        <p className="py-12 text-center font-sans-brand text-xs leading-4 text-white md:py-8 md:text-sm">
           One Planet Partners Copyright &copy; 2026. All rights reserved.
         </p>
       </Container>

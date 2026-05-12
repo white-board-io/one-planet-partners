@@ -165,11 +165,9 @@ export function FocusSection() {
                     mid-market businesses
                   </em>{" "}
                   positioned to benefit from India’s industrial growth, infrastructure buildout,
-                  rising domestic
                 </span>
                 <span className="block whitespace-nowrap">
-                  consumption, and transition toward a more sustainable economy. Strong micro in a
-                  supportive macro.
+                  rising domestic consumption, and transition toward a more sustainable economy.
                 </span>
               </span>
             </p>
