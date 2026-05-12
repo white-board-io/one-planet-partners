@@ -55,10 +55,15 @@ export function ValueCreationSection() {
             How We Create Value
           </h2>
 
-          <p className="mt-8 max-w-86 font-sans-brand text-lg leading-7 font-light text-black md:mt-5 md:max-w-212 md:text-base  md:leading-7">
-            We approach every investment with an owner’s mindset. Tailored to mid-market businesses,
-            our value creation framework unlocks stronger growth, greater resilience, climate
-            positivity and higher-quality exits.
+          <p className="mt-8 font-sans-brand text-xl leading-8 font-light text-black md:mt-5 md:text-xl lg:text-2xl lg:leading-7">
+            <span className="block">
+              We approach every investment with an owner’s mindset. Tailored to mid-market
+              businesses, our value creation framework
+            </span>
+            <span className="block">
+              unlocks stronger growth, greater resilience, climate positivity and higher-quality
+              exits.
+            </span>
           </p>
 
           <div className="mt-17 grid w-full grid-cols-2 gap-x-7 gap-y-18 sm:gap-x-12 md:mt-18 md:grid-cols-3 md:gap-x-20 md:gap-y-24">
