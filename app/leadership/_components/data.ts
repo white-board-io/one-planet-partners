@@ -37,7 +37,7 @@ export const people: Person[] = [
   {
     id: "bobby",
     name: "Bobby Pauly",
-    designation: "Managing Partner",
+    designation: "Founder & General Partner",
     image: "/images/leadership/Bobby%20Pauly.png",
     bio: [
       "Bobby Pauly brings over two decades of private equity experience across India's mid-market landscape. He has been instrumental in building value across multiple investment cycles and sectors.",
@@ -52,7 +52,7 @@ export const people: Person[] = [
   {
     id: "mrinalini",
     name: "Mrinalini Mirchandani",
-    designation: "Managing Partner",
+    designation: "Founder & General Partner",
     image: "/images/leadership/Mrinalini%20Mirchandani.png",
     bio: [
       "Mrinalini Mirchandani is a seasoned investment professional with extensive experience in private equity across emerging markets, with a particular focus on India's high-growth sectors.",
@@ -67,7 +67,7 @@ export const people: Person[] = [
   {
     id: "sheetal",
     name: "Sheetal Thakkar",
-    designation: "Partner and Head of Investor Relations",
+    designation:"Founder & General Partner",
     image: "/images/leadership/Sheetal%20Thakkar.png",
     bio: [
       "Sheetal Thakkar leads investor relations at One Planet Partners, bringing a deep understanding of LP relationships and fund strategy communications built over many years in the financial services industry.",

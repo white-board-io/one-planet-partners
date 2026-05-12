@@ -24,12 +24,12 @@ const valueItems: Array<{ copy: string; icon: ValueIcon; copyClassName?: string 
     icon: TalentIcon,
   },
   {
-    copy: "Better reporting, tighter controls and stronger governance. Climate integrated.",
+    copy: "Strengthen governance, climate integrated reporting and controls",
     icon: ReportingIcon,
     copyClassName: "max-w-53",
   },
   {
-    copy: "Step-up exit maturity, multiply pathways to exit.",
+    copy: "Develop exit maturity, multiply pathways to exit",
     icon: FootprintIcon,
   },
 ];
