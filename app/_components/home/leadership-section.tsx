@@ -39,9 +39,9 @@ const leaders = [
 const stats = [
   { value: "25+", label: "years of collaboration", desktopLabel: ["years of", "collaboration"] },
   {
-    value: "USD 15+",
-    label: "billion deal experience",
-    desktopLabel: ["billion deal", "experience"],
+  value: "~USD",
+    label: "14 billion deal experience",
+    desktopLabel: ["14 billion deal", "experience"],
   },
   {
     value: "65+",

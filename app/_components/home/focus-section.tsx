@@ -8,19 +8,19 @@ import { cn } from "@/lib/utils";
 const focusItems = [
   {
     title: "Energy",
-    copy: "We partner with platforms helping India expand cleaner, more reliable power. Our focus is on businesses that improve efficiency, strengthen distributed infrastructure, and make the energy transition commercially durable.",
+    copy: "We invest in the businesses enabling India's shift to cleaner energy: renewable generation, battery storage, resource-efficient industrials, and the supply chains that make them possible. Where clean and competitive converge, returns follow.",
     image: "/images/svg/focus-image2.png",
     alt: "Solar power infrastructure and clean energy systems",
   },
   {
     title: "Mobility",
-    copy: "We back companies moving people, goods, and critical supply chains with greater reliability. These businesses benefit from India's infrastructure buildout, digitized logistics, and the shift toward lower-carbon transport.",
+    copy: "We back the companies that are beneficiaries of — and architects of — how India moves: EV platforms, fleet operators, charging networks, and sustainable logistics. A billion-person mobility transition is one of the defining commercial opportunities of the next decade.",
     image: "/images/svg/focus-image1.png",
     alt: "Road and logistics infrastructure across an industrial corridor",
   },
   {
     title: "Manufacturing",
-    copy: "We partner with category leaders in discrete manufacturing, serving India and global markets — businesses with the competitive position to capture India's manufacturing decade and a clear pathway to green that turns the transition into an edge.",
+    copy: "We partner with category leaders in discrete manufacturing, including within the supply chain, serving India and global markets. Businesses with the competitive position to capture India's manufacturing decade and a clear pathway to green that turns the transition into an edge.",
     image: "/images/svg/focus-image.svg",
     alt: "Manufacturing equipment and industrial automation",
   },
@@ -30,18 +30,20 @@ function renderFocusCopy(title: string, copy: string) {
   if (title === "Energy") {
     return (
       <>
-        <span className="xl:block xl:whitespace-nowrap">We partner with platforms helping</span>{" "}
+        <span className="xl:block xl:whitespace-nowrap">We invest in the businesses enabling</span>{" "}
         <span className="xl:block xl:whitespace-nowrap">
-          India expand cleaner, more reliable power.
+          India&apos;s shift to cleaner energy: renewable
         </span>{" "}
         <span className="xl:block xl:whitespace-nowrap">
-          Our focus is on businesses that improve
+          generation, battery storage, resource-efficient
         </span>{" "}
-        <span className="xl:block xl:whitespace-nowrap">efficiency, strengthen distributed</span>{" "}
         <span className="xl:block xl:whitespace-nowrap">
-          infrastructure, and make the energy transition
+          industrials, and the supply chains that make
         </span>{" "}
-        <span className="xl:block xl:whitespace-nowrap">commercially durable.</span>
+        <span className="xl:block xl:whitespace-nowrap">them possible. Where clean and </span>{" "}
+        <span className="xl:block xl:whitespace-nowrap">
+           competitive converge, returns follow.
+        </span>
       </>
     );
   }
@@ -50,20 +52,24 @@ function renderFocusCopy(title: string, copy: string) {
     return (
       <>
         <span className="xl:block xl:whitespace-nowrap">
-          We back companies moving people, goods,
+          We back the companies that are beneficiaries
         </span>{" "}
         <span className="xl:block xl:whitespace-nowrap">
-          and critical supply chains with greater
+          of — and architects of — how India moves:
         </span>{" "}
         <span className="xl:block xl:whitespace-nowrap">
-          {" "}
-          reliability. These businesses benefit{" "}
+          EV platforms, fleet operators, charging
         </span>{" "}
         <span className="xl:block xl:whitespace-nowrap">
-          from India&apos;s infrastructure buildout,
+          networks, and sustainable logistics.
         </span>{" "}
-        <span className="xl:block xl:whitespace-nowrap">digitized logistics, and the shift</span>{" "}
-        <span className="xl:block xl:whitespace-nowrap">toward lower-carbon transport.</span>
+        <span className="xl:block xl:whitespace-nowrap">
+          A billion-person mobility transition is one of
+        </span>{" "}
+        <span className="xl:block xl:whitespace-nowrap">
+          the defining commercial opportunities of the
+        </span>{" "}
+        <span className="xl:block xl:whitespace-nowrap">next decade.</span>
       </>
     );
   }
@@ -75,22 +81,21 @@ function renderFocusCopy(title: string, copy: string) {
           We partner with category leaders in discrete
         </span>{" "}
         <span className="xl:block xl:whitespace-nowrap">
-          manufacturing, serving India and global
+          manufacturing, including within the supply
         </span>{" "}
         <span className="xl:block xl:whitespace-nowrap">
-          markets — businesses with the competitive
+          chain, serving India and global markets.
         </span>{" "}
         <span className="xl:block xl:whitespace-nowrap">
-          position to capture India&apos;s manufacturing
+          Businesses with the competitive position to
         </span>{" "}
         <span className="xl:block xl:whitespace-nowrap">
-          decade and a clear{" "}
-          <em className="font-serif-brand text-2xl leading-9 font-semibold text-white italic">
-            pathway to green
-          </em>{" "}
-          that
+          capture India&apos;s manufacturing decade and a
         </span>{" "}
-        <span className="xl:block xl:whitespace-nowrap">turns the transition into an edge.</span>
+        <span className="xl:block xl:whitespace-nowrap">
+          clear pathway to green that turns the
+        </span>{" "}
+        <span className="xl:block xl:whitespace-nowrap">transition into an edge.</span>
       </>
     );
   }
@@ -147,7 +152,7 @@ export function FocusSection() {
             </div>
             <p
               aria-label="We invest in established mid-market businesses positioned to benefit from India’s industrial growth, infrastructure buildout, rising domestic consumption, and transition toward a more sustainable economy. Strong micro in a supportive macro."
-              className="mx-auto mt-5 max-w-62 font-sans-brand text-xs leading-4 font-light text-white md:mt-0 md:max-w-332 md:text-2xl md:leading-7"
+              className="mx-auto mt-5 max-w-62 font-sans-brand text-base leading-6 font-light text-white md:mt-0 md:max-w-332 lg:text-2xl lg:leading-8"
             >
               <span className="md:hidden">
                 We invest in established{" "}
@@ -188,7 +193,7 @@ export function FocusSection() {
               >
                 {activeFocus.title}
               </p>
-              <p className="mx-auto mt-9 max-w-60 text-center font-sans-brand text-sm leading-4 font-light tracking-normal text-white md:mx-0 md:mt-16 md:min-h-51 md:max-w-118 md:text-left md:text-2xl md:leading-7">
+              <p className="mx-auto mt-9 max-w-60 text-center font-sans-brand text-base leading-6 font-light tracking-normal text-white md:mx-0 md:mt-16 md:min-h-51 md:max-w-118 md:text-left lg:text-2xl lg:leading-8">
                 {renderFocusCopy(activeFocus.title, activeFocus.copy)}
               </p>
               <div className="mt-9 flex items-center justify-center gap-6 text-white md:mt-24 md:justify-start md:gap-4 xl:w-75 xl:justify-between xl:gap-0">
