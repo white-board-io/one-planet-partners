@@ -60,7 +60,7 @@ export function DifferentiatorMobileCards({ items }: { items: Differentiator[] }
             >
               <div className="overflow-hidden">
                 <div className="bg-white px-8 pt-10 pb-16 text-black">
-                  <h4 className="font-serif-brand text-5xl leading-none font-semibold text-black">
+                  <h4 className="font-serif-brand text-3xl leading-none font-semibold text-black">
                     {item.title}
                   </h4>
                   <p className="mt-9 font-sans-brand text-lg leading-6 font-light tracking-normal text-black">

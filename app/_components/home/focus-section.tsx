@@ -27,36 +27,79 @@ const focusItems = [
 ];
 
 function renderFocusCopy(title: string, copy: string) {
-  if (title !== "Manufacturing") {
-    return copy;
+  if (title === "Energy") {
+    return (
+      <>
+        <span className="xl:block xl:whitespace-nowrap">We partner with platforms helping</span>{" "}
+        <span className="xl:block xl:whitespace-nowrap">
+          India expand cleaner, more reliable power.
+        </span>{" "}
+        <span className="xl:block xl:whitespace-nowrap">
+          Our focus is on businesses that improve
+        </span>{" "}
+        <span className="xl:block xl:whitespace-nowrap">efficiency, strengthen distributed</span>{" "}
+        <span className="xl:block xl:whitespace-nowrap">
+          infrastructure, and make the energy transition
+        </span>{" "}
+        <span className="xl:block xl:whitespace-nowrap">commercially durable.</span>
+      </>
+    );
   }
 
-  return (
-    <>
-      <span className="xl:block xl:whitespace-nowrap">
-        We partner with category leaders in discrete
-      </span>{" "}
-      <span className="xl:block xl:whitespace-nowrap">manufacturing, serving India and global</span>{" "}
-      <span className="xl:block xl:whitespace-nowrap">
-        markets — businesses with the competitive
-      </span>{" "}
-      <span className="xl:block xl:whitespace-nowrap">
-        position to capture India&apos;s manufacturing
-      </span>{" "}
-      <span className="xl:block xl:whitespace-nowrap">
-        decade and a clear{" "}
-        <em className="font-serif-brand text-2xl leading-9 font-semibold text-white italic">
-          pathway to green
-        </em>{" "}
-        that
-      </span>{" "}
-      <span className="xl:block xl:whitespace-nowrap">turns the transition into an edge.</span>
-    </>
-  );
+  if (title === "Mobility") {
+    return (
+      <>
+        <span className="xl:block xl:whitespace-nowrap">
+          We back companies moving people, goods,
+        </span>{" "}
+        <span className="xl:block xl:whitespace-nowrap">
+          and critical supply chains with greater
+        </span>{" "}
+        <span className="xl:block xl:whitespace-nowrap">
+          {" "}
+          reliability. These businesses benefit{" "}
+        </span>{" "}
+        <span className="xl:block xl:whitespace-nowrap">
+          from India&apos;s infrastructure buildout,
+        </span>{" "}
+        <span className="xl:block xl:whitespace-nowrap">digitized logistics, and the shift</span>{" "}
+        <span className="xl:block xl:whitespace-nowrap">toward lower-carbon transport.</span>
+      </>
+    );
+  }
+
+  if (title === "Manufacturing") {
+    return (
+      <>
+        <span className="xl:block xl:whitespace-nowrap">
+          We partner with category leaders in discrete
+        </span>{" "}
+        <span className="xl:block xl:whitespace-nowrap">
+          manufacturing, serving India and global
+        </span>{" "}
+        <span className="xl:block xl:whitespace-nowrap">
+          markets — businesses with the competitive
+        </span>{" "}
+        <span className="xl:block xl:whitespace-nowrap">
+          position to capture India&apos;s manufacturing
+        </span>{" "}
+        <span className="xl:block xl:whitespace-nowrap">
+          decade and a clear{" "}
+          <em className="font-serif-brand text-2xl leading-9 font-semibold text-white italic">
+            pathway to green
+          </em>{" "}
+          that
+        </span>{" "}
+        <span className="xl:block xl:whitespace-nowrap">turns the transition into an edge.</span>
+      </>
+    );
+  }
+
+  return copy;
 }
 
 export function FocusSection() {
-  const [activeIndex, setActiveIndex] = useState(2);
+  const [activeIndex, setActiveIndex] = useState(0);
   const activeFocus = focusItems[activeIndex];
 
   const goToPrevious = () => {
@@ -81,7 +124,7 @@ export function FocusSection() {
             </h2>
             <div
               aria-label="Focus sectors"
-              className="flex flex-nowrap items-center justify-center gap-x-3 text-center font-serif-brand text-base leading-8 font-normal tracking-normal whitespace-nowrap text-white md:mt-0 md:gap-x-7 md:text-5xl md:leading-19"
+              className="flex flex-nowrap items-center justify-center gap-x-3 text-center font-serif-brand text-base leading-8 font-normal tracking-normal whitespace-nowrap text-white md:mt-0 md:gap-x-7 md:text-3xl md:leading-19"
               role="group"
             >
               {focusItems.map((item, index) => (
@@ -143,7 +186,7 @@ export function FocusSection() {
             <div className="order-2 flex flex-col pb-0 md:order-1 md:block md:min-h-0 md:pb-0">
               <p
                 aria-live="polite"
-                className="mb-8 hidden font-serif-brand text-5xl leading-11 font-normal tracking-normal md:block md:text-6xl md:leading-10"
+                className="mb-8 hidden font-serif-brand text-3xl leading-11 font-normal tracking-normal md:block md:text-6xl md:leading-10"
               >
                 {activeFocus.title}
               </p>

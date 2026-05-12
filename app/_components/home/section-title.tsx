@@ -4,7 +4,7 @@ export function SectionTitle({ children, light = false }: { children: string; li
   return (
     <h2
       className={cn(
-        "font-serif-brand text-3xl leading-tight font-light md:text-4xl",
+        "font-serif-brand text-3xl leading-tight font-light md:text-5xl",
         light ? "text-white" : "text-black",
       )}
     >

@@ -114,7 +114,7 @@ export function DifferentiatorDesktopCards({ items }: { items: Differentiator[] 
           onMouseLeave={() => resetCard(index)}
           onFocus={() => revealCard(index)}
           onBlur={() => resetCard(index)}
-          className="group relative aspect-[606/648] bg-white/5 [perspective:1200px]"
+          className="group relative aspect-[606/648] bg-white [perspective:1200px]"
         >
           <div
             ref={(element) => {
@@ -133,12 +133,12 @@ export function DifferentiatorDesktopCards({ items }: { items: Differentiator[] 
               />
               <h3 className="sr-only">{item.title}</h3>
             </div>
-            <div className="absolute inset-0 flex flex-col justify-start overflow-hidden rounded-md bg-[#101010] p-8 text-white [backface-visibility:hidden] [transform:rotateY(180deg)] md:p-10">
+            <div className="absolute inset-0 flex flex-col justify-start overflow-hidden rounded-md bg-white p-8 text-black font-bold [backface-visibility:hidden] [transform:rotateY(180deg)] md:p-10">
               <h3
                 ref={(element) => {
                   titleRefs.current[index] = element;
                 }}
-                className="max-w-96 font-serif-brand text-[2.5rem] leading-none font-light will-change-transform lg:text-[3rem]"
+                className="max-w-96 font-serif-brand text-[2.5rem] leading-none font-normal will-change-transform lg:text-[3rem]"
               >
                 {item.title}
               </h3>
@@ -146,7 +146,7 @@ export function DifferentiatorDesktopCards({ items }: { items: Differentiator[] 
                 ref={(element) => {
                   copyRefs.current[index] = element;
                 }}
-                className="mt-7 max-w-[28rem] font-sans-brand text-[1.125rem] leading-[1.55] font-light text-white/78 will-change-transform lg:text-[1.375rem] lg:leading-[1.55]"
+                className="mt-7 max-w-[28rem] font-sans-brand text-[1.125rem] leading-[1.55] font-light text-black/78 will-change-transform lg:text-[1.375rem] lg:leading-[1.55]"
               >
                 {item.copy}
               </p>

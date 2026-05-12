@@ -24,7 +24,7 @@ export function PersonDetail({ person }: { person: Person }) {
           </div>
 
           <div className="text-center lg:text-left">
-            <h1 className="font-serif-brand text-4xl font-semibold text-black md:text-5xl lg:text-[3.75rem] lg:leading-tight">
+            <h1 className="font-serif-brand text-5xl font-semibold text-black md:text-3xl lg:text-[3.75rem] lg:leading-tight">
               {person.name}
             </h1>
             <p className="font-sans-brand text-lg font-light text-black/60 md:text-xl">

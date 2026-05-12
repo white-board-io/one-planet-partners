@@ -7,17 +7,17 @@ import { Container } from "@/app/_components/container";
 import { cn } from "@/lib/utils";
 
 const HOVER_SCALE = 192 / 144;
-const DEFAULT_ACTIVE_INDEX = 2;
+const DEFAULT_ACTIVE_INDEX = 0;
 
 const leaders = [
   {
     name: "Dr. Mukund Rajan",
-    designation: "Managing Partner",
+    designation: "Founder & General Partner",
     image: "/images/svg/leadership-image1.svg",
   },
   {
     name: "Mr. Bobby Pauly",
-    designation: "Managing Partner",
+    designation: "Founder & General Partner",
     image: "/images/svg/leadership-image2.svg",
   },
   {
@@ -27,7 +27,7 @@ const leaders = [
   },
   {
     name: "Sheetal Thakkar",
-    designation: "Partner and Head of Investor Relations",
+    designation: "Founder & General Partner",
     image: "/images/svg/leadership-image4.svg",
   },
 ];
@@ -53,7 +53,7 @@ export function LeadershipSection() {
     <section id="leadership" className="scroll-mt-24 bg-white py-32 text-black md:py-40">
       <Container>
         <div className="flex flex-col items-center gap-10 text-center md:hidden">
-          <h2 className="font-serif-brand text-5xl leading-none font-normal tracking-normal">
+          <h2 className="font-serif-brand text-3xl leading-none font-normal tracking-normal">
             Leadership
           </h2>
 
@@ -169,7 +169,7 @@ export function LeadershipSection() {
                         transform: `scale(${isActive ? HOVER_SCALE : 1})`,
                         backgroundColor: isActive ? "#DCDCDC" : "#D9D5D0",
                       }}
-                      className="relative size-36 origin-top overflow-hidden rounded-full transition-[transform,background-color] duration-200 ease-out"
+                      className="relative size-36 origin-center overflow-hidden rounded-full transition-[transform,background-color] duration-200 ease-out"
                     >
                       <Image
                         fill
@@ -181,16 +181,14 @@ export function LeadershipSection() {
                     </div>
                     <figcaption
                       className={cn(
-                        "pointer-events-none absolute left-1/2 top-52 w-52 -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-300 ease-out",
+                        "pointer-events-none absolute left-1/2 top-48 w-52 -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-300 ease-out",
                         isActive ? "translate-y-0 opacity-100" : null,
                       )}
                     >
                       <p className="font-serif-brand text-base leading-tight font-semibold underline decoration-black/45 underline-offset-2">
                         {leader.name}
                       </p>
-                      <p className="mt-2 text-xs leading-snug text-black/65">
-                        {leader.designation}
-                      </p>
+                      <p className="text-xs leading-snug text-black/65">{leader.designation}</p>
                     </figcaption>
                   </figure>
                 );
@@ -205,7 +203,7 @@ export function LeadershipSection() {
                     index < stats.length - 1 ? "border-r border-black/70" : null,
                   )}
                 >
-                  <p className="font-serif-brand text-4xl leading-10 font-normal tracking-normal whitespace-nowrap">
+                  <p className="font-serif-brand text-5xl leading-10 font-normal tracking-normal whitespace-nowrap">
                     {stat.value}
                   </p>
                   <p className="mx-auto mt-3 max-w-44 font-sans-brand text-2xl leading-7 font-light tracking-normal text-black/62">

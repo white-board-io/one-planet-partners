@@ -19,7 +19,7 @@ export function CtaSection() {
               <em className="font-semibold italic">market-leaders... together.</em>
             </span>
           </p>
-          <p className="mx-auto max-w-65 text-center font-sans-brand text-base leading-snug font-light tracking-normal text-white md:max-w-205 md:text-xl md:leading-7">
+          <p className="mx-auto max-w-65 text-center font-sans-brand text-base leading-snug font-light tracking-normal text-white md:max-w-205 md:text-2xl md:leading-7">
             We welcome conversations with partners
             <br className="hidden md:block" />
             who share our conviction in

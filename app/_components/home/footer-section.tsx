@@ -35,12 +35,12 @@ export function FooterSection() {
                   key={item.label}
                   href={item.href}
                   aria-label={item.label}
-                  className="grid h-17 grid-cols-[2.5rem_minmax(0,1fr)] items-center border-b border-white/50 font-sans-brand text-base leading-none text-white transition-colors hover:text-white/70 lg:h-15 lg:grid-cols-[3.5rem_minmax(0,1fr)] lg:text-[1.75rem] lg:last:border-b-0 xl:text-[2rem]"
+                  className="grid h-17 grid-cols-[2.5rem_minmax(0,1fr)] items-center border-b border-white/50 font-sans-brand text-base leading-none text-white transition-colors hover:text-white/70 lg:h-15 lg:grid-cols-[3.5rem_minmax(0,1fr)] lg:last:border-b-0 xl:text-2xl"
                 >
-                  <span className="flex h-6 w-6 items-center justify-start lg:h-7 lg:w-7">
+                  <span className="flex h-6 w-6 items-center justify-start lg:h-6 lg:w-6">
                     {item.icon}
                   </span>
-                  <span className="min-w-0 truncate pl-2 lg:pl-14">{item.handle}</span>
+                  <span className="min-w-0 truncate pl-2 lg:pl-32">{item.handle}</span>
                 </Link>
               ))}
             </div>
