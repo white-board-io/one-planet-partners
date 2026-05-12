@@ -35,10 +35,7 @@ export function SeniorAdvisors() {
           {advisors.map((advisor, i) => (
             <div
               key={advisor.id}
-              className={cn(
-                "col-span-1 md:col-span-2",
-                i === 3 && "md:col-start-2",
-              )}
+              className={cn("col-span-1 md:col-span-2", i === 3 && "md:col-start-2")}
             >
               <AdvisorCard id={advisor.id} name={advisor.name} image={advisor.image} />
             </div>
