@@ -24,10 +24,10 @@ export function PersonDetail({ person }: { person: Person }) {
           </div>
 
           <div className="text-center lg:text-left">
-            <h1 className="font-serif-brand text-5xl font-semibold text-black md:text-3xl lg:text-[3.75rem] lg:leading-tight">
+            <h1 className="font-serif-brand text-5xl font-semibold text-black md:text-3xl lg:text-[2.75rem] lg:leading-tight">
               {person.name}
             </h1>
-            <p className="font-sans-brand text-lg font-light text-black/60 md:text-xl">
+            <p className="font-sans-brand text-lg font-light text-black/60 md:text-lg">
               {person.designation}
             </p>
           </div>
@@ -38,7 +38,11 @@ export function PersonDetail({ person }: { person: Person }) {
           {person.bio.map((paragraph, i) => (
             <p
               key={i}
-              className="font-sans-brand text-base font-light leading-relaxed text-black/80 md:text-lg"
+              className={
+                i === 0
+                  ? "font-serif-brand text-2xl font-normal not-italic leading-8 tracking-normal text-black/80"
+                  : "font-sans-brand text-base font-light leading-8 text-black/80 md:text-2xl"
+              }
             >
               {paragraph}
             </p>
