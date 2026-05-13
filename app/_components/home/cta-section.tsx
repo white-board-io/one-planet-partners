@@ -10,17 +10,17 @@ export function CtaSection() {
     >
       <Container>
         <div className="mx-auto max-w-230">
-          <p className="mx-auto max-w-90 text-center font-serif-brand text-2xl leading-tight font-normal tracking-normal text-balance md:max-w-none md:text-6xl md:py-14 md:leading-15">
+          <p className="mx-auto max-w-90 text-center font-serif-brand text-2xl leading-tight font-normal tracking-normal text-balance md:max-w-3xl md:py-10 md:text-5xl md:leading-tight lg:max-w-none lg:py-14 lg:text-6xl lg:leading-15">
             <span className="block">Let&rsquo;s build the next generation</span>
             <span className="block">
               of responsible
-              <br className="md:hidden" />
-              <span className="hidden md:inline"> </span>
+              <br className="lg:hidden" />
+              <span className="hidden lg:inline"> </span>
               <em className="font-semibold italic">market-leaders... together.</em>
             </span>
           </p>
           <p className="mx-auto max-w-96 pt-8 text-center font-sans-brand text-2xl leading-[1.35] font-light tracking-normal text-white md:max-w-205 md:text-2xl md:leading-7">
-            <span className="md:hidden">
+            <span className="lg:hidden">
               <span className="block">We welcome conversations</span>
               <span className="block">with partners who share our</span>
               <span className="block">conviction in</span>
@@ -34,7 +34,7 @@ export function CtaSection() {
                 creation.
               </strong>
             </span>
-            <span className="hidden md:inline">
+            <span className="hidden lg:inline">
               We welcome conversations with partners
               <br />
               who share our conviction in

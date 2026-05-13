@@ -56,16 +56,16 @@ export function LeadershipSection() {
   return (
     <section id="leadership" className="scroll-mt-24 bg-white py-32 text-black md:py-40">
       <Container>
-        <div className="flex flex-col items-center gap-6 md:gap-10 text-center md:hidden">
-          <h2 className="font-serif-brand text-4xl leading-none font-normal tracking-normal">
+        <div className="flex flex-col items-center gap-6 text-center md:gap-10 lg:hidden">
+          <h2 className="font-serif-brand text-4xl leading-none font-normal tracking-normal md:text-6xl">
             Leadership
           </h2>
 
-          <div className="flex flex-col gap-6">
-            <h3 className="[font-family:var(--font-source-sans)] text-base leading-tight font-semibold tracking-normal">
+          <div className="flex max-w-2xl flex-col gap-6">
+            <h3 className="[font-family:var(--font-source-sans)] text-base leading-tight font-semibold tracking-normal md:text-2xl">
               A Proven Team Building Together Again
             </h3>
-            <p className="[font-family:var(--font-source-sans)] text-xl leading-6 font-normal tracking-normal text-black/80">
+            <p className="[font-family:var(--font-source-sans)] text-xl leading-6 font-normal tracking-normal text-black/80 md:text-2xl md:leading-8">
               Belief in India&apos;s entrepreneurship unites us. We bring strong investment and
               value-creation expertise, deep history of working together, and marquee relationships
               across India&apos;s business landscape.
@@ -89,7 +89,7 @@ export function LeadershipSection() {
             ))}
           </div>
 
-          <div className="grid w-full max-w-xs grid-cols-2 gap-x-8 gap-y-10 pt-2">
+          <div className="grid w-full max-w-xs grid-cols-2 gap-x-8 gap-y-10 pt-2 md:max-w-3xl md:grid-cols-4 md:gap-x-6">
             {leaders.map((leader) => (
               <figure
                 key={leader.id}
@@ -99,7 +99,7 @@ export function LeadershipSection() {
                 <Link
                   href={`/leadership/${leader.id}`}
                   aria-label={`Read ${leader.name}'s bio`}
-                  className="relative block size-22 overflow-hidden rounded-full bg-[#D9D5D0]"
+                  className="relative block size-22 overflow-hidden rounded-full bg-[#D9D5D0] md:size-32"
                 >
                   <Image
                     fill
@@ -117,7 +117,9 @@ export function LeadershipSection() {
                   >
                     {leader.name}
                   </Link>
-                  <p className="mt-1 text-xs leading-snug text-black/65">{leader.designation}</p>
+                  <p className="mt-1 text-xs leading-snug text-black/65 md:text-sm">
+                    {leader.designation}
+                  </p>
                 </figcaption>
               </figure>
             ))}
@@ -131,7 +133,7 @@ export function LeadershipSection() {
           </Link>
         </div>
 
-        <div className="hidden w-full gap-12 md:grid md:grid-cols-[1.1fr_0.9fr] md:items-center">
+        <div className="hidden w-full gap-12 lg:grid lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
             <h2 className="font-serif-brand text-7xl leading-16 font-normal tracking-normal text-black">
               Leadership

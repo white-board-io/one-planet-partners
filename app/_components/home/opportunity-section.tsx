@@ -56,15 +56,15 @@ const opportunityCards = [
 
 export function OpportunitySection() {
   return (
-    <section id="opportunity" className="scroll-mt-24 bg-white py-24 text-black lg:py-48">
+    <section id="opportunity" className="scroll-mt-24 bg-white py-24 text-black md:py-32 lg:py-48">
       <Container>
         <div>
-          <div className="mb-14 text-center lg:mb-25">
-            <h2 className="font-serif-brand text-4xl leading-none font-normal tracking-normal lg:text-7xl lg:leading-9">
+          <div className="mb-14 text-center md:mb-18 lg:mb-25">
+            <h2 className="font-serif-brand text-4xl leading-none font-normal tracking-normal md:text-6xl lg:text-7xl lg:leading-9">
               The Opportunity
             </h2>
           </div>
-          <div className="grid gap-12 lg:grid-cols-3 lg:gap-16 xl:px-16">
+          <div className="grid gap-12 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-16 xl:px-16">
             {opportunityCards.map((card) => (
               <article key={card.title.join(" ")} className="flex flex-col">
                 <Image
@@ -74,7 +74,7 @@ export function OpportunitySection() {
                   alt={card.alt}
                   className="mb-6 h-auto w-full rounded-sm lg:mb-12"
                 />
-                <h3 className="mb-4 font-serif-brand text-3xl leading-6 font-normal tracking-normal lg:mb-7 lg:text-4xl lg:leading-8">
+                <h3 className="mb-4 font-serif-brand text-3xl leading-6 font-normal tracking-normal md:text-[1.75rem] md:leading-7 lg:mb-7 lg:text-4xl lg:leading-8">
                   {card.title.map((line) => (
                     <span key={line} className="block whitespace-nowrap">
                       {line}
@@ -83,7 +83,7 @@ export function OpportunitySection() {
                 </h3>
                 <p
                   aria-label={card.copy}
-                  className="font-sans-brand text-base text-xl leading-6 font-light tracking-normal text-black/80 lg:text-2xl lg:leading-8"
+                  className="font-sans-brand text-base text-xl leading-6 font-light tracking-normal text-black/80 md:text-lg md:leading-7 lg:text-2xl lg:leading-8"
                 >
                   <span className="lg:hidden">{card.copy}</span>
                   <span aria-hidden="true" className="hidden lg:block">

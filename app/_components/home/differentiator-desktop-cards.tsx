@@ -101,7 +101,7 @@ export function DifferentiatorDesktopCards({ items }: { items: Differentiator[] 
   };
 
   return (
-    <div className="hidden gap-8 px-6 sm:px-10 md:grid md:grid-cols-3 md:gap-9 md:px-0">
+    <div className="hidden gap-8 px-6 sm:px-10 lg:grid lg:grid-cols-3 lg:gap-9 lg:px-0">
       {items.map((item, index) => (
         <article
           key={item.title}
@@ -133,7 +133,7 @@ export function DifferentiatorDesktopCards({ items }: { items: Differentiator[] 
               />
               <h3 className="sr-only">{item.title}</h3>
             </div>
-            <div className="absolute inset-0 flex flex-col justify-start overflow-hidden rounded-md bg-white p-8 text-black font-bold [backface-visibility:hidden] [transform:rotateY(180deg)] md:p-10">
+            <div className="absolute inset-0 flex flex-col justify-start overflow-hidden rounded-md bg-white p-8 text-black font-bold [backface-visibility:hidden] [transform:rotateY(180deg)] lg:p-10">
               <h3
                 ref={(element) => {
                   titleRefs.current[index] = element;

@@ -163,11 +163,14 @@ export function FocusSection() {
   };
 
   return (
-    <section id="focus" className="scroll-mt-24 bg-black py-24 text-white md:pt-33 md:pb-0">
+    <section
+      id="focus"
+      className="scroll-mt-24 bg-black py-24 text-white md:pt-28 md:pb-24 lg:pt-33 lg:pb-0"
+    >
       <Container>
         <div className="mx-auto">
           <div className="mx-auto mb-10 text-center md:mb-16">
-            <h2 className="font-serif-brand text-4xl mb-6 leading-10 font-normal text-white md:mb-8 md:text-7xl md:leading-18">
+            <h2 className="font-serif-brand text-4xl mb-6 leading-10 font-normal text-white md:mb-8 md:text-6xl md:leading-tight lg:text-7xl lg:leading-18">
               Our Focus
             </h2>
             <div
@@ -195,9 +198,9 @@ export function FocusSection() {
             </div>
             <p
               aria-label="We invest in established mid-market businesses positioned to benefit from India’s industrial growth, infrastructure buildout, rising domestic consumption, and transition toward a more sustainable economy. Strong micro in a supportive macro."
-              className="mx-auto mt-5 max-w-62 font-sans-brand text-base text-xl leading-6 font-light text-white md:mt-0 md:max-w-332 lg:text-2xl lg:leading-8"
+              className="mx-auto mt-5 max-w-62 font-sans-brand text-base text-xl leading-6 font-light text-white md:mt-6 md:max-w-2xl lg:mt-0 lg:max-w-332 lg:text-2xl lg:leading-8"
             >
-              <span className="md:hidden">
+              <span className="lg:hidden">
                 We invest in established{" "}
                 <em className="font-serif-brand font-semibold text-white italic">
                   mid-market businesses
@@ -206,7 +209,7 @@ export function FocusSection() {
                 rising domestic consumption, and transition toward a more sustainable economy.
                 Strong micro in a supportive macro.
               </span>
-              <span aria-hidden="true" className="hidden md:block">
+              <span aria-hidden="true" className="hidden lg:block">
                 <span className="block whitespace-nowrap">
                   We invest in established{" "}
                   <em className="font-serif-brand font-semibold text-white italic">
@@ -229,22 +232,22 @@ export function FocusSection() {
           </p>
 
           <div
-            className="grid touch-pan-y items-stretch gap-0 md:grid-cols-[0.9fr_1.2fr] md:items-start md:gap-16 xl:grid-cols-[0.8fr_1.2fr] xl:gap-24 2xl:grid-cols-[470px_762px] 2xl:gap-16"
+            className="grid touch-pan-y items-stretch gap-0 md:gap-12 lg:grid-cols-[0.9fr_1.2fr] lg:items-start lg:gap-16 xl:grid-cols-[0.8fr_1.2fr] xl:gap-24 2xl:grid-cols-[470px_762px] 2xl:gap-16"
             onPointerCancel={handleSlidePointerCancel}
             onPointerDown={handleSlidePointerDown}
             onPointerUp={handleSlidePointerUp}
           >
-            <div className="order-2 flex flex-col pb-0 md:order-1 md:block md:min-h-0 md:pb-0">
+            <div className="order-2 flex flex-col pb-0 md:block md:min-h-0 md:pb-0 lg:order-1">
               <p
                 aria-live="polite"
-                className="mb-8 hidden font-serif-brand text-3xl leading-11 font-normal tracking-normal md:block md:text-6xl md:leading-10"
+                className="mb-8 hidden text-center font-serif-brand text-3xl leading-11 font-normal tracking-normal md:block md:text-5xl md:leading-tight lg:text-left lg:text-6xl lg:leading-10"
               >
                 {activeFocus.title}
               </p>
-              <p className="mx-auto mt-9 max-w-60 text-center font-sans-brand text-base text-xl leading-6 font-light tracking-normal text-white md:mx-0 md:mt-16 md:min-h-51 md:max-w-118 md:text-left lg:text-2xl lg:leading-8">
+              <p className="mx-auto mt-9 max-w-60 text-center font-sans-brand text-base text-xl leading-6 font-light tracking-normal text-white md:mt-10 md:max-w-2xl md:min-h-0 lg:mx-0 lg:mt-16 lg:min-h-51 lg:max-w-118 lg:text-left lg:text-2xl lg:leading-8">
                 {renderFocusCopy(activeFocus.title, activeFocus.copy)}
               </p>
-              <div className="mt-9 flex items-center justify-center gap-6 text-white md:mt-24 md:justify-start md:gap-4 xl:w-75 xl:justify-between xl:gap-0">
+              <div className="mt-9 flex items-center justify-center gap-6 text-white md:mt-12 md:gap-4 lg:mt-24 lg:justify-start xl:w-75 xl:justify-between xl:gap-0">
                 <button
                   type="button"
                   aria-label="Previous focus"
@@ -283,11 +286,11 @@ export function FocusSection() {
                 </button>
               </div>
             </div>
-            <div className="relative order-1 mx-auto aspect-[239/110] w-full max-w-sm overflow-hidden rounded-sm bg-white/5 md:order-2 md:mx-0 md:aspect-[762/665] md:h-auto md:min-h-0 md:max-w-190 md:rounded-t-md md:rounded-b-none">
+            <div className="relative order-1 mx-auto aspect-[239/110] w-full max-w-sm overflow-hidden rounded-sm bg-white/5 md:aspect-[16/9] md:max-w-2xl lg:order-2 lg:mx-0 lg:aspect-[762/665] lg:h-auto lg:min-h-0 lg:max-w-190 lg:rounded-t-md lg:rounded-b-none">
               <Image
                 key={activeFocus.image}
                 fill
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 src={activeFocus.image}
                 alt={activeFocus.alt}
                 className="select-none object-cover object-center"

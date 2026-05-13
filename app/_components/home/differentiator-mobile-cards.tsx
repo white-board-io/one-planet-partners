@@ -134,7 +134,7 @@ export function DifferentiatorMobileCards({ items }: { items: Differentiator[] }
   };
 
   return (
-    <div className="grid gap-9 px-4 md:hidden">
+    <div className="grid gap-9 px-4 md:grid-cols-2 md:gap-7 md:px-8 lg:hidden">
       {items.map((item, index) => {
         const isOpen = activeIndex === index;
         const contentId = `differentiator-mobile-copy-${index}`;
@@ -172,8 +172,8 @@ export function DifferentiatorMobileCards({ items }: { items: Differentiator[] }
               )}
             >
               <div className="overflow-hidden">
-                <div className="bg-white px-8 py-12 text-black">
-                  <p className="font-sans-brand text-xl leading-6 font-light tracking-normal text-black">
+                <div className="bg-white px-8 py-12 text-black md:px-6 md:py-8">
+                  <p className="font-sans-brand text-xl leading-6 font-light tracking-normal text-black md:text-lg">
                     {item.copy}
                   </p>
                 </div>
