@@ -19,16 +19,32 @@ export function CtaSection() {
               <em className="font-semibold italic">market-leaders... together.</em>
             </span>
           </p>
-          <p className="mx-auto max-w-65 text-center font-sans-brand text-base leading-snug font-light tracking-normal text-white md:max-w-205 md:text-2xl md:leading-7">
-            We welcome conversations with partners
-            <br className="hidden md:block" />
-            who share our conviction in
-            <br className="hidden md:block" />
-            <strong className="font-medium">
-              India&rsquo;s mid-market opportunity and the power of
-              <br className="hidden md:block" />
-              climate-aligned value creation.
-            </strong>
+          <p className="mx-auto max-w-96 pt-8 text-center font-sans-brand text-2xl leading-[1.35] font-light tracking-normal text-white md:max-w-205 md:text-2xl md:leading-7">
+            <span className="md:hidden">
+              <span className="block">We welcome conversations</span>
+              <span className="block">with partners who share our</span>
+              <span className="block">conviction in</span>
+              <strong className="block text-2xl leading-[1.35] font-semibold">
+                India&rsquo;s mid-market
+                <br />
+                opportunity and the power
+                <br />
+                of climate-aligned value
+                <br />
+                creation.
+              </strong>
+            </span>
+            <span className="hidden md:inline">
+              We welcome conversations with partners
+              <br />
+              who share our conviction in
+              <br />
+              <strong className="font-medium">
+                India&rsquo;s mid-market opportunity and the power of
+                <br />
+                climate-aligned value creation.
+              </strong>
+            </span>
           </p>
           <Link
             href="mailto:info@oneplanetpartners.com"
@@ -39,7 +55,7 @@ export function CtaSection() {
               height={74}
               alt="info@oneplanetpartners.com"
               src="/images/svg/info.svg"
-              className="h-auto transition-transform duration-300 ease-out group-hover:scale-150 group-focus-visible:scale-150"
+              className="h-auto w-96 max-w-full transition-transform duration-300 ease-out group-hover:scale-150 group-focus-visible:scale-150 md:w-auto"
             />
           </Link>
         </div>

@@ -39,7 +39,7 @@ const leaders = [
 const stats = [
   { value: "25+", label: "years of collaboration", desktopLabel: ["years of", "collaboration"] },
   {
-  value: "~USD",
+    value: "~USD",
     label: "14 billion deal experience",
     desktopLabel: ["14 billion deal", "experience"],
   },
@@ -56,8 +56,8 @@ export function LeadershipSection() {
   return (
     <section id="leadership" className="scroll-mt-24 bg-white py-32 text-black md:py-40">
       <Container>
-        <div className="flex flex-col items-center gap-10 text-center md:hidden">
-          <h2 className="font-serif-brand text-3xl leading-none font-normal tracking-normal">
+        <div className="flex flex-col items-center gap-6 md:gap-10 text-center md:hidden">
+          <h2 className="font-serif-brand text-4xl leading-none font-normal tracking-normal">
             Leadership
           </h2>
 
@@ -65,7 +65,7 @@ export function LeadershipSection() {
             <h3 className="[font-family:var(--font-source-sans)] text-base leading-tight font-semibold tracking-normal">
               A Proven Team Building Together Again
             </h3>
-            <p className="[font-family:var(--font-source-sans)] text-sm leading-6 font-normal tracking-normal text-black/80">
+            <p className="[font-family:var(--font-source-sans)] text-xl leading-6 font-normal tracking-normal text-black/80">
               Belief in India&apos;s entrepreneurship unites us. We bring strong investment and
               value-creation expertise, deep history of working together, and marquee relationships
               across India&apos;s business landscape.

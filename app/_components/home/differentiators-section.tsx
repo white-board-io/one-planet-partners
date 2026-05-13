@@ -26,7 +26,7 @@ export function DifferentiatorsSection() {
       <Container className="max-w-none px-0 sm:px-0 lg:px-0">
         <div className="mx-auto w-full">
           <div className="mb-8 text-center md:mb-22">
-            <h2 className="font-serif-brand text-2xl leading-none font-normal md:text-7xl md:leading-none">
+            <h2 className="font-serif-brand text-4xl leading-none font-normal md:text-7xl md:leading-none">
               What Sets Us Apart
             </h2>
           </div>

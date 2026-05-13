@@ -51,11 +51,11 @@ export function ValueCreationSection() {
             priority={false}
           />
 
-          <h2 className="mt-6 max-w-59 font-serif-brand text-5xl leading-10 font-normal tracking-normal text-black md:mt-8 md:max-w-none md:text-7xl md:leading-16">
+          <h2 className="mt-6 max-w-59 font-serif-brand text-4xl leading-9 font-normal tracking-normal text-black md:mt-8 md:max-w-none md:text-7xl md:leading-16">
             How We Create Value
           </h2>
 
-          <p className="mt-8 font-sans-brand text-2xl leading-8 font-light text-black md:mt-5 md:text-xl lg:text-2xl lg:leading-7">
+          <p className="mt-8 font-sans-brand text-xl leading-6 font-light text-black md:mt-5 md:text-xl lg:text-2xl lg:leading-7">
             <span className="block">
               We approach every investment with an owner’s mindset. Tailored to mid-market
               businesses, our value creation framework
