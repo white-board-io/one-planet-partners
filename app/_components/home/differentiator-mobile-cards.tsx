@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import {
+  useCallback,
+  useEffect,
   useRef,
   useState,
   type PointerEvent as ReactPointerEvent,
@@ -18,6 +20,8 @@ type Differentiator = {
 
 const verticalSwipeThreshold = 48;
 const verticalSwipeAxisBias = 1.2;
+const fastScrollDistanceThreshold = 64;
+const fastScrollVelocityThreshold = 0.45;
 
 type SwipeStart = {
   index: number;
@@ -28,9 +32,90 @@ type SwipeStart = {
 
 export function DifferentiatorMobileCards({ items }: { items: Differentiator[] }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const imageButtonRefs = useRef<Array<HTMLButtonElement | null>>([]);
+  const lastScrollSampleRef = useRef({ timestamp: 0, y: 0 });
   const pointerSwipeStartRef = useRef<(SwipeStart & { pointerId: number }) | null>(null);
   const touchSwipeStartRef = useRef<SwipeStart | null>(null);
   const suppressClickUntilRef = useRef(0);
+
+  const getMostVisibleImageIndex = useCallback(() => {
+    const viewportHeight = window.innerHeight;
+    let bestIndex: number | null = null;
+    let bestVisibleArea = 0;
+
+    imageButtonRefs.current.forEach((element, index) => {
+      if (!element) {
+        return;
+      }
+
+      const rect = element.getBoundingClientRect();
+      const visibleHeight = Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
+
+      if (visibleHeight <= 0) {
+        return;
+      }
+
+      const imageCenter = rect.top + rect.height / 2;
+      const isInRevealBand =
+        imageCenter >= viewportHeight * 0.18 && imageCenter <= viewportHeight * 0.82;
+
+      if (isInRevealBand && visibleHeight > bestVisibleArea) {
+        bestIndex = index;
+        bestVisibleArea = visibleHeight;
+      }
+    });
+
+    return bestIndex;
+  }, []);
+
+  useEffect(() => {
+    imageButtonRefs.current.length = items.length;
+  }, [items.length]);
+
+  useEffect(() => {
+    lastScrollSampleRef.current = {
+      timestamp: window.performance.now(),
+      y: window.scrollY,
+    };
+
+    const handlePageScroll = () => {
+      const currentY = window.scrollY;
+      const currentTimestamp = window.performance.now();
+      const previousSample = lastScrollSampleRef.current;
+      const deltaY = currentY - previousSample.y;
+      const deltaTime = Math.max(currentTimestamp - previousSample.timestamp, 1);
+
+      lastScrollSampleRef.current = {
+        timestamp: currentTimestamp,
+        y: currentY,
+      };
+
+      if (!window.matchMedia("(max-width: 1279px)").matches) {
+        return;
+      }
+
+      const isFastUpwardScroll =
+        deltaY > 0 &&
+        (deltaY >= fastScrollDistanceThreshold ||
+          deltaY / deltaTime >= fastScrollVelocityThreshold);
+
+      if (!isFastUpwardScroll) {
+        return;
+      }
+
+      const visibleIndex = getMostVisibleImageIndex();
+
+      if (visibleIndex !== null) {
+        setActiveIndex(visibleIndex);
+      }
+    };
+
+    window.addEventListener("scroll", handlePageScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handlePageScroll);
+    };
+  }, [getMostVisibleImageIndex]);
 
   const updateFromVerticalSwipe = (
     swipeStart: SwipeStart | null,
@@ -154,6 +239,9 @@ export function DifferentiatorMobileCards({ items }: { items: Differentiator[] }
           <article key={item.title} className="overflow-hidden rounded-md bg-[#050505]">
             <button
               type="button"
+              ref={(element) => {
+                imageButtonRefs.current[index] = element;
+              }}
               aria-controls={contentId}
               aria-expanded={isOpen}
               aria-label={`${isOpen ? "Hide" : "Show"} details for ${item.title}`}
