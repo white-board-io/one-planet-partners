@@ -44,7 +44,7 @@ const opportunityCards = [
       "most significant scalable",
       "opportunities of this decade. One",
       "Planet leverages its climate",
-      "intelligence as an underwriting lens",
+      "insight as an underwriting lens",
       "to identify businesses with stronger",
       "growth prospects, greater resilience,",
       "and superior exit potential.",
@@ -74,12 +74,15 @@ export function OpportunitySection() {
                   alt={card.alt}
                   className="mb-6 h-auto w-full rounded-sm lg:mb-12"
                 />
-                <h3 className="mb-4 font-serif-brand text-3xl leading-6 font-normal tracking-normal md:text-[1.75rem] md:leading-7 lg:mb-7 lg:text-4xl lg:leading-8">
-                  {card.title.map((line) => (
-                    <span key={line} className="block whitespace-nowrap">
-                      {line}
-                    </span>
-                  ))}
+                <h3 className="mb-4 font-serif-brand text-2xl leading-tight font-normal tracking-normal sm:text-3xl sm:leading-6 md:text-[1.75rem] md:leading-7 lg:mb-7 lg:text-4xl lg:leading-8">
+                  <span className="md:hidden">{card.title.join(" ")}</span>
+                  <span className="hidden md:block">
+                    {card.title.map((line) => (
+                      <span key={line} className="block whitespace-nowrap">
+                        {line}
+                      </span>
+                    ))}
+                  </span>
                 </h3>
                 <p
                   aria-label={card.copy}

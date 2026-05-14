@@ -197,7 +197,7 @@ export function FocusSection() {
               ))}
             </div>
             <p
-              aria-label="We invest in established mid-market businesses positioned to benefit from India’s industrial growth, infrastructure buildout, rising domestic consumption, and transition toward a more sustainable economy. Strong micro in a supportive macro."
+              aria-label="We invest in established mid-market businesses positioned to benefit from India’s industrial growth, infrastructure buildout, rising domestic consumption, and transition toward a more sustainable economy."
               className="mx-auto mt-5 max-w-62 font-sans-brand text-base text-xl leading-6 font-light text-white md:mt-6 md:max-w-2xl lg:mt-0 lg:max-w-332 lg:text-2xl lg:leading-8"
             >
               <span className="lg:hidden">
@@ -207,7 +207,6 @@ export function FocusSection() {
                 </em>{" "}
                 positioned to benefit from India’s industrial growth, infrastructure buildout,
                 rising domestic consumption, and transition toward a more sustainable economy.
-                Strong micro in a supportive macro.
               </span>
               <span aria-hidden="true" className="hidden lg:block">
                 <span className="block whitespace-nowrap">

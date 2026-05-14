@@ -13,24 +13,28 @@ const leaders = [
   {
     id: "mukund",
     name: "Dr. Mukund Rajan",
+    nameLines: ["Dr. Mukund", "Rajan"] as const,
     designation: "Founder & General Partner",
     image: "/images/svg/leadership-image1.svg",
   },
   {
     id: "bobby",
     name: "Mr. Bobby Pauly",
+    nameLines: ["Mr. Bobby", "Pauly"] as const,
     designation: "Founder & General Partner",
     image: "/images/svg/leadership-image2.svg",
   },
   {
     id: "mrinalini",
     name: "Mrinalini Mirchandani",
+    nameLines: ["Mrinalini", "Mirchandani"] as const,
     designation: "Founder & General Partner",
     image: "/images/svg/leadership-image3.svg",
   },
   {
     id: "sheetal",
     name: "Sheetal Thakkar",
+    nameLines: ["Sheetal", "Thakkar"] as const,
     designation: "Founder & General Partner",
     image: "/images/svg/leadership-image4.svg",
   },
@@ -115,7 +119,10 @@ export function LeadershipSection() {
                     aria-label={`Read ${leader.name}'s bio`}
                     className="font-serif-brand text-base leading-tight font-semibold underline decoration-black/45 underline-offset-2"
                   >
-                    {leader.name}
+                    <span className="flex flex-col">
+                      <span>{leader.nameLines[0]}</span>
+                      <span>{leader.nameLines[1]}</span>
+                    </span>
                   </Link>
                   <p className="mt-1 text-xs leading-snug text-black/65 md:text-sm">
                     {leader.designation}
@@ -127,7 +134,7 @@ export function LeadershipSection() {
 
           <Link
             href="/leadership"
-            className="inline-flex items-center rounded-full border border-black px-7 py-2 font-serif-brand text-2xl leading-relaxed font-normal tracking-wide text-black transition hover:border-[#47a685] hover:!text-[#47a685]"
+            className="inline-flex items-center rounded-full border border-black px-5 py-1.5 font-serif-brand text-base leading-normal font-normal tracking-wide text-black transition hover:border-[#47a685] hover:!text-[#47a685] md:px-7 md:py-2 md:text-2xl md:leading-relaxed"
           >
             Meet Our People
           </Link>
