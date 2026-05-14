@@ -28,6 +28,7 @@ const focusItems = [
 
 const swipeThreshold = 48;
 const swipeAxisBias = 1.2;
+const interactiveTargetSelector = "button, a, input, textarea, select, [role='button']";
 
 function renderFocusCopy(title: string, copy: string) {
   if (title === "Energy") {
@@ -126,6 +127,10 @@ export function FocusSection() {
   };
 
   const handleSlidePointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
+    if (event.target instanceof Element && event.target.closest(interactiveTargetSelector)) {
+      return;
+    }
+
     if (event.pointerType === "mouse" && event.button !== 0) {
       return;
     }

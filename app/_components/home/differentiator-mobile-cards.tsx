@@ -30,6 +30,7 @@ export function DifferentiatorMobileCards({ items }: { items: Differentiator[] }
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const pointerSwipeStartRef = useRef<(SwipeStart & { pointerId: number }) | null>(null);
   const touchSwipeStartRef = useRef<SwipeStart | null>(null);
+  const suppressClickUntilRef = useRef(0);
 
   const updateFromVerticalSwipe = (
     swipeStart: SwipeStart | null,
@@ -52,10 +53,20 @@ export function DifferentiatorMobileCards({ items }: { items: Differentiator[] }
     }
 
     swipeStart.hasHandled = true;
+    suppressClickUntilRef.current = window.performance.now() + 700;
     setActiveIndex(deltaY < 0 ? index : null);
   };
 
-  const handleImagePointerDown = (event: ReactPointerEvent<HTMLDivElement>, index: number) => {
+  const handleCardToggle = (index: number) => {
+    if (suppressClickUntilRef.current > window.performance.now()) {
+      suppressClickUntilRef.current = 0;
+      return;
+    }
+
+    setActiveIndex((currentIndex) => (currentIndex === index ? null : index));
+  };
+
+  const handleImagePointerDown = (event: ReactPointerEvent<HTMLButtonElement>, index: number) => {
     if (event.pointerType !== "mouse" || event.button !== 0) {
       return;
     }
@@ -69,7 +80,7 @@ export function DifferentiatorMobileCards({ items }: { items: Differentiator[] }
     };
   };
 
-  const handleImageSwipe = (event: ReactPointerEvent<HTMLDivElement>, index: number) => {
+  const handleImageSwipe = (event: ReactPointerEvent<HTMLButtonElement>, index: number) => {
     const swipeStart = pointerSwipeStartRef.current;
 
     if (!swipeStart || swipeStart.pointerId !== event.pointerId) {
@@ -79,18 +90,18 @@ export function DifferentiatorMobileCards({ items }: { items: Differentiator[] }
     updateFromVerticalSwipe(swipeStart, index, event.clientX, event.clientY);
   };
 
-  const handleImagePointerUp = (event: ReactPointerEvent<HTMLDivElement>, index: number) => {
+  const handleImagePointerUp = (event: ReactPointerEvent<HTMLButtonElement>, index: number) => {
     handleImageSwipe(event, index);
     pointerSwipeStartRef.current = null;
   };
 
-  const handleImagePointerCancel = (event: ReactPointerEvent<HTMLDivElement>) => {
+  const handleImagePointerCancel = (event: ReactPointerEvent<HTMLButtonElement>) => {
     if (pointerSwipeStartRef.current?.pointerId === event.pointerId) {
       pointerSwipeStartRef.current = null;
     }
   };
 
-  const handleImageTouchStart = (event: ReactTouchEvent<HTMLDivElement>, index: number) => {
+  const handleImageTouchStart = (event: ReactTouchEvent<HTMLButtonElement>, index: number) => {
     const touch = event.touches[0];
 
     if (!touch) {
@@ -105,7 +116,7 @@ export function DifferentiatorMobileCards({ items }: { items: Differentiator[] }
     };
   };
 
-  const handleImageTouchMove = (event: ReactTouchEvent<HTMLDivElement>, index: number) => {
+  const handleImageTouchMove = (event: ReactTouchEvent<HTMLButtonElement>, index: number) => {
     const touch = event.touches[0];
 
     if (!touch) {
@@ -115,7 +126,7 @@ export function DifferentiatorMobileCards({ items }: { items: Differentiator[] }
     updateFromVerticalSwipe(touchSwipeStartRef.current, index, touch.clientX, touch.clientY);
   };
 
-  const handleImageTouchEnd = (event: ReactTouchEvent<HTMLDivElement>, index: number) => {
+  const handleImageTouchEnd = (event: ReactTouchEvent<HTMLButtonElement>, index: number) => {
     const touch = event.changedTouches[0];
 
     if (touch) {
@@ -125,7 +136,7 @@ export function DifferentiatorMobileCards({ items }: { items: Differentiator[] }
     touchSwipeStartRef.current = null;
   };
 
-  const handleImageWheel = (event: ReactWheelEvent<HTMLDivElement>, index: number) => {
+  const handleImageWheel = (event: ReactWheelEvent<HTMLButtonElement>, index: number) => {
     if (Math.abs(event.deltaY) < verticalSwipeThreshold) {
       return;
     }
@@ -134,15 +145,20 @@ export function DifferentiatorMobileCards({ items }: { items: Differentiator[] }
   };
 
   return (
-    <div className="grid gap-9 px-4 md:grid-cols-2 md:gap-7 md:px-8 lg:hidden">
+    <div className="grid gap-9 px-4 md:grid-cols-2 md:gap-7 md:px-8 xl:hidden">
       {items.map((item, index) => {
         const isOpen = activeIndex === index;
         const contentId = `differentiator-mobile-copy-${index}`;
 
         return (
           <article key={item.title} className="overflow-hidden rounded-md bg-[#050505]">
-            <div
-              className="relative aspect-[606/648] touch-pan-y overflow-hidden rounded-md"
+            <button
+              type="button"
+              aria-controls={contentId}
+              aria-expanded={isOpen}
+              aria-label={`${isOpen ? "Hide" : "Show"} details for ${item.title}`}
+              className="relative block aspect-[606/648] w-full touch-pan-y overflow-hidden rounded-md border-0 bg-transparent p-0 text-left"
+              onClick={() => handleCardToggle(index)}
               onPointerCancel={handleImagePointerCancel}
               onPointerDown={(event) => handleImagePointerDown(event, index)}
               onPointerMove={(event) => handleImageSwipe(event, index)}
@@ -162,7 +178,7 @@ export function DifferentiatorMobileCards({ items }: { items: Differentiator[] }
                 draggable={false}
               />
               <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/88 via-black/38 to-transparent" />
-            </div>
+            </button>
             <div
               id={contentId}
               aria-hidden={!isOpen}
