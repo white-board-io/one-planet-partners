@@ -70,6 +70,12 @@ a {
   text-decoration: none;
 }
 
+.footer-credit-link {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25rem;
+}
+
 img {
   display: block;
   max-width: 100%;

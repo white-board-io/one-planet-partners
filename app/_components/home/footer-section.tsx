@@ -82,20 +82,20 @@ export function FooterSection() {
         </Container>
       </div>
 
-      <Container >
-        <div className="flex flex-col lg:flex-row lg:justify-between">
-        <p className="py-2 text-start font-sans-brand text-xs lg:text-lg leading-5 text-white md:py-8">
-          One Planet Partners Copyright &copy; 2026. All rights reserved.
-        </p>
-        <p className="pb-2 text-start font-sans-brand text-xs lg:text-lg leading-5 text-white md:py-8">
-          Designed & Developed by{" "}
-          <Link
-            href="https://www.properganda.in/"
-            className="underline underline-offset-2 transition-colors hover:text-white/70"
-          >
-            Properganda
-          </Link>
-        </p>
+      <Container>
+        <div className="flex flex-col items-center gap-7 py-10 text-center lg:flex-row lg:items-start lg:justify-between lg:gap-6 lg:py-8 lg:text-left">
+          <p className="font-sans-brand text-sm  text-white lg:text-lg lg:leading-5">
+            One Planet Partners Copyright &copy; 2026. All rights reserved.
+          </p>
+          <p className="font-sans-brand text-base text-xs text-white lg:text-lg lg:leading-5">
+            Designed & Developed by{" "}
+            <Link
+              href="https://www.properganda.in/"
+              className="footer-credit-link transition-colors hover:text-white/70"
+            >
+              Properganda
+            </Link>
+          </p>
         </div>
       </Container>
     </footer>
