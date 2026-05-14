@@ -33,7 +33,10 @@ function renderFocusCopy(title: string, copy: string) {
   if (title === "Energy") {
     return (
       <>
-        <span className="xl:block xl:whitespace-nowrap">We invest in the businesses enabling</span>{" "}
+        <span className="xl:block xl:whitespace-nowrap">
+          We invest in the businesses{" "}
+          <em className="font-serif-brand font-semibold text-white italic">enabling</em>
+        </span>{" "}
         <span className="xl:block xl:whitespace-nowrap">
           India&apos;s shift to cleaner energy: renewable
         </span>{" "}
@@ -53,7 +56,8 @@ function renderFocusCopy(title: string, copy: string) {
     return (
       <>
         <span className="xl:block xl:whitespace-nowrap">
-          We back the companies that are beneficiaries
+          We back the companies that are{" "}
+          <em className="font-serif-brand font-semibold text-white italic">beneficiaries</em>
         </span>{" "}
         <span className="xl:block xl:whitespace-nowrap">
           of — and architects of — how India moves:
@@ -91,7 +95,11 @@ function renderFocusCopy(title: string, copy: string) {
         <span className="xl:block xl:whitespace-nowrap">
           capture India&apos;s manufacturing decade and a
         </span>{" "}
-        <span className="xl:block xl:whitespace-nowrap">clear pathway to green that turns the</span>{" "}
+        <span className="xl:block xl:whitespace-nowrap">
+          clear{" "}
+          <em className="font-serif-brand font-semibold text-white italic">pathway to green</em>{" "}
+          that turns the
+        </span>{" "}
         <span className="xl:block xl:whitespace-nowrap">transition into an edge.</span>
       </>
     );
@@ -225,7 +233,7 @@ export function FocusSection() {
 
           <p
             aria-live="polite"
-            className="mb-5 text-center font-serif-brand text-2xl leading-8 font-normal tracking-normal md:hidden"
+            className="mb-5 text-center font-serif-brand text-3xl leading-8 font-normal tracking-normal md:hidden"
           >
             {activeFocus.title}
           </p>
@@ -239,7 +247,7 @@ export function FocusSection() {
             <div className="order-2 flex flex-col pb-0 md:block md:min-h-0 md:pb-0 lg:order-1">
               <p
                 aria-live="polite"
-                className="mb-8 hidden text-center font-serif-brand text-3xl leading-11 font-normal tracking-normal md:block md:text-5xl md:leading-tight lg:text-left lg:text-6xl lg:leading-10"
+                className="mb-8 hidden text-center font-serif-brand text-2xl leading-11 font-normal tracking-normal md:block md:text-5xl md:leading-tight lg:text-left lg:text-6xl lg:leading-10"
               >
                 {activeFocus.title}
               </p>
