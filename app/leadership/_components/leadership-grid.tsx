@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/app/_components/container";
 import { leaders } from "./data";
+import { splitDesignation } from "./split-designation";
 import { splitPersonName } from "./split-person-name";
 
 function LeaderCard({
@@ -16,6 +17,9 @@ function LeaderCard({
   image: string;
 }) {
   const { line1, line2 } = splitPersonName(name);
+  const { line1: designationLine1, line2: designationLine2 } =
+    splitDesignation(designation);
+
   return (
     <Link
       href={`/leadership/${id}`}
@@ -41,7 +45,13 @@ function LeaderCard({
           ) : null}
         </p>
         <p className="mt-2 font-sans-brand text-sm font-light text-black/70 lg:text-base">
-          {designation}
+          <span className="block sm:inline">{designationLine1}</span>
+          {designationLine2 ? (
+            <>
+              <span className="hidden sm:inline"> </span>
+              <span className="block sm:inline">{designationLine2}</span>
+            </>
+          ) : null}
         </p>
       </div>
     </Link>

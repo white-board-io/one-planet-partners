@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { Container } from "@/app/_components/container";
+import { splitDesignation } from "@/app/leadership/_components/split-designation";
 import { cn } from "@/lib/utils";
 
 const HOVER_SCALE = 192 / 144;
@@ -94,7 +95,11 @@ export function LeadershipSection() {
           </div>
 
           <div className="grid w-full max-w-xs grid-cols-2 gap-x-8 gap-y-10 pt-2 md:max-w-3xl md:grid-cols-4 md:gap-x-6">
-            {leaders.map((leader) => (
+            {leaders.map((leader) => {
+              const { line1: desLine1, line2: desLine2 } = splitDesignation(
+                leader.designation,
+              );
+              return (
               <figure
                 key={leader.id}
                 aria-label={`${leader.name}, ${leader.designation}`}
@@ -124,12 +129,14 @@ export function LeadershipSection() {
                       <span>{leader.nameLines[1]}</span>
                     </span>
                   </Link>
-                  <p className="mt-1 text-xs leading-snug text-black/65 md:text-sm">
-                    {leader.designation}
+                  <p className="mt-1 flex flex-col items-center text-xs leading-snug text-black/65 md:text-sm">
+                    <span>{desLine1}</span>
+                    {desLine2 ? <span>{desLine2}</span> : null}
                   </p>
                 </figcaption>
               </figure>
-            ))}
+              );
+            })}
           </div>
 
           <Link
@@ -174,6 +181,9 @@ export function LeadershipSection() {
             >
               {leaders.map((leader, index) => {
                 const isActive = activeIndex === index;
+                const { line1: desLine1, line2: desLine2 } = splitDesignation(
+                  leader.designation,
+                );
                 return (
                   <figure
                     key={leader.id}
@@ -219,7 +229,10 @@ export function LeadershipSection() {
                       >
                         {leader.name}
                       </Link>
-                      <p className="text-xs leading-snug text-black/65">{leader.designation}</p>
+                      <p className="flex flex-col text-xs leading-snug text-black/65">
+                        <span>{desLine1}</span>
+                        {desLine2 ? <span>{desLine2}</span> : null}
+                      </p>
                     </figcaption>
                   </figure>
                 );

@@ -37,10 +37,10 @@ export function FooterSection() {
                   aria-label={item.label}
                   className="grid h-[3.375rem] grid-cols-[4rem_minmax(0,1fr)] items-center border-b border-white/55 font-sans-brand text-xl leading-none text-white transition-colors hover:text-white/70 sm:text-2xl lg:h-15 lg:grid-cols-[3.5rem_minmax(0,1fr)] lg:border-white/50 lg:text-base lg:last:border-b-0 xl:text-2xl"
                 >
-                  <span className="flex h-4 w-4 items-center justify-start lg:h-6 lg:w-6">
+                  <span className="flex h-4 w-4 pl-0 lg:ml-4 lg:h-6 lg:w-6">
                     {item.icon}
                   </span>
-                  <span className="min-w-0 truncate pl-0 text-right lg:pl-32 lg:text-left">
+                  <span className="min-w-0 truncate pl-0 pr-0 text-right lg:pl-36 lg:text-left">
                     {item.handle}
                   </span>
                 </Link>
@@ -82,8 +82,8 @@ export function FooterSection() {
         </Container>
       </div>
 
-      <Container className="max-w-307">
-        <p className="py-9 text-center font-sans-brand text-sm leading-5 text-white md:py-8">
+      <Container >
+        <p className="py-9 text-start font-sans-brand text-xs lg:text-lg leading-5 text-white md:py-8">
           One Planet Partners Copyright &copy; 2026. All rights reserved.
         </p>
       </Container>
