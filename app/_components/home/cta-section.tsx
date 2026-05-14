@@ -6,11 +6,11 @@ export function CtaSection() {
   return (
     <section
       id="contact"
-      className="scroll-mt-24 bg-black pt-33 pb-38 text-center text-white md:min-h-150 md:pt-30 md:pb-30"
+      className="scroll-mt-24 bg-black pt-33 pb-30 text-center text-white md:min-h-150 md:pt-30 md:pb-30"
     >
       <Container>
         <div className="mx-auto max-w-230">
-          <p className="mx-auto max-w-90 text-center font-serif-brand text-3xl leading-tight font-normal tracking-normal md:max-w-3xl md:py-10 md:text-5xl md:leading-tight lg:max-w-none lg:py-14 lg:text-6xl lg:leading-15 lg:text-balance">
+          <p className="mx-auto text-center font-serif-brand text-[28px] leading-tight font-normal tracking-normal md:max-w-3xl md:py-10 md:text-5xl md:leading-tight lg:max-w-none lg:py-14 lg:text-6xl lg:leading-15 lg:text-balance">
             <span>Let&rsquo;s build the next </span>
             <br className="lg:hidden" aria-hidden />
             <span> generation of responsible </span>
@@ -46,7 +46,7 @@ export function CtaSection() {
           </p>
           <Link
             href="mailto:info@oneplanetpartners.com"
-            className="group mt-26 inline-flex max-w-full transition-opacity hover:opacity-80 md:mt-15"
+            className="group mt-20 inline-flex max-w-full transition-opacity hover:opacity-80 md:mt-15"
           >
             <Image
               width={646}

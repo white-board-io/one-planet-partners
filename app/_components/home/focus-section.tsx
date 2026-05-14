@@ -200,7 +200,10 @@ export function FocusSection() {
                   ) : null}
                   <button
                     aria-pressed={index === activeIndex}
-                    className="text-white transition hover:text-white"
+                    className={cn(
+                      "text-white transition hover:text-white",
+                      index === activeIndex ? "font-semibold" : "font-normal",
+                    )}
                     onClick={() => setActiveIndex(index)}
                     type="button"
                   >
@@ -238,7 +241,7 @@ export function FocusSection() {
 
           <p
             aria-live="polite"
-            className="mb-10 text-center font-serif-brand text-3xl leading-8 font-normal tracking-normal md:hidden"
+            className="mb-10 text-center font-serif-brand text-3xl leading-8 font-semibold tracking-normal md:hidden"
           >
             {activeFocus.title}
           </p>
@@ -252,7 +255,7 @@ export function FocusSection() {
             <div className="order-2 flex flex-col pb-0 md:block md:min-h-0 md:pb-0 lg:order-1">
               <p
                 aria-live="polite"
-                className="mb-8 hidden text-center font-serif-brand text-2xl leading-11 font-normal tracking-normal md:block md:text-5xl md:leading-tight lg:text-left lg:text-6xl lg:leading-10"
+                className="mb-8 hidden text-center font-serif-brand text-2xl leading-11 font-semibold tracking-normal md:block md:text-5xl md:leading-tight lg:text-left lg:text-6xl lg:leading-10"
               >
                 {activeFocus.title}
               </p>
