@@ -146,7 +146,7 @@ export function DifferentiatorDesktopCards({ items }: { items: Differentiator[] 
                 ref={(element) => {
                   copyRefs.current[index] = element;
                 }}
-                className="mt-5 max-w-[28rem] font-sans-brand text-[1rem] leading-[1.38] font-light text-black/78 will-change-transform 2xl:mt-7 2xl:text-[1.375rem] 2xl:leading-[1.55]"
+                className="mt-5 max-w-[28rem] font-sans-brand text-[1rem] leading-[1.38] font-light text-black/78 will-change-transform 2xl:mt-7 xl:text-[1.375rem] 2xl:leading-[1.55]"
               >
                 {item.copy}
               </p>
