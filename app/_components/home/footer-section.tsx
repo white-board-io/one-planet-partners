@@ -61,7 +61,7 @@ export function FooterSection() {
               />
             </Link>
 
-            <address className="order-3 w-full border-white/30 pt-11 not-italic lg:mt-1 lg:border-y lg:py-7">
+            <address className="order-3 w-full border-white/30 pt-11 not-italic lg:mt-1 lg:border-y lg:py-7 lg:pl-6">
               <div className="grid grid-cols-[4rem_minmax(0,1fr)] items-start lg:flex lg:gap-5">
                 <MapPinIcon />
                 <div>
@@ -83,9 +83,20 @@ export function FooterSection() {
       </div>
 
       <Container >
-        <p className="py-9 text-start font-sans-brand text-xs lg:text-lg leading-5 text-white md:py-8">
+        <div className="flex flex-col lg:flex-row lg:justify-between">
+        <p className="py-2 text-start font-sans-brand text-xs lg:text-lg leading-5 text-white md:py-8">
           One Planet Partners Copyright &copy; 2026. All rights reserved.
         </p>
+        <p className="pb-2 text-start font-sans-brand text-xs lg:text-lg leading-5 text-white md:py-8">
+          Designed & Developed by{" "}
+          <Link
+            href="https://www.properganda.in/"
+            className="underline underline-offset-2 transition-colors hover:text-white/70"
+          >
+            Properganda
+          </Link>
+        </p>
+        </div>
       </Container>
     </footer>
   );
