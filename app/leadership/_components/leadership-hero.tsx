@@ -9,7 +9,7 @@ export function LeadershipHero() {
         alt=""
         priority
         src="/images/leadership-hero.png"
-        className="object-cover opacity-55"
+        className="object-cover"
       />
       <div
         aria-hidden="true"

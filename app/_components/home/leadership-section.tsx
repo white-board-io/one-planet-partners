@@ -45,7 +45,7 @@ const stats = [
   {
     value: "~14bn",
     label: "14 billion deal experience",
-    desktopLabel: ["14 billion deal", "experience"],
+    desktopLabel: ["billion deal", "experience"],
   },
   {
     value: "65+",

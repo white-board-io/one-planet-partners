@@ -24,7 +24,7 @@ export function PersonDetail({ person }: { person: Person }) {
           </div>
 
           <div className="text-center lg:text-left">
-            <h1 className="font-serif-brand text-5xl font-semibold text-black md:text-3xl lg:text-[2.75rem] lg:leading-tight">
+            <h1 className="font-serif-brand text-4xl font-semibold text-black md:text-3xl lg:text-7xl lg:leading-tight">
               {person.name}
             </h1>
             <p className="font-sans-brand text-lg font-light text-black/60 md:text-lg">
@@ -40,8 +40,8 @@ export function PersonDetail({ person }: { person: Person }) {
               key={i}
               className={
                 i === 0
-                  ? "font-serif-brand text-2xl font-normal not-italic leading-8 tracking-normal text-black/80"
-                  : "font-sans-brand text-base font-light leading-8 text-black/80 md:text-2xl"
+                  ? "font-serif-brand text-base text-xl leading-6 font-normal not-italic md:text-lg md:leading-7 lg:text-2xl lg:leading-8tracking-normal text-black/80"
+                  : "font-sans-brand text-base text-xl leading-6 font-light tracking-normal text-black/80 md:text-lg md:leading-7 lg:text-2xl lg:leading-8"
               }
             >
               {paragraph}

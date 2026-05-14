@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/app/_components/container";
 import { leaders } from "./data";
+import { splitPersonName } from "./split-person-name";
 
 function LeaderCard({
   id,
@@ -14,6 +15,7 @@ function LeaderCard({
   designation: string;
   image: string;
 }) {
+  const { line1, line2 } = splitPersonName(name);
   return (
     <Link
       href={`/leadership/${id}`}
@@ -29,7 +31,15 @@ function LeaderCard({
         />
       </div>
       <div className="mt-6 text-center">
-        <p className="font-serif-brand text-lg font-semibold lg:text-2xl">{name}</p>
+        <p className="font-serif-brand text-lg font-semibold leading-snug sm:leading-normal lg:text-2xl">
+          <span className="block sm:inline">{line1}</span>
+          {line2 ? (
+            <>
+              <span className="hidden sm:inline"> </span>
+              <span className="block sm:inline">{line2}</span>
+            </>
+          ) : null}
+        </p>
         <p className="mt-2 font-sans-brand text-sm font-light text-black/70 lg:text-base">
           {designation}
         </p>
@@ -42,7 +52,7 @@ export function LeadershipGrid() {
   return (
     <section className="bg-white py-16 md:py-24">
       <Container>
-        <h2 className="text-center font-serif-brand text-display-xl font-normal text-black">
+        <h2 className="text-center font-serif-brand text-4xl lg:text-7xl font-normal text-black">
           Leadership
         </h2>
         <div className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
