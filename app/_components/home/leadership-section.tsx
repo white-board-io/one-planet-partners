@@ -218,7 +218,7 @@ export function LeadershipSection() {
                     </div>
                     <figcaption
                       className={cn(
-                        "absolute left-1/2 top-48 w-52 -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-300 ease-out",
+                        "absolute left-1/2 top-45 w-52 -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-300 ease-out",
                         isActive ? "translate-y-0 opacity-100" : null,
                       )}
                     >
