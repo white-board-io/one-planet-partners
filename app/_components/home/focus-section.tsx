@@ -233,7 +233,7 @@ export function FocusSection() {
 
           <p
             aria-live="polite"
-            className="mb-5 text-center font-serif-brand text-3xl leading-8 font-normal tracking-normal md:hidden"
+            className="mb-10 text-center font-serif-brand text-3xl leading-8 font-normal tracking-normal md:hidden"
           >
             {activeFocus.title}
           </p>
@@ -251,7 +251,7 @@ export function FocusSection() {
               >
                 {activeFocus.title}
               </p>
-              <p className="mx-auto mt-9 max-w-60 text-center font-sans-brand text-base text-xl leading-6 font-light tracking-normal text-white md:mt-10 md:max-w-2xl md:min-h-0 lg:mx-0 lg:mt-16 lg:min-h-51 lg:max-w-118 lg:text-left lg:text-2xl lg:leading-8">
+              <p className="mx-auto mt-9 max-w-68 text-center font-sans-brand text-base text-xl leading-6 font-light tracking-normal text-white md:mt-10 md:max-w-2xl md:min-h-0 lg:mx-0 lg:mt-16 lg:min-h-51 lg:max-w-118 lg:text-left lg:text-2xl lg:leading-8">
                 {renderFocusCopy(activeFocus.title, activeFocus.copy)}
               </p>
               <div className="mt-9 flex items-center justify-center gap-6 text-white md:mt-12 md:gap-4 lg:mt-24 lg:justify-start xl:w-75 xl:justify-between xl:gap-0">
