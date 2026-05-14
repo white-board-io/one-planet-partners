@@ -8,19 +8,19 @@ type ValueIcon = ComponentType<ValueIconProps>;
 
 const valueItems: Array<{ copy: string; icon: ValueIcon; copyClassName?: string }> = [
   {
-    copy: "Sharpen strategy and investor messaging.",
+    copy: "Sharpen strategy and investor messaging",
     icon: StrategyIcon,
   },
   {
-    copy: "Accelerate growth and expand margins.",
+    copy: "Accelerate growth and expand margins",
     icon: GrowthIcon,
   },
   {
-    copy: "Enhance capital efficiency.",
+    copy: "Enhance capital efficiency",
     icon: CapitalIcon,
   },
   {
-    copy: "Elevate talent, link to value.",
+    copy: "Elevate talent, link to value",
     icon: TalentIcon,
   },
   {
@@ -52,7 +52,8 @@ export function ValueCreationSection() {
           />
 
           <h2 className="mt-6 max-w-59 font-serif-brand text-4xl leading-9 font-normal tracking-normal text-black md:mt-8 md:max-w-none md:text-7xl md:leading-16">
-            How We Create Value
+            <span className="block md:inline">How We </span>
+            <span className="block md:inline">Create Value</span>
           </h2>
 
           <p className="mt-8 font-sans-brand text-xl leading-6 font-light text-black md:mt-5 md:text-xl lg:text-2xl lg:leading-7">
