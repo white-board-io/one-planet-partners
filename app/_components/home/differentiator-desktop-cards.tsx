@@ -138,7 +138,7 @@ export function DifferentiatorDesktopCards({ items }: { items: Differentiator[] 
                 ref={(element) => {
                   titleRefs.current[index] = element;
                 }}
-                className="max-w-96 font-serif-brand text-[2.375rem] leading-[1.05] font-normal will-change-transform 2xl:text-[3rem] 2xl:leading-none"
+                className="max-w-96 font-serif-brand text-[2.375rem] leading-[1.05] font-normal will-change-transform xl:text-[3rem] 2xl:leading-none"
               >
                 {item.title}
               </h3>
