@@ -44,7 +44,7 @@ const stats = [
   { value: "25+", label: "years of collaboration", desktopLabel: ["years of", "collaboration"] },
   {
     value: "~14bn",
-    label: "14 billion deal experience",
+    label: "billion deal experience",
     desktopLabel: ["billion deal", "experience"],
   },
   {
