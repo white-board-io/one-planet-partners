@@ -94,7 +94,7 @@ export function LeadershipSection() {
             ))}
           </div>
 
-          <div className="grid w-full max-w-xs grid-cols-2 gap-x-8 gap-y-10 pt-2 md:max-w-3xl md:grid-cols-4 md:gap-x-6">
+          <div className="grid w-full max-w-xs grid-cols-2 gap-x-8 gap-y-10 pt-6 md:max-w-3xl md:grid-cols-4 md:gap-x-6">
             {leaders.map((leader) => {
               const { line1: desLine1, line2: desLine2 } = splitDesignation(
                 leader.designation,
@@ -176,7 +176,7 @@ export function LeadershipSection() {
 
           <div className="w-140 justify-self-en mr-16">
             <div
-              className="flex min-h-88 items-start justify-center pt-4"
+              className="flex min-h-88 items-start justify-center pt-8"
               onMouseLeave={() => setActiveIndex(DEFAULT_ACTIVE_INDEX)}
             >
               {leaders.map((leader, index) => {
