@@ -214,7 +214,7 @@ export function FocusSection() {
             </div>
             <p
               aria-label="We invest in established mid-market businesses positioned to benefit from India’s industrial growth, infrastructure buildout, rising domestic consumption, and transition toward a more sustainable economy."
-              className="mx-auto mt-5 max-w-62 font-sans-brand text-base text-xl leading-6 font-light text-white md:mt-6 md:max-w-2xl lg:mt-0 lg:max-w-332 lg:text-2xl lg:leading-8"
+              className="mx-auto mt-5 max-w-62 font-sans-brand text-base text-xl leading-6 font-normal text-white md:mt-6 md:max-w-2xl lg:mt-0 lg:max-w-332 lg:text-2xl lg:leading-8"
             >
               <span className="lg:hidden">
                 We invest in established{" "}
@@ -259,7 +259,7 @@ export function FocusSection() {
               >
                 {activeFocus.title}
               </p>
-              <p className="mx-auto mt-9 max-w-68 text-center font-sans-brand text-base text-xl leading-6 font-light tracking-normal text-white md:mt-10 md:max-w-2xl md:min-h-0 lg:mx-0 lg:mt-16 lg:min-h-51 lg:max-w-118 lg:text-left lg:text-2xl lg:leading-8">
+              <p className="mx-auto mt-9 max-w-68 text-center font-sans-brand text-base text-xl leading-6 font-normal tracking-normal text-white md:mt-10 md:max-w-2xl md:min-h-0 lg:mx-0 lg:mt-16 lg:min-h-51 lg:max-w-118 lg:text-left lg:text-2xl lg:leading-8">
                 {renderFocusCopy(activeFocus.title, activeFocus.copy)}
               </p>
               <div className="mt-9 flex items-center justify-center gap-6 text-white md:mt-12 md:gap-4 lg:mt-24 lg:justify-start xl:w-75 xl:justify-between xl:gap-0">

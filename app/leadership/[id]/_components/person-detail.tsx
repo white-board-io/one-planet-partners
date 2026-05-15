@@ -27,7 +27,7 @@ export function PersonDetail({ person }: { person: Person }) {
             <h1 className="font-serif-brand text-4xl font-semibold text-black md:text-3xl lg:text-7xl lg:leading-tight">
               {person.name}
             </h1>
-            <p className="font-sans-brand text-lg font-light text-black/60 md:text-lg">
+            <p className="font-sans-brand text-lg font-normal text-black/60 md:text-lg">
               {person.designation}
             </p>
           </div>
@@ -41,7 +41,7 @@ export function PersonDetail({ person }: { person: Person }) {
               className={
                 i === 0
                   ? "font-serif-brand text-base text-xl leading-6 font-normal not-italic md:text-lg md:leading-7 lg:text-2xl lg:leading-8tracking-normal text-black/80"
-                  : "font-sans-brand text-base text-xl leading-6 font-light tracking-normal text-black/80 md:text-lg md:leading-7 lg:text-2xl lg:leading-8"
+                  : "font-sans-brand text-base text-xl leading-6 font-normal tracking-normal text-black/80 md:text-lg md:leading-7 lg:text-2xl lg:leading-8"
               }
             >
               {paragraph}

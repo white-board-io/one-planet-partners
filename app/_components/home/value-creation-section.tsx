@@ -56,7 +56,7 @@ export function ValueCreationSection() {
             <span className="block md:inline">Create Value</span>
           </h2>
 
-          <p className="mt-8 font-sans-brand text-xl leading-6 font-light text-black md:mt-5 md:text-xl lg:text-2xl lg:leading-7">
+          <p className="mt-8 font-sans-brand text-xl leading-6 font-normal text-black md:mt-5 md:text-xl lg:text-2xl lg:leading-7">
             <span className="block">
               We approach every investment with an owner’s mindset. Tailored to mid-market
               businesses, our value creation framework

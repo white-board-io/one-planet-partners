@@ -44,7 +44,7 @@ function LeaderCard({
             </>
           ) : null}
         </p>
-        <p className="mt-2 font-sans-brand text-sm font-light text-black/70 lg:text-base">
+        <p className="mt-2 font-sans-brand text-sm font-normal text-black/70 lg:text-base">
           <span className="block sm:inline">{designationLine1}</span>
           {designationLine2 ? (
             <>

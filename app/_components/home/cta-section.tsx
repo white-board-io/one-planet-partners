@@ -17,7 +17,7 @@ export function CtaSection() {
             <br className="lg:hidden" aria-hidden />
             <em className="font-normal italic">market-leaders&hellip; together.</em>
           </p>
-          <p className="mx-auto  pt-8 text-center font-sans-brand text-2xl leading-[1.35] font-light tracking-normal text-white md:max-w-205 md:text-2xl md:leading-7">
+          <p className="mx-auto  pt-8 text-center font-sans-brand text-2xl leading-[1.35] font-normal tracking-normal text-white md:max-w-205 md:text-2xl md:leading-7">
             <span className="lg:hidden">
               <span className="block">We welcome conversations</span>
               <span className="block">with partners who share our</span>

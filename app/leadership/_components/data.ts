@@ -28,9 +28,7 @@ export const people: Person[] = [
       "Mukund holds an M.Phil and D.Phil in International Relations as a Rhodes Scholar at Oxford University and a B.Tech from IIT Delhi.",
     ],
     social: {
-      linkedin: "https://linkedin.com/in/mukundrajan",
-      twitter: "https://twitter.com/mukundrajan",
-      website: "https://oneplanetpartners.com",
+      linkedin: "https://in.linkedin.com/in/mukund-rajan-497a825",
     },
     category: "leader",
   },
@@ -45,7 +43,7 @@ export const people: Person[] = [
       "Bobby holds a management degree from IIM Calcutta and graduated from the Mechanical Engineering program of College of Engineering, Guindy.",
     ],
     social: {
-      linkedin: "https://linkedin.com/in/bobbypauly",
+      linkedin: "https://in.linkedin.com/in/bobbypauly",
     },
     category: "leader",
   },
@@ -61,7 +59,7 @@ export const people: Person[] = [
       "Mrinalini holds a management degree from IIM Calcutta and a B.Com from Mumbai University.",
     ],
     social: {
-      linkedin: "https://linkedin.com/in/mrinalinim",
+      linkedin: "https://in.linkedin.com/in/mrinalini-mirchandani-6293a462",
     },
     category: "leader",
   },
@@ -76,7 +74,7 @@ export const people: Person[] = [
       "Sheetal holds an MBA from the Wharton School and a BS from NYU's Stern School of Business.",
     ],
     social: {
-      linkedin: "https://linkedin.com/in/sheetalthakkar",
+      linkedin: "https://www.linkedin.com/in/sheetal-thakkar-3a30901",
     },
     category: "leader",
   },
@@ -92,7 +90,7 @@ export const people: Person[] = [
       "He is currently Country Head of SoftBank India and serves on the boards of several leading Indian companies.",
     ],
     social: {
-      linkedin: "https://linkedin.com/in/manojkohli",
+      linkedin: "https://in.linkedin.com/in/manoj-kohli-34948b108",
     },
     category: "advisor",
   },
@@ -108,7 +106,7 @@ export const people: Person[] = [
       "Raju holds an MBA from IIM Ahmedabad and a B.Tech (Honors) in Electrical Engineering from IIT Bombay.",
     ],
     social: {
-      linkedin: "https://linkedin.com/in/rajendrab",
+      linkedin: "https://in.linkedin.com/in/rajendra-bhinge",
     },
     category: "advisor",
   },
@@ -124,7 +122,7 @@ export const people: Person[] = [
       "Ramesh holds a B.Com from Nagpur University and is a qualified AICWA, ACS, and CPA. He has completed executive programs at IIM Ahmedabad and INSEAD.",
     ],
     social: {
-      linkedin: "https://linkedin.com/in/rameshsub",
+      linkedin: "https://in.linkedin.com/in/ramesh-n-subramanyam",
     },
     category: "advisor",
   },
@@ -140,7 +138,7 @@ export const people: Person[] = [
       "He holds an MBA from UCLA Anderson School of Management and a BA in Economics from Keio University.",
     ],
     social: {
-      linkedin: "https://linkedin.com/in/rikikojima",
+      linkedin: "https://jp.linkedin.com/in/riki-kojima-2246474",
     },
     category: "advisor",
   },
@@ -156,7 +154,7 @@ export const people: Person[] = [
       "Riaz holds a BS in Finance from Boston College's Carroll School of Management.",
     ],
     social: {
-      linkedin: "https://linkedin.com/in/riazc",
+      linkedin: "https://uk.linkedin.com/in/riaz-currimjee-a6232",
     },
     category: "advisor",
   },

@@ -147,8 +147,8 @@ export function HeroSection() {
         <Container className="relative z-10 flex h-full items-center">
           <div className="overflow-hidden py-2 font-serif-brand text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl">
             <h1 ref={headlineRef} className="text-white">
-              <span className="block font-light">{"Invest in India's"}</span>
-              <span className="block font-light">
+              <span className="block font-normal">{"Invest in India's"}</span>
+              <span className="block font-normal">
                 Rapidly <em className="italic font-semibold">Growing</em>
               </span>
               <span className="block italic font-semibold">Mid-Market.</span>
@@ -168,7 +168,7 @@ export function HeroSection() {
                       "block my-1.5",
                       index < 3
                         ? "italic"
-                        : "[font-family:var(--font-source-sans)] font-light tracking-normal not-italic",
+                        : "[font-family:var(--font-source-sans)] font-normal tracking-normal not-italic",
                     )}
                   >
                     {line}

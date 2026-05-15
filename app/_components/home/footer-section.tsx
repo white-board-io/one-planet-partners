@@ -4,19 +4,19 @@ import { Container } from "@/app/_components/container";
 
 const socialLinks = [
   {
-    href: "#",
+    href: "https://in.linkedin.com/company/oneplanetpartners",
     label: "LinkedIn",
     handle: "@oneplanetpartners",
     icon: <LinkedInIcon />,
   },
   {
-    href: "#",
+    href: "https://x.com/oneplanetpartners",
     label: "X",
     handle: "@oneplanetpartners",
     icon: <XIcon />,
   },
   {
-    href: "#",
+    href: "https://www.instagram.com/oneplanetpartners",
     label: "Instagram",
     handle: "@oneplanetpartners",
     icon: <InstagramIcon />,
@@ -30,11 +30,16 @@ export function FooterSection() {
         <Container>
           <div className="grid pt-28 pb-24 lg:grid-cols-[minmax(0,25rem)_minmax(12rem,1fr)_minmax(18rem,26rem)] lg:items-start lg:gap-0 lg:pt-25 lg:pb-25">
             <div className="order-2 mt-18 w-full max-w-full border-white/50 lg:order-1 lg:mt-0 lg:border-y">
-              {socialLinks.map((item) => (
+              {socialLinks.map((item) => {
+                const isExternal = item.href.startsWith("http");
+                return (
                 <Link
                   key={item.label}
                   href={item.href}
                   aria-label={item.label}
+                  {...(isExternal
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
                   className="grid h-[3.375rem] grid-cols-[4rem_minmax(0,1fr)] items-center border-b border-white/55 font-sans-brand text-xl leading-none text-white transition-colors hover:text-white/70 sm:text-2xl lg:h-15 lg:grid-cols-[3.5rem_minmax(0,1fr)] lg:border-white/50 lg:text-base lg:last:border-b-0 xl:text-2xl"
                 >
                   <span className="flex h-4 w-4 pl-0 lg:ml-4 lg:h-6 lg:w-6">
@@ -44,7 +49,8 @@ export function FooterSection() {
                     {item.handle}
                   </span>
                 </Link>
-              ))}
+                );
+              })}
             </div>
 
             <Link

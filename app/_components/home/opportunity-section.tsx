@@ -86,7 +86,7 @@ export function OpportunitySection() {
                 </h3>
                 <p
                   aria-label={card.copy}
-                  className="font-sans-brand text-base text-xl leading-6 font-light tracking-normal text-black/80 md:text-lg md:leading-7 lg:text-2xl lg:leading-8"
+                  className="font-sans-brand text-base text-xl leading-6 font-normal tracking-normal text-black/80 md:text-lg md:leading-7 lg:text-2xl lg:leading-8"
                 >
                   <span className="lg:hidden">{card.copy}</span>
                   <span aria-hidden="true" className="hidden lg:block">

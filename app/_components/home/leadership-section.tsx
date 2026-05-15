@@ -156,7 +156,7 @@ export function LeadershipSection() {
               <h3 className="font-sans-brand text-2xl leading-8 font-semibold tracking-normal whitespace-nowrap">
                 A Proven Team Building Together Again
               </h3>
-              <p className="mt-5 font-sans-brand text-2xl leading-7 font-light tracking-normal text-black/70">
+              <p className="mt-5 font-sans-brand text-2xl leading-7 font-normal tracking-normal text-black/70">
                 Belief in India&apos;s entrepreneurship unites us. We bring
                 <br />
                 strong investment and value-creation expertise, deep
@@ -250,7 +250,7 @@ export function LeadershipSection() {
                   <p className="font-serif-brand text-5xl leading-10 font-normal tracking-normal whitespace-nowrap">
                     {stat.value}
                   </p>
-                  <p className="mx-auto mt-3 max-w-44 font-sans-brand text-2xl leading-7 font-light tracking-normal text-black/62">
+                  <p className="mx-auto mt-3 max-w-44 font-sans-brand text-2xl leading-7 font-normal tracking-normal text-black/62">
                     {stat.desktopLabel.map((line) => (
                       <span key={line} className="block">
                         {line}
