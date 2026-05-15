@@ -4,12 +4,12 @@ import { DifferentiatorMobileCards } from "@/app/_components/home/differentiator
 
 const differentiators = [
   {
-    title: "Business builders, not passive capital",
+    title: "Business Builders, Not Passive Capital",
     image: "/images/svg/differentiaror-image1.svg",
     copy: "We take meaningful stakes and act as owners. Capital is just the start. What we bring beyond that — strategic insight, value creation mindset, operational expertise, governance, and deep networks — is where the value is built.",
   },
   {
-    title: "Institutional, yet entrepreneurial",
+    title: "Institutional, Yet Entrepreneurial",
     image: "/images/svg/differentiator-image2.svg",
     copy: "We combine big-firm discipline with start-up energy. Institutional rigour and governance, and entrepreneurial speed and flexibility.",
   },
@@ -27,7 +27,7 @@ export function DifferentiatorsSection() {
         <div className="mx-auto w-full">
           <div className="mb-8 text-center md:mb-22">
             <h2 className="font-serif-brand text-4xl leading-none font-normal md:text-7xl md:leading-none">
-              What Sets Us Apart
+              Our Edge
             </h2>
           </div>
           <DifferentiatorMobileCards items={differentiators} />

@@ -96,7 +96,7 @@ export const people: Person[] = [
   },
   {
     id: "rajendra",
-    name: 'Rajendra "Raju" Bhinge',
+    name: 'Rajendra Bhinge',
     designation: "Senior Advisor",
     image: "/images/leadership/Rajendra%20Bhinge.png",
     bio: [

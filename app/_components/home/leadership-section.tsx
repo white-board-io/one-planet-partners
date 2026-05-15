@@ -21,7 +21,7 @@ const leaders = [
   {
     id: "bobby",
     name: "Bobby Pauly",
-    nameLines: ["Mr. Bobby", "Pauly"] as const,
+    nameLines: ["Bobby", "Pauly"] as const,
     designation: "Founder & General Partner",
     image: "/images/leadership/Bobby%20Pauly.png",
   },
@@ -44,9 +44,9 @@ const leaders = [
 const stats = [
   { value: "25+", label: "years of collaboration", desktopLabel: ["years of", "collaboration"] },
   {
-    value: "~14",
-    label: "billion USD deal experience",
-    desktopLabel: ["billion USD", "deal experience"],
+    value: "~14bn",
+    label: "USD deal experience",
+    desktopLabel: ["USD", "deal experience"],
   },
   {
     value: "65+",
