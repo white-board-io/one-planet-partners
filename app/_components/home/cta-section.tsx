@@ -10,14 +10,14 @@ export function CtaSection() {
     >
       <Container>
         <div className="mx-auto max-w-230">
-          <p className="mx-auto text-center font-serif-brand text-[28px] leading-tight font-normal tracking-normal md:max-w-3xl md:py-10 md:text-5xl md:leading-tight lg:max-w-none lg:py-14 lg:text-6xl lg:leading-15 lg:text-balance">
+          <p className="mx-auto text-center font-serif-brand text-[28px] leading-tight font-normal tracking-normal sm:text-[34px] md:max-w-3xl md:py-10 md:text-5xl md:leading-tight lg:max-w-none lg:py-14 lg:text-6xl lg:leading-15 lg:text-balance">
             <span>Let&rsquo;s build the next </span>
             <br className="lg:hidden" aria-hidden />
             <span> generation of responsible </span>
             <br className="lg:hidden" aria-hidden />
             <em className="font-normal italic">market-leaders&hellip; together.</em>
           </p>
-          <p className="mx-auto max-w-96 pt-8 text-center font-sans-brand text-2xl leading-[1.35] font-light tracking-normal text-white md:max-w-205 md:text-2xl md:leading-7">
+          <p className="mx-auto  pt-8 text-center font-sans-brand text-2xl leading-[1.35] font-light tracking-normal text-white md:max-w-205 md:text-2xl md:leading-7">
             <span className="lg:hidden">
               <span className="block">We welcome conversations</span>
               <span className="block">with partners who share our</span>

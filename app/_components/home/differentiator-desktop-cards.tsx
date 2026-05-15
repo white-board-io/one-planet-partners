@@ -101,7 +101,7 @@ export function DifferentiatorDesktopCards({ items }: { items: Differentiator[] 
   };
 
   return (
-    <div className="hidden gap-8 px-6 sm:px-10 xl:grid xl:grid-cols-3 xl:gap-9 xl:px-0">
+    <div className="hidden gap-8 px-6 sm:px-10 lg:grid lg:grid-cols-3 lg:gap-9 lg:px-0">
       {items.map((item, index) => (
         <article
           key={item.title}

@@ -230,7 +230,7 @@ export function DifferentiatorMobileCards({ items }: { items: Differentiator[] }
   };
 
   return (
-    <div className="grid gap-9 px-4 md:grid-cols-2 md:gap-7 md:px-8 xl:hidden">
+    <div className="grid gap-9 px-4 md:grid-cols-2 md:gap-7 md:px-8 lg:hidden">
       {items.map((item, index) => {
         const isOpen = activeIndex === index;
         const contentId = `differentiator-mobile-copy-${index}`;
