@@ -6,30 +6,30 @@ import { cn } from "@/lib/utils";
 type ValueIconProps = Pick<SVGProps<SVGSVGElement>, "className" | "aria-hidden">;
 type ValueIcon = ComponentType<ValueIconProps>;
 
-const valueItems: Array<{ copy: string; icon: ValueIcon; copyClassName?: string }> = [
+const valueItems: Array<{ lines: string[]; icon: ValueIcon; copyClassName?: string }> = [
   {
-    copy: "Sharpen strategy and investor messaging",
+    lines: ["Sharpen strategy and", "investor messaging"],
     icon: StrategyIcon,
   },
   {
-    copy: "Accelerate growth and expand margins",
+    lines: ["Accelerate growth and", "expand margins"],
     icon: GrowthIcon,
   },
   {
-    copy: "Enhance capital efficiency",
+    lines: ["Enhance capital", "efficiency"],
     icon: CapitalIcon,
   },
   {
-    copy: "Elevate talent, link to value",
+    lines: ["Elevate talent,", "link to value"],
     icon: TalentIcon,
   },
   {
-    copy: "Strengthen governance, climate integrated reporting and controls",
+    lines: ["Strengthen governance,", "climate integrated", "reporting and controls"],
     icon: ReportingIcon,
     copyClassName: "max-w-53",
   },
   {
-    copy: "Develop exit maturity, multiply pathways to exit",
+    lines: ["Develop exit maturity,", "multiply pathways to exit"],
     icon: FootprintIcon,
   },
 ];
@@ -68,16 +68,20 @@ export function ValueCreationSection() {
           </p>
 
           <div className="mt-17 grid w-full grid-cols-2 gap-x-7 gap-y-18 sm:gap-x-12 md:mt-18 md:grid-cols-3 md:gap-x-20 md:gap-y-24">
-            {valueItems.map(({ copy, icon: Icon, copyClassName }) => (
-              <div key={copy} className="flex flex-col items-center">
+            {valueItems.map(({ lines, icon: Icon, copyClassName }) => (
+              <div key={lines.join(" ")} className="flex flex-col items-center">
                 <Icon aria-hidden="true" className="h-8 w-8 text-black/85" />
                 <p
                   className={cn(
-                    "mt-9 max-w-46 font-serif-brand text-2xl leading-6 font-normal text-black md:mt-6 md:max-w-64 md:leading-8",
+                    "mt-7 max-w-52 text-center font-serif-brand text-2xl leading-7 font-normal text-black md:mt-7 md:max-w-64 md:leading-8",
                     copyClassName,
                   )}
                 >
-                  {copy}
+                  {lines.map((line) => (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  ))}
                 </p>
               </div>
             ))}
