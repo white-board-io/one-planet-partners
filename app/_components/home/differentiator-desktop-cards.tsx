@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { Reveal } from "@/app/_components/reveal";
 
 type Differentiator = {
   title: string;
@@ -103,8 +104,8 @@ export function DifferentiatorDesktopCards({ items }: { items: Differentiator[] 
   return (
     <div className="hidden gap-8 px-6 sm:px-10 lg:grid lg:grid-cols-3 lg:gap-9 lg:px-0">
       {items.map((item, index) => (
+        <Reveal key={item.title} delay={index * 130}>
         <article
-          key={item.title}
           ref={(element) => {
             cardRefs.current[index] = element;
           }}
@@ -153,6 +154,7 @@ export function DifferentiatorDesktopCards({ items }: { items: Differentiator[] 
             </div>
           </div>
         </article>
+        </Reveal>
       ))}
     </div>
   );

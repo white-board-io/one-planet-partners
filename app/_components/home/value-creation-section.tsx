@@ -1,6 +1,7 @@
 import type { ComponentType, SVGProps } from "react";
 import Image from "next/image";
 import { Container } from "@/app/_components/container";
+import { Reveal } from "@/app/_components/reveal";
 import { cn } from "@/lib/utils";
 
 type ValueIconProps = Pick<SVGProps<SVGSVGElement>, "className" | "aria-hidden">;
@@ -42,20 +43,25 @@ export function ValueCreationSection() {
     >
       <Container>
         <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
-          <Image
-            src="/images/svg/logo.svg"
-            alt="One Planet Partners"
-            width={84}
-            height={84}
-            className="size-13 md:size-21"
-            priority={false}
-          />
+          <Reveal>
+            <Image
+              src="/images/svg/logo.svg"
+              alt="One Planet Partners"
+              width={84}
+              height={84}
+              className="size-13 md:size-21"
+              priority={false}
+            />
+          </Reveal>
 
-          <h2 className="mt-6 max-w-59 font-serif-brand text-4xl leading-9 font-normal tracking-normal text-black md:mt-8 md:max-w-none md:text-7xl md:leading-16">
-            <span className="block md:inline">How We </span>
-            <span className="block md:inline">Create Value</span>
-          </h2>
+          <Reveal delay={120}>
+            <h2 className="mt-6 max-w-59 font-serif-brand text-4xl leading-9 font-normal tracking-normal text-black md:mt-8 md:max-w-none md:text-7xl md:leading-16">
+              <span className="block md:inline">How We </span>
+              <span className="block md:inline">Create Value</span>
+            </h2>
+          </Reveal>
 
+          <Reveal delay={240}>
           <p className="mt-8 font-sans-brand text-xl leading-6 font-normal text-black md:mt-5 md:text-xl lg:text-2xl lg:leading-7">
             <span className="block">
               We approach every investment with an owner’s mindset. Tailored to mid-market
@@ -70,10 +76,11 @@ export function ValueCreationSection() {
               exits.
             </span>
           </p>
+          </Reveal>
 
           <div className="mt-17 grid w-full grid-cols-2 gap-x-7 gap-y-18 sm:gap-x-12 md:mt-18 md:grid-cols-3 md:gap-x-20 md:gap-y-24">
-            {valueItems.map(({ lines, icon: Icon, copyClassName }) => (
-              <div key={lines.join(" ")} className="flex flex-col items-center">
+            {valueItems.map(({ lines, icon: Icon, copyClassName }, index) => (
+              <Reveal key={lines.join(" ")} delay={(index % 3) * 120} className="flex flex-col items-center">
                 <Icon aria-hidden="true" className="h-10 w-10 text-black/85" />
                 <p
                   className={cn(
@@ -87,7 +94,7 @@ export function ValueCreationSection() {
                     </span>
                   ))}
                 </p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>

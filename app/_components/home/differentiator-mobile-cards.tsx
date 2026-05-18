@@ -10,6 +10,7 @@ import {
   type TouchEvent as ReactTouchEvent,
   type WheelEvent as ReactWheelEvent,
 } from "react";
+import { Reveal } from "@/app/_components/reveal";
 import { cn } from "@/lib/utils";
 
 type Differentiator = {
@@ -236,7 +237,8 @@ export function DifferentiatorMobileCards({ items }: { items: Differentiator[] }
         const contentId = `differentiator-mobile-copy-${index}`;
 
         return (
-          <article key={item.title} className="overflow-hidden rounded-md bg-[#050505]">
+          <Reveal key={item.title} delay={index * 130}>
+          <article className="overflow-hidden rounded-md bg-[#050505]">
             <button
               type="button"
               ref={(element) => {
@@ -284,6 +286,7 @@ export function DifferentiatorMobileCards({ items }: { items: Differentiator[] }
               </div>
             </div>
           </article>
+          </Reveal>
         );
       })}
     </div>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { Container } from "@/app/_components/container";
+import { Reveal } from "@/app/_components/reveal";
 import { splitDesignation } from "@/app/leadership/_components/split-designation";
 import { cn } from "@/lib/utils";
 
@@ -62,11 +63,13 @@ export function LeadershipSection() {
     <section id="leadership" className="scroll-mt-24 bg-white py-32 text-black md:py-40">
       <Container>
         <div className="flex flex-col items-center gap-6 text-center md:gap-10 lg:hidden">
-          <h2 className="font-serif-brand text-4xl leading-none font-normal tracking-normal md:text-6xl">
-            Leadership
-          </h2>
+          <Reveal>
+            <h2 className="font-serif-brand text-4xl leading-none font-normal tracking-normal md:text-6xl">
+              Leadership
+            </h2>
+          </Reveal>
 
-          <div className="flex max-w-2xl flex-col gap-6">
+          <Reveal delay={100} className="flex max-w-2xl flex-col gap-6">
             <h3 className="[font-family:var(--font-source-sans)] text-base leading-tight font-semibold tracking-normal md:text-2xl">
               A Proven Team Building Together Again
             </h3>
@@ -75,9 +78,9 @@ export function LeadershipSection() {
               value-creation expertise, deep history of working together, and marquee relationships
               across India&apos;s business landscape.
             </p>
-          </div>
+          </Reveal>
 
-          <div className="grid w-full grid-cols-3">
+          <Reveal delay={200} className="grid w-full grid-cols-3">
             {stats.map((stat, index) => (
               <div
                 key={stat.value}
@@ -92,9 +95,12 @@ export function LeadershipSection() {
                 <p className="mx-auto mt-2 text-xs leading-snug text-black/62">{stat.label}</p>
               </div>
             ))}
-          </div>
+          </Reveal>
 
-          <div className="grid w-full max-w-xs grid-cols-2 gap-x-8 gap-y-10 pt-6 md:max-w-3xl md:grid-cols-4 md:gap-x-6">
+          <Reveal
+            delay={300}
+            className="grid w-full max-w-xs grid-cols-2 gap-x-8 gap-y-10 pt-6 md:max-w-3xl md:grid-cols-4 md:gap-x-6"
+          >
             {leaders.map((leader) => {
               const { line1: desLine1, line2: desLine2 } = splitDesignation(
                 leader.designation,
@@ -137,22 +143,26 @@ export function LeadershipSection() {
               </figure>
               );
             })}
-          </div>
+          </Reveal>
 
-          <Link
-            href="/leadership"
-            className="inline-flex items-center rounded-full border border-black px-5 py-1.5 font-serif-brand text-base leading-normal font-normal tracking-wide text-black transition hover:border-[#47a685] hover:!text-[#47a685] md:px-7 md:py-2 md:text-2xl md:leading-relaxed"
-          >
-            Meet Our People
-          </Link>
+          <Reveal delay={400}>
+            <Link
+              href="/leadership"
+              className="inline-flex items-center rounded-full border border-black px-5 py-1.5 font-serif-brand text-base leading-normal font-normal tracking-wide text-black transition hover:border-[#47a685] hover:!text-[#47a685] md:px-7 md:py-2 md:text-2xl md:leading-relaxed"
+            >
+              Meet Our People
+            </Link>
+          </Reveal>
         </div>
 
         <div className="hidden w-full gap-12 lg:grid lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
-            <h2 className="font-serif-brand text-7xl leading-16 font-normal tracking-normal text-black">
-              Leadership
-            </h2>
-            <div className="mt-18 w-full max-w-136">
+            <Reveal>
+              <h2 className="font-serif-brand text-7xl leading-16 font-normal tracking-normal text-black">
+                Leadership
+              </h2>
+            </Reveal>
+            <Reveal delay={120} className="mt-18 w-full max-w-136">
               <h3 className="font-sans-brand text-2xl leading-8 font-semibold tracking-normal whitespace-nowrap">
                 A Proven Team Building Together Again
               </h3>
@@ -165,16 +175,18 @@ export function LeadershipSection() {
                 <br />
                 across India&apos;s business landscape.
               </p>
-            </div>
-            <Link
-              href="/leadership"
-              className="mt-12 inline-flex items-center rounded-full border-1 border-black px-7 py-2 font-serif-brand text-xl leading-7 font-normal text-black transition hover:border-[#47a685] hover:!text-[#47a685]"
-            >
-              Meet Our People
-            </Link>
+            </Reveal>
+            <Reveal delay={240}>
+              <Link
+                href="/leadership"
+                className="mt-12 inline-flex items-center rounded-full border-1 border-black px-7 py-2 font-serif-brand text-xl leading-7 font-normal text-black transition hover:border-[#47a685] hover:!text-[#47a685]"
+              >
+                Meet Our People
+              </Link>
+            </Reveal>
           </div>
 
-          <div className="w-140 justify-self-en mr-16">
+          <Reveal delay={200} className="w-140 justify-self-en mr-16">
             <div
               className="flex min-h-88 items-start justify-center pt-8"
               onMouseLeave={() => setActiveIndex(DEFAULT_ACTIVE_INDEX)}
@@ -260,7 +272,7 @@ export function LeadershipSection() {
                 </div>
               ))}
             </div>
-          </div>
+          </Reveal>
         </div>
       </Container>
     </section>

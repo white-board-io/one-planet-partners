@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Container } from "@/app/_components/container";
+import { Reveal } from "@/app/_components/reveal";
 import { advisors } from "./data";
 import { splitPersonName } from "./split-person-name";
 
@@ -38,17 +39,20 @@ export function SeniorAdvisors() {
   return (
     <section className="bg-neutral-50 py-16 md:py-24">
       <Container>
-      <h2 className="text-center font-serif-brand text-4xl lg:text-7xl font-normal text-black">
-          Senior Advisors
-        </h2>
+      <Reveal>
+          <h2 className="text-center font-serif-brand text-4xl lg:text-7xl font-normal text-black">
+            Senior Advisors
+          </h2>
+        </Reveal>
         <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-6 lg:gap-6">
           {advisors.map((advisor, i) => (
-            <div
+            <Reveal
               key={advisor.id}
+              delay={(i % 3) * 110}
               className={cn("col-span-1 md:col-span-2", i === 3 && "md:col-start-2")}
             >
               <AdvisorCard id={advisor.id} name={advisor.name} image={advisor.image} />
-            </div>
+            </Reveal>
           ))}
         </div>
       </Container>

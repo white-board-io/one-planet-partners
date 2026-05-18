@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Container } from "@/app/_components/container";
+import { Reveal } from "@/app/_components/reveal";
 import type { Person } from "../../_components/data";
 
 export function PersonDetail({ person }: { person: Person }) {
@@ -10,7 +11,7 @@ export function PersonDetail({ person }: { person: Person }) {
       <Container className="max-w-4xl">
         {/* Top two-column row: portrait left, name + designation right */}
         <div className="grid gap-10 lg:grid-cols-[2fr_3fr] lg:items-center lg:gap-20">
-          <div className="flex justify-center lg:justify-start">
+          <Reveal className="flex justify-center lg:justify-start">
             <div className="relative size-52 overflow-hidden rounded-full bg-neutral-200 md:size-64">
               <Image
                 fill
@@ -21,37 +22,38 @@ export function PersonDetail({ person }: { person: Person }) {
                 sizes="(max-width: 768px) 208px, (max-width: 1024px) 256px, 311px"
               />
             </div>
-          </div>
+          </Reveal>
 
-          <div className="text-center lg:text-left">
+          <Reveal delay={140} className="text-center lg:text-left">
             <h1 className="font-serif-brand text-4xl font-semibold text-black md:text-3xl lg:text-7xl lg:leading-tight">
               {person.name}
             </h1>
             <p className="font-sans-brand text-lg font-normal text-black/60 md:text-lg">
               {person.designation}
             </p>
-          </div>
+          </Reveal>
         </div>
 
         {/* Bio text — full width below the portrait/name row */}
         <div className="mt-12 space-y-6 lg:mt-16">
           {person.bio.map((paragraph, i) => (
-            <p
-              key={i}
-              className={
-                i === 0
-                  ? "font-serif-brand text-base text-xl leading-6 font-normal not-italic md:text-lg md:leading-7 lg:text-2xl lg:leading-8tracking-normal text-black/80"
-                  : "font-sans-brand text-base text-xl leading-6 font-normal tracking-normal text-black/80 md:text-lg md:leading-7 lg:text-2xl lg:leading-8"
-              }
-            >
-              {paragraph}
-            </p>
+            <Reveal key={i} delay={i * 90}>
+              <p
+                className={
+                  i === 0
+                    ? "font-serif-brand text-base text-xl leading-6 font-normal not-italic md:text-lg md:leading-7 lg:text-2xl lg:leading-8tracking-normal text-black/80"
+                    : "font-sans-brand text-base text-xl leading-6 font-normal tracking-normal text-black/80 md:text-lg md:leading-7 lg:text-2xl lg:leading-8"
+                }
+              >
+                {paragraph}
+              </p>
+            </Reveal>
           ))}
         </div>
 
         {/* Social icons — below bio, left-aligned */}
         {hasSocial && (
-          <div className="mt-10 flex justify-center gap-6 lg:justify-start">
+          <Reveal className="mt-10 flex justify-center gap-6 lg:justify-start">
             {person.social.linkedin && (
               <a
                 href={person.social.linkedin}
@@ -85,7 +87,7 @@ export function PersonDetail({ person }: { person: Person }) {
                 <GlobeIcon />
               </a>
             )}
-          </div>
+          </Reveal>
         )}
       </Container>
     </section>

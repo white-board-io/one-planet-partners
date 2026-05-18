@@ -1,6 +1,7 @@
 import { Container } from "@/app/_components/container";
 import { DifferentiatorDesktopCards } from "@/app/_components/home/differentiator-desktop-cards";
 import { DifferentiatorMobileCards } from "@/app/_components/home/differentiator-mobile-cards";
+import { Reveal } from "@/app/_components/reveal";
 
 const differentiators = [
   {
@@ -25,11 +26,11 @@ export function DifferentiatorsSection() {
     <section id="edge" className="scroll-mt-24 bg-black pt-20 pb-21 text-white md:pt-30 md:pb-18">
       <Container className="max-w-none px-0 sm:px-0 lg:px-0">
         <div className="mx-auto w-full">
-          <div className="mb-8 text-center md:mb-22">
+          <Reveal className="mb-8 text-center md:mb-22">
             <h2 className="font-serif-brand text-4xl leading-none font-normal md:text-7xl md:leading-none">
               Our Edge
             </h2>
-          </div>
+          </Reveal>
           <DifferentiatorMobileCards items={differentiators} />
           <DifferentiatorDesktopCards items={differentiators} />
         </div>

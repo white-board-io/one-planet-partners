@@ -3,6 +3,7 @@
 import { useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 import Image from "next/image";
 import { Container } from "@/app/_components/container";
+import { Reveal } from "@/app/_components/reveal";
 import { cn } from "@/lib/utils";
 
 const focusItems = [
@@ -183,10 +184,13 @@ export function FocusSection() {
       <Container>
         <div className="mx-auto">
           <div className="mx-auto mb-10 text-center md:mb-16">
-            <h2 className="font-serif-brand text-4xl mb-6 leading-10 font-normal text-white md:mb-8 md:text-6xl md:leading-tight lg:text-7xl lg:leading-18">
-              Our Focus
-            </h2>
-            <div
+            <Reveal>
+              <h2 className="font-serif-brand text-4xl mb-6 leading-10 font-normal text-white md:mb-8 md:text-6xl md:leading-tight lg:text-7xl lg:leading-18">
+                Our Focus
+              </h2>
+            </Reveal>
+            <Reveal
+              delay={120}
               aria-label="Focus sectors"
               className="flex flex-nowrap items-center justify-center gap-x-3 text-center font-serif-brand text-base leading-8 font-normal tracking-normal whitespace-nowrap text-white md:mt-0 md:gap-x-7 md:text-3xl md:leading-19"
               role="group"
@@ -211,7 +215,8 @@ export function FocusSection() {
                   </button>
                 </div>
               ))}
-            </div>
+            </Reveal>
+            <Reveal delay={240}>
             <p
               aria-label="We invest in established mid-market businesses positioned to benefit from India’s industrial growth, infrastructure buildout, rising domestic consumption, and transition toward a more sustainable economy."
               className="mx-auto mt-5 max-w-62 font-sans-brand text-base text-xl leading-6 font-normal text-white md:mt-6 md:max-w-2xl lg:mt-0 lg:max-w-332 lg:text-2xl lg:leading-8"
@@ -237,14 +242,17 @@ export function FocusSection() {
                 </span>
               </span>
             </p>
+            </Reveal>
           </div>
 
-          <p
-            aria-live="polite"
-            className="mb-10 text-center font-serif-brand text-3xl leading-8 font-semibold tracking-normal md:hidden"
-          >
-            {activeFocus.title}
-          </p>
+          <Reveal>
+            <p
+              aria-live="polite"
+              className="mb-10 text-center font-serif-brand text-3xl leading-8 font-semibold tracking-normal md:hidden"
+            >
+              {activeFocus.title}
+            </p>
+          </Reveal>
 
           <div
             className="grid touch-pan-y items-stretch gap-0 md:gap-12 lg:grid-cols-[0.9fr_1.2fr] lg:items-start lg:gap-16 xl:grid-cols-[0.8fr_1.2fr] xl:gap-24 2xl:grid-cols-[470px_762px] 2xl:gap-16"
@@ -253,15 +261,19 @@ export function FocusSection() {
             onPointerUp={handleSlidePointerUp}
           >
             <div className="order-2 flex flex-col pb-0 md:block md:min-h-0 md:pb-0 lg:order-1">
-              <p
-                aria-live="polite"
-                className="mb-8 hidden text-center font-serif-brand text-2xl leading-11 font-semibold tracking-normal md:block md:text-5xl md:leading-tight lg:text-left lg:text-6xl lg:leading-10"
-              >
-                {activeFocus.title}
-              </p>
-              <p className="mx-auto mt-9 max-w-68 text-center font-sans-brand text-base text-xl leading-6 font-normal tracking-normal text-white md:mt-10 md:max-w-2xl md:min-h-0 lg:mx-0 lg:mt-16 lg:min-h-51 lg:max-w-118 lg:text-left lg:text-2xl lg:leading-8">
-                {renderFocusCopy(activeFocus.title, activeFocus.copy)}
-              </p>
+              <Reveal>
+                <p
+                  aria-live="polite"
+                  className="mb-8 hidden text-center font-serif-brand text-2xl leading-11 font-semibold tracking-normal md:block md:text-5xl md:leading-tight lg:text-left lg:text-6xl lg:leading-10"
+                >
+                  {activeFocus.title}
+                </p>
+              </Reveal>
+              <Reveal delay={120}>
+                <p className="mx-auto mt-9 max-w-68 text-center font-sans-brand text-base text-xl leading-6 font-normal tracking-normal text-white md:mt-10 md:max-w-2xl md:min-h-0 lg:mx-0 lg:mt-16 lg:min-h-51 lg:max-w-118 lg:text-left lg:text-2xl lg:leading-8">
+                  {renderFocusCopy(activeFocus.title, activeFocus.copy)}
+                </p>
+              </Reveal>
               <div className="mt-9 flex items-center justify-center gap-6 text-white md:mt-12 md:gap-4 lg:mt-24 lg:justify-start xl:w-75 xl:justify-between xl:gap-0">
                 <button
                   type="button"

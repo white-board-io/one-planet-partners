@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Container } from "@/app/_components/container";
+import { Reveal } from "@/app/_components/reveal";
 
 export function LeadershipHero() {
   return (
@@ -16,11 +17,13 @@ export function LeadershipHero() {
         className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/90"
       />
       <Container className="relative pb-16 text-center lg:pb-28">
-        <h1 className="font-serif-brand text-3xl font-normal text-white md:text-7xl lg:text-8xl">
-          A Proven Team
-          <br />
-          <em className="font-medium italic">Building Together Again</em>
-        </h1>
+        <Reveal>
+          <h1 className="font-serif-brand text-3xl font-normal text-white md:text-7xl lg:text-8xl">
+            A Proven Team
+            <br />
+            <em className="font-medium italic">Building Together Again</em>
+          </h1>
+        </Reveal>
       </Container>
     </section>
   );

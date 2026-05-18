@@ -26,7 +26,11 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${sourceSerif.variable} ${sourceSans.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={`${sourceSerif.variable} ${sourceSans.variable} h-full antialiased`}
+    >
       <body className="flex min-h-full flex-col">
         {children}
         {process.env.NODE_ENV === "development" ? <Breakpoint /> : null}

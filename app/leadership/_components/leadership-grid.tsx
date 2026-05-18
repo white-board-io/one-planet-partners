@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/app/_components/container";
+import { Reveal } from "@/app/_components/reveal";
 import { leaders } from "./data";
 import { splitDesignation } from "./split-designation";
 import { splitPersonName } from "./split-person-name";
@@ -62,12 +63,16 @@ export function LeadershipGrid() {
   return (
     <section className="bg-white py-16 md:py-24">
       <Container>
-        <h2 className="text-center font-serif-brand text-4xl lg:text-7xl font-normal text-black">
-          Leadership
-        </h2>
+        <Reveal>
+          <h2 className="text-center font-serif-brand text-4xl lg:text-7xl font-normal text-black">
+            Leadership
+          </h2>
+        </Reveal>
         <div className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
-          {leaders.map((leader) => (
-            <LeaderCard key={leader.id} {...leader} />
+          {leaders.map((leader, index) => (
+            <Reveal key={leader.id} delay={(index % 4) * 110}>
+              <LeaderCard {...leader} />
+            </Reveal>
           ))}
         </div>
       </Container>
