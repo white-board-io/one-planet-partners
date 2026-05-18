@@ -1,0 +1,49 @@
+app/_components/home/cta-section.tsx
+  6b899923c29ccad8 4,14,22-23,51-52,65
+app/leadership/_components/leadership-hero.tsx
+  6b899923c29ccad8 3,20-26
+app/_components/home/differentiator-mobile-cards.tsx
+  6b899923c29ccad8 13,240-241,289
+app/_components/home/focus-section.tsx
+  6b899923c29ccad8 6,187-193,218-219,245,248-255,264-276
+app/_components/home/differentiators-section.tsx
+  6b899923c29ccad8 4,29,33
+app/leadership/_components/senior-advisors.tsx
+  6b899923c29ccad8 5,42-46,49,51,55
+app/_components/home/leadership-section.tsx
+  6b899923c29ccad8 7,66-70,72,81,83,98,100-103,146,148-155,160-165,178-186,189,275
+app/_components/home/opportunity-section.tsx
+  6b899923c29ccad8 3,63,67,69-71,103
+app/_components/home/value-creation-section.tsx
+  6b899923c29ccad8 4,46-55,57-62,64,79,82-83,97
+app/layout.tsx
+  6b899923c29ccad8 29-33
+app/_components/home/differentiator-desktop-cards.tsx
+  6b899923c29ccad8 6,107,157
+app/leadership/_components/leadership-grid.tsx
+  6b899923c29ccad8 4,66-70,72-75
+app/_components/reveal.tsx
+  6b899923c29ccad8 1-69
+app/leadership/[id]/_components/person-detail.tsx
+  6b899923c29ccad8 3,14,25,27,34,40-50,56,90
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.23",
+  "base_commit_sha": "ad6696b0a25ca633d5ef02289d1204aac1259549",
+  "prompts": {
+    "6b899923c29ccad8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3181c746-4773-4f3f-8516-d4e962d93549",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Arun Selva Kumar <arun@joinassembly.com>",
+      "messages": [],
+      "total_additions": 272,
+      "total_deletions": 125,
+      "accepted_lines": 256,
+      "overriden_lines": 0
+    }
+  }
+}
