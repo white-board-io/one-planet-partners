@@ -5,13 +5,13 @@ import { Reveal } from "@/app/_components/reveal";
 const opportunityCards = [
   {
     title: ["India’s structural", "growth"],
-    copy: "India is entering a period of sustained industrial growth, infrastructure buildout, rising domestic consumption, and accelerating formalization. Much of this value creation lies in the mid-market, which contributes to 30% of national GDP where businesses are scaling rapidly but remain underpenetrated by institutional capital.",
+    copy: "India is entering a period of sustained industrial growth, infrastructure buildout, rising domestic consumption, and accelerating formalisation. Much of this value creation lies in the mid-market, which contributes to 30% of national GDP where businesses are scaling rapidly but remain underpenetrated by institutional capital.",
     copyLines: [
       "India is entering a period of sustained",
       "industrial growth, infrastructure",
       "buildout, rising domestic",
       "consumption, and accelerating",
-      "formalization. Much of this value",
+      "formalisation. Much of this value",
       "creation lies in the mid-market, which",
       "contributes to 30% of national GDP",
       "where businesses are scaling rapidly",
@@ -39,12 +39,12 @@ const opportunityCards = [
   },
   {
     title: ["Climate as a", "commercial advantage"],
-    copy: "India’s energy transition is one of the most significant scalable opportunities of this decade. One Planet leverages its climate intelligence as an underwriting lens to identify businesses with stronger growth prospects, greater resilience, and superior exit potential.",
+    copy: "India’s energy transition is one of the most significant scalable opportunities of this decade. One Planet Partners leverages its climate intelligence as an underwriting lens to identify businesses with stronger growth prospects, greater resilience, and superior exit potential.",
     copyLines: [
       "India’s energy transition is one of the",
       "most significant scalable",
       "opportunities of this decade. One",
-      "Planet leverages its climate",
+      "Planet Partners leverages its climate",
       "insight as an underwriting lens",
       "to identify businesses with stronger",
       "growth prospects, greater resilience,",
@@ -57,7 +57,7 @@ const opportunityCards = [
 
 export function OpportunitySection() {
   return (
-    <section id="opportunity" className="scroll-mt-24 bg-white py-24 text-black md:py-32 lg:py-48">
+    <section id="opportunity" className="scroll-mt-24 bg-white py-24 text-black md:py-32 lg:py-44">
       <Container>
         <div>
           <Reveal className="mb-14 text-center md:mb-18 lg:mb-25">

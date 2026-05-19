@@ -22,7 +22,7 @@ export const people: Person[] = [
     designation: "Founder & General Partner",
     image: "/images/leadership/Mukund%20Rajan.png",
     bio: [
-      "Mukund is one of India's earliest and best recognized professionals in sustainability and climate. Previously, he was Chairman of the Tata Global Sustainability Council, member of the apex Group Executive Council, and the first Brand Custodian of the Tata Group.",
+      "Mukund is one of India's earliest and best recognised professionals in sustainability and climate. Previously, he was Chairman of the Tata Global Sustainability Council, member of the apex Group Executive Council, and the first Brand Custodian of the Tata Group.",
       "In 2019, he founded ECube Investment Advisors, which evangelizes sustainability practices in India. Mukund is a member of the Steering Committee of FICCI (Federation of Indian Chambers of Commerce & Industry). He has served as Commissioner of the global Energy Transitions Commission, and has authored two books on climate policy and sustainability.",
       "In his 23 years with the Tata Group, he worked closely with successive Tata Group Chairpersons, served on multiple Tata boards, and was the youngest CEO of a major listed Tata company. He led Tata's private equity business (AUM of USD 1 Bn+) and set up the mid-market focused Tata Opportunities Fund with Bobby in 2010-11, where he served as the founding Managing Partner.",
       "Mukund holds an M.Phil and D.Phil in International Relations as a Rhodes Scholar at Oxford University and a B.Tech from IIT Delhi.",
@@ -53,7 +53,7 @@ export const people: Person[] = [
     designation: "Founder & General Partner",
     image: "/images/leadership/Mrinalini%20Mirchandani.png",
     bio: [
-      "Mrinalini brings over two decades of experience advising leading Indian and global organizations on strategy, private equity, M&A, talent & business transformation.",
+      "Mrinalini brings over two decades of experience advising leading Indian and global organisations on strategy, private equity, M&A, talent & business transformation.",
       "She is the first and only woman to be elected Senior Partner in McKinsey's 34-year history in India. Over 15+ years at the firm, she held multiple leadership roles, including heading McKinsey's Private Equity practice in India. In that capacity, she advised leading global and Indian PE funds on investment diligence and portfolio value creation.",
       "Earlier, Mrinalini led Healthcare and Consumer Investment Banking for Merrill Lynch in India as well as Healthcare recruiting for Egon Zehnder in India. In 2018, she featured in the Economic Times list of India's 40 Under Forty Young Business Leaders.",
       "Mrinalini holds a management degree from IIM Calcutta and a B.Com from Mumbai University.",
