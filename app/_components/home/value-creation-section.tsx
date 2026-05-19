@@ -81,7 +81,7 @@ export function ValueCreationSection() {
           <div className="mt-17 grid w-full grid-cols-2 gap-x-7 gap-y-18 sm:gap-x-12 md:mt-18 md:grid-cols-3 md:gap-x-20 md:gap-y-24">
             {valueItems.map(({ lines, icon: Icon, copyClassName }, index) => (
               <Reveal key={lines.join(" ")} delay={(index % 3) * 120} className="flex flex-col items-center">
-                <Icon aria-hidden="true" className="h-10 w-10 text-black/85" />
+                <Icon aria-hidden="true" className="size-12 text-black/85" />
                 <p
                   className={cn(
                     "mt-7 max-w-52 text-center font-serif-brand text-2xl leading-7 font-normal text-black md:mt-7 md:max-w-64 md:leading-8",
