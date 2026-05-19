@@ -2,6 +2,7 @@ import type { ComponentType, SVGProps } from "react";
 import Image from "next/image";
 import { Container } from "@/app/_components/container";
 import { Reveal } from "@/app/_components/reveal";
+import { ValueIconAnimator } from "@/app/_components/home/value-icon-animator";
 import { cn } from "@/lib/utils";
 
 type ValueIconProps = Pick<SVGProps<SVGSVGElement>, "className" | "aria-hidden">;
@@ -62,41 +63,44 @@ export function ValueCreationSection() {
           </Reveal>
 
           <Reveal delay={240}>
-          <p className="mt-8 font-sans-brand text-xl leading-6 font-normal text-black md:mt-5 md:text-xl lg:text-2xl lg:leading-7">
-            <span className="block">
-              We approach every investment with an owner’s mindset. Tailored to mid-market
-              businesses, 
-            </span>
-            <span className="block">
-            our value creation framework unlocks stronger growth, greater resilience, 
-              exits.
-            </span>
-            <span className="block">
-                climate positivity and higher-quality
-              exits.
-            </span>
-          </p>
+            <p className="mt-8 font-sans-brand text-xl leading-6 font-normal text-black md:mt-5 md:text-xl lg:text-2xl lg:leading-7">
+              <span className="block">
+                We approach every investment with an owner’s mindset. Tailored to mid-market
+                businesses,
+              </span>
+              <span className="block">
+                our value creation framework unlocks stronger growth, greater resilience, exits.
+              </span>
+              <span className="block">climate positivity and higher-quality exits.</span>
+            </p>
           </Reveal>
 
-          <div className="mt-17 grid w-full grid-cols-2 gap-x-7 gap-y-18 sm:gap-x-12 md:mt-18 md:grid-cols-3 md:gap-x-20 md:gap-y-24">
+          <ValueIconAnimator className="mt-17 grid w-full grid-cols-2 gap-x-7 gap-y-18 sm:gap-x-12 md:mt-18 md:grid-cols-3 md:gap-x-20 md:gap-y-24">
             {valueItems.map(({ lines, icon: Icon, copyClassName }, index) => (
-              <Reveal key={lines.join(" ")} delay={(index % 3) * 120} className="flex flex-col items-center">
-                <Icon aria-hidden="true" className="size-12 text-black/85" />
-                <p
-                  className={cn(
-                    "mt-7 max-w-52 text-center font-serif-brand text-2xl leading-7 font-normal text-black md:mt-7 md:max-w-64 md:leading-8",
-                    copyClassName,
-                  )}
+              <div key={lines.join(" ")} className="flex flex-col items-center">
+                <span
+                  data-value-icon=""
+                  className="inline-flex size-10 will-change-transform lg:size-12"
                 >
-                  {lines.map((line) => (
-                    <span key={line} className="block">
-                      {line}
-                    </span>
-                  ))}
-                </p>
-              </Reveal>
+                  <Icon aria-hidden="true" className="size-full text-black/85" />
+                </span>
+                <Reveal delay={(index % 3) * 120}>
+                  <p
+                    className={cn(
+                      "mt-7 max-w-52 text-center font-serif-brand text-2xl leading-7 font-normal text-black md:mt-7 md:max-w-64 md:leading-8",
+                      copyClassName,
+                    )}
+                  >
+                    {lines.map((line) => (
+                      <span key={line} className="block">
+                        {line}
+                      </span>
+                    ))}
+                  </p>
+                </Reveal>
+              </div>
             ))}
-          </div>
+          </ValueIconAnimator>
         </div>
       </Container>
     </section>
