@@ -33,6 +33,7 @@ const valueItems: Array<{ lines: string[]; icon: ValueIcon; copyClassName?: stri
   {
     lines: ["Develop exit maturity,", "multiply pathways to exit"],
     icon: FootprintIcon,
+    copyClassName: "md:max-w-72",
   },
 ];
 
@@ -69,7 +70,7 @@ export function ValueCreationSection() {
                 businesses,
               </span>
               <span className="block">
-                our value creation framework unlocks stronger growth, greater resilience, exits.
+                our value creation framework unlocks stronger growth, greater resilience,
               </span>
               <span className="block">climate positivity and higher-quality exits.</span>
             </p>

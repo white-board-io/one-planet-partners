@@ -80,21 +80,6 @@ export const people: Person[] = [
   },
   // Senior Advisors
   {
-    id: "manoj",
-    name: "Manoj Kohli",
-    designation: "Senior Advisor",
-    image: "/images/leadership/Manoj%20Kohli.png",
-    bio: [
-      "Manoj Kohli is one of India's most distinguished business leaders, having served as CEO of Bharti Airtel and leading its international expansion across Africa and Asia.",
-      "With over four decades of experience spanning telecom, technology, and renewable energy, Manoj brings unmatched strategic insight and a vast network across India's corporate and policy landscape.",
-      "He is currently Country Head of SoftBank India and serves on the boards of several leading Indian companies.",
-    ],
-    social: {
-      linkedin: "https://in.linkedin.com/in/manoj-kohli-34948b108",
-    },
-    category: "advisor",
-  },
-  {
     id: "rajendra",
     name: 'Rajendra Bhinge',
     designation: "Senior Advisor",
