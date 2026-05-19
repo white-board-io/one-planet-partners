@@ -2,7 +2,10 @@
 
 import { useEffect, useRef, type ComponentPropsWithoutRef } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { cn } from "@/lib/utils";
+
+gsap.registerPlugin(ScrollTrigger);
 
 type ValueIconAnimatorProps = ComponentPropsWithoutRef<"div">;
 
@@ -22,16 +25,30 @@ export function ValueIconAnimator({ children, className, ...props }: ValueIconAn
 
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    gsap.set(icons, {
-      autoAlpha: prefersReducedMotion ? 1 : 0,
-      clipPath: prefersReducedMotion ? "none" : "circle(0% at 50% 50%)",
-      scale: prefersReducedMotion ? 1 : 0.72,
-      transformOrigin: "50% 50%",
-    });
+    const setInitialIconState = () => {
+      gsap.set(icons, {
+        autoAlpha: 0,
+        clipPath: "circle(0% at 50% 50%)",
+        scale: 0.72,
+        transformOrigin: "50% 50%",
+      });
+    };
+
+    const showIcons = () => {
+      gsap.set(icons, {
+        autoAlpha: 1,
+        clipPath: "none",
+        scale: 1,
+        transformOrigin: "50% 50%",
+      });
+    };
 
     if (prefersReducedMotion) {
+      showIcons();
       return;
     }
+
+    setInitialIconState();
 
     const timeline = gsap.timeline({
       paused: true,
@@ -49,22 +66,28 @@ export function ValueIconAnimator({ children, className, ...props }: ValueIconAn
       stagger: 0.08,
     });
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (!entries.some((entry) => entry.isIntersecting)) {
-          return;
-        }
+    const playIcons = () => {
+      setInitialIconState();
+      timeline.restart();
+    };
 
-        timeline.restart();
-        observer.disconnect();
-      },
-      { rootMargin: "0px 0px -12% 0px", threshold: 0.2 },
-    );
+    const resetIcons = () => {
+      timeline.pause(0);
+      setInitialIconState();
+    };
 
-    observer.observe(grid);
+    const scrollTrigger = ScrollTrigger.create({
+      trigger: grid,
+      start: "top 85%",
+      end: "bottom 15%",
+      onEnter: playIcons,
+      onEnterBack: playIcons,
+      onLeave: resetIcons,
+      onLeaveBack: resetIcons,
+    });
 
     return () => {
-      observer.disconnect();
+      scrollTrigger.kill();
       timeline.kill();
       gsap.killTweensOf(icons);
     };

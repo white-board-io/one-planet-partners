@@ -26,15 +26,6 @@ export function Reveal({ children, className, delay = 0, style, ...rest }: Revea
     const node = ref.current;
     if (!node) return;
 
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-
-    if (prefersReducedMotion) {
-      setRevealed(true);
-      return;
-    }
-
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -56,7 +47,7 @@ export function Reveal({ children, className, delay = 0, style, ...rest }: Revea
     <div
       ref={ref}
       className={cn(
-        "transition-[opacity,transform] duration-[1100ms] ease-out motion-reduce:transition-none",
+        "transition-[opacity,transform] duration-[1100ms] ease-out motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none",
         revealed ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0",
         className,
       )}
