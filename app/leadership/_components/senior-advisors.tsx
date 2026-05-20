@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 import { Container } from "@/app/_components/container";
 import { Reveal } from "@/app/_components/reveal";
 import { advisors } from "./data";
@@ -44,13 +43,9 @@ export function SeniorAdvisors() {
             Senior Advisors
           </h2>
         </Reveal>
-        <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-6 lg:gap-6">
+        <div className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
           {advisors.map((advisor, i) => (
-            <Reveal
-              key={advisor.id}
-              delay={(i % 3) * 110}
-              className={cn("col-span-1 md:col-span-2", i === 3 && "md:col-start-2")}
-            >
+            <Reveal key={advisor.id} delay={(i % 4) * 110}>
               <AdvisorCard id={advisor.id} name={advisor.name} image={advisor.image} />
             </Reveal>
           ))}
