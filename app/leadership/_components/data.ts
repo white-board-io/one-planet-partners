@@ -134,7 +134,7 @@ export const people: Person[] = [
     image: "/images/leadership/Riaz%20Currimjee.png",
     bio: [
       "Riaz Currimjee is the Founder and Managing Partner of Surya Capital, a merchant banking, investment, and advisory firm focused on private market opportunities in India, driven by structural shifts across decarbonisation, demographics, and technology. Prior to its India focus, Surya Capital operated as a principal investment firm focused on East Africa.",
-      "Earlier in his career, Riaz was a Partner at Arundel Partners, a hedge fund seeding platform, and worked as an investment banker at Lazard, specializing in mergers and acquisitions. He began his professional career at Arthur Andersen in London, where he qualified as a Chartered Accountant.",
+      "Earlier in his career, Riaz was a Partner at Arundel Partners, a hedge fund seeding platform, and worked as an investment banker at Lazard, specialising in mergers and acquisitions. He began his professional career at Arthur Andersen in London, where he qualified as a Chartered Accountant.",
       "Riaz has served as a Non-Executive Director of Gaja Capital, a leading Indian mid-market private equity firm, since its inception over two decades ago. He also serves on the board of Currimjee Jeewanjee & Co. Ltd, one of Mauritius' largest conglomerates, with interests spanning telecommunications, real estate, hospitality, energy, and FMCG. The group was a founding shareholder in Bharti Airtel and also founded Emtel, the Southern Hemisphere's first mobile telecommunications company.",
       "Riaz holds a BS in Finance from Boston College's Carroll School of Management.",
     ],

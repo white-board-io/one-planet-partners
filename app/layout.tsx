@@ -30,6 +30,7 @@ export default function RootLayout({
       lang="en"
       data-scroll-behavior="smooth"
       className={`${sourceSerif.variable} ${sourceSans.variable} h-full antialiased`}
+      style={{ scrollPaddingTop: "5.4625rem" }}
     >
       <body className="flex min-h-full flex-col">
         {children}

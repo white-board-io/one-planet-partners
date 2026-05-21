@@ -41,7 +41,7 @@ export function ValueCreationSection() {
   return (
     <section
       id="value-creation"
-      className="scroll-mt-24 bg-white pt-41 pb-36 text-black md:min-h-screen md:py-44 lg:py-53"
+      className="bg-white pt-41 pb-36 text-black md:min-h-screen md:py-44 lg:py-53"
     >
       <Container>
         <div className="mx-auto flex max-w-5xl flex-col items-center text-center">

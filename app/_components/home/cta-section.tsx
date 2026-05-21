@@ -7,7 +7,7 @@ export function CtaSection() {
   return (
     <section
       id="contact"
-      className="scroll-mt-24 bg-black pt-33 pb-30 text-center text-white md:min-h-150 md:pt-30 md:pb-30"
+      className="bg-black pt-33 pb-30 text-center text-white md:min-h-150 md:pt-30 md:pb-30"
     >
       <Container>
         <div className="mx-auto max-w-230">

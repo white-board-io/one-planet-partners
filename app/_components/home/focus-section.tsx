@@ -179,7 +179,7 @@ export function FocusSection() {
   return (
     <section
       id="focus"
-      className="scroll-mt-24 bg-black py-24 text-white md:pt-28 md:pb-24 lg:pt-33 lg:pb-0"
+      className="bg-black py-24 text-white md:pt-28 md:pb-24 lg:pt-33 lg:pb-0"
     >
       <Container>
         <div className="mx-auto">

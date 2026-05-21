@@ -60,7 +60,7 @@ export function LeadershipSection() {
   const [activeIndex, setActiveIndex] = useState(DEFAULT_ACTIVE_INDEX);
 
   return (
-    <section id="leadership" className="scroll-mt-24 bg-white py-32 text-black md:py-40">
+    <section id="leadership" className="bg-white py-32 text-black md:py-40">
       <Container>
         <div className="flex flex-col items-center gap-6 text-center md:gap-10 lg:hidden">
           <Reveal>

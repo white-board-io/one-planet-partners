@@ -25,7 +25,7 @@ const socialLinks = [
 
 export function FooterSection() {
   return (
-    <footer id="contact" className="scroll-mt-24 border-t border-white/25 bg-black text-white">
+    <footer className="border-t border-white/25 bg-black text-white">
       <div className="border-b border-white/20">
         <Container>
           <div className="grid pt-28 pb-24 lg:grid-cols-[minmax(0,25rem)_minmax(12rem,1fr)_minmax(18rem,26rem)] lg:items-start lg:gap-0 lg:pt-25 lg:pb-25">
