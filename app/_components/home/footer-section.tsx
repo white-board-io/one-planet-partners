@@ -10,7 +10,7 @@ const socialLinks = [
     icon: <LinkedInIcon />,
   },
   {
-    href: "https://x.com/oneplanetpartners",
+    href: "https://x.com/OnePlanetP",
     label: "X",
     handle: "@oneplanetpartners",
     icon: <XIcon />,

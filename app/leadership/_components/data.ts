@@ -85,7 +85,7 @@ export const people: Person[] = [
     designation: "Senior Advisor",
     image: "/images/leadership/Rajendra%20Bhinge.png",
     bio: [
-      'Rajendra "Raju" Bhinge is a veteran business strategist and corporate advisor with decades of experience working alongside some of India\'s leading business leaders and institutions. He previously served as Executive Director of Tata Industries, the strategic investment arm of the Tata Group, where he led transformational initiatives as a close advisor to Group Chairman Ratan Tata and served on multiple Tata Group company boards.',
+      'Rajendra is a veteran business strategist and corporate advisor with decades of experience working alongside some of India\'s leading business leaders and institutions. He previously served as Executive Director of Tata Industries, the strategic investment arm of the Tata Group, where he led transformational initiatives as a close advisor to Group Chairman Ratan Tata and served on multiple Tata Group company boards.',
       "Raju is also the Founder and former CEO of Tata Strategic Management Group (TSMG), the Tata Group's premier strategy consultancy, where he advised on business transformations, market entries, restructurings, and acquisitions across India and international markets. He additionally convened the Tata Business Review Committee, a high-level advisory group guiding business performance, strategy, and capital allocation across Tata companies.",
       "He currently serves as Chairman of Antennae Ventures, a technology-focused startup accelerator supporting emerging ventures from early-stage through growth.",
       "Raju holds an MBA from IIM Ahmedabad and a B.Tech (Honors) in Electrical Engineering from IIT Bombay.",
@@ -101,7 +101,7 @@ export const people: Person[] = [
     designation: "Senior Advisor",
     image: "/images/leadership/Ramesh%20Subramanyam.png",
     bio: [
-      "Ramesh Subramanyam is a seasoned finance and business leader with more than 33 years of experience across corporate finance, treasury, M&A, governance, strategy, and business development. His career spans leadership roles across some of India's leading business groups and multinational corporations, including the Hinduja Group, Tata Group, Monsanto, Siemens, and Unilever.",
+      "Ramesh is a seasoned finance and business leader with more than 33 years of experience across corporate finance, treasury, M&A, governance, strategy, and business development. His career spans leadership roles across some of India's leading business groups and multinational corporations, including the Hinduja Group, Tata Group, Monsanto, Siemens, and Unilever.",
       "Ramesh last served as Group CFO and President of Hinduja Group Limited, where he led financial strategy and growth initiatives across the Group's diversified global portfolio. Prior to joining Hinduja Group, he spent nearly 15 years at Tata Group, serving as Senior Vice President at Tata Sons and Group CFO of Tata Power, where he played a key role in expanding the company's renewable energy, transmission, solar, and distribution businesses.",
       "He serves on the boards of multiple companies, including Hinduja Renewable Energy, Hindustan Construction Company, Ashok Leyland Defence Systems Ltd, and was previously Chairman of CII's CFO Committee, Member of the Confederation of Indian Industry (CII) Committee on Economy and Committee on Financial Reporting.",
       "Ramesh holds a B.Com from Nagpur University and is a qualified AICWA, ACS, and CPA. He has completed executive programs at IIM Ahmedabad and INSEAD.",
@@ -117,7 +117,7 @@ export const people: Person[] = [
     designation: "Senior Advisor",
     image: "/images/leadership/Riki%20Kojima.png",
     bio: [
-      "Riki Kojima is a global business leader with over 40 years of experience across private equity, energy, corporate transformation, and institutional investing in Asia, Europe, and North America.",
+      "Riki is a global business leader with over 40 years of experience across private equity, energy, corporate transformation, and institutional investing in Asia, Europe, and North America.",
       "Most recently, Riki served as Executive Vice President, Chief Innovation Officer, and Board Member of Tokyo Electric Power Company Holdings (TEPCO), where he led the company's carbon-neutral transformation and strategic partnerships. He previously served as Executive Vice President and CFO of TEPCO Renewable Power, overseeing the expansion of Japan's largest renewable energy portfolio.",
       "Earlier in his career, Riki managed a US$2 billion private equity portfolio at Mitsubishi Corporation and later served as Chief of Staff in the CEO's Office. He also held senior roles at Bridgepoint Capital, GE Capital, and GE Plastics across Asia Pacific. Riki began his international career at the World Bank Group and IFC, working on privatization and infrastructure initiatives across emerging markets.",
       "He holds an MBA from UCLA Anderson School of Management and a BA in Economics from Keio University.",
@@ -133,7 +133,7 @@ export const people: Person[] = [
     designation: "Senior Advisor",
     image: "/images/leadership/Riaz%20Currimjee.png",
     bio: [
-      "Riaz Currimjee is the Founder and Managing Partner of Surya Capital, a merchant banking, investment, and advisory firm focused on private market opportunities in India, driven by structural shifts across decarbonisation, demographics, and technology. Prior to its India focus, Surya Capital operated as a principal investment firm focused on East Africa.",
+      "Riaz is the Founder and Managing Partner of Surya Capital, a merchant banking, investment, and advisory firm focused on private market opportunities in India, driven by structural shifts across decarbonisation, demographics, and technology. Prior to its India focus, Surya Capital operated as a principal investment firm focused on East Africa.",
       "Earlier in his career, Riaz was a Partner at Arundel Partners, a hedge fund seeding platform, and worked as an investment banker at Lazard, specialising in mergers and acquisitions. He began his professional career at Arthur Andersen in London, where he qualified as a Chartered Accountant.",
       "Riaz has served as a Non-Executive Director of Gaja Capital, a leading Indian mid-market private equity firm, since its inception over two decades ago. He also serves on the board of Currimjee Jeewanjee & Co. Ltd, one of Mauritius' largest conglomerates, with interests spanning telecommunications, real estate, hospitality, energy, and FMCG. The group was a founding shareholder in Bharti Airtel and also founded Emtel, the Southern Hemisphere's first mobile telecommunications company.",
       "Riaz holds a BS in Finance from Boston College's Carroll School of Management.",
