@@ -41,8 +41,8 @@ export function PersonDetail({ person }: { person: Person }) {
               <p
                 className={
                   i === 0
-                    ? "font-serif-brand text-base text-xl leading-6 font-semibold not-italic md:text-lg md:leading-7 lg:text-2xl lg:leading-8 tracking-normal text-black/80"
-                    : "font-serif-brand text-base text-xl leading-6 font-normal tracking-normal text-black/80 md:text-lg md:leading-7 lg:text-2xl lg:leading-8"
+                    ? "font-sans-brand text-base text-xl leading-6 font-semibold not-italic md:text-lg md:leading-7 lg:text-2xl lg:leading-8 tracking-normal text-black/80"
+                    : "font-sans-brand text-base text-xl leading-6 font-normal tracking-normal text-black/80 md:text-lg md:leading-7 lg:text-2xl lg:leading-8"
                 }
               >
                 {paragraph}

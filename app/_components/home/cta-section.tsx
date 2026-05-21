@@ -17,7 +17,7 @@ export function CtaSection() {
             <br className="lg:hidden" aria-hidden />
             <span> generation of responsible </span>
             <br className="lg:hidden" aria-hidden />
-            <em className="font-normal italic">market-leaders&hellip; together.</em>
+            <em className="font-normal italic">market-leaders&hellip;together.</em>
           </p>
           </Reveal>
           <Reveal delay={140}>
