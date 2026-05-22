@@ -217,31 +217,47 @@ export function FocusSection() {
               ))}
             </Reveal>
             <Reveal delay={240}>
-            <p
-              aria-label="We invest in established mid-market businesses positioned to benefit from India’s industrial growth, infrastructure buildout, rising domestic consumption, and transition toward a more sustainable economy."
-              className="mx-auto mt-5 max-w-62 font-sans-brand text-base text-xl leading-6 font-normal text-white md:mt-6 md:max-w-2xl lg:mt-0 lg:max-w-332 lg:text-2xl lg:leading-8"
-            >
-              <span className="lg:hidden">
-                We invest in established{" "}
-                <em className="font-serif-brand font-semibold text-white italic">
-                  mid-market businesses
-                </em>{" "}
-                positioned to benefit from India’s industrial growth, infrastructure buildout,
-                rising domestic consumption, and transition toward a more sustainable economy.
-              </span>
-              <span aria-hidden="true" className="hidden lg:block">
-                <span className="block whitespace-nowrap">
+              <p
+                aria-label="We invest in established mid-market businesses positioned to benefit from India’s industrial growth, infrastructure buildout, rising domestic consumption, and transition toward a more sustainable economy."
+                className="mx-auto mt-5 max-w-62 text-center font-sans-brand text-base text-xl leading-6 font-normal text-white md:mt-6 md:max-w-2xl lg:mt-0 lg:max-w-332 lg:text-2xl lg:leading-8"
+              >
+                <span className="lg:hidden">
                   We invest in established{" "}
                   <em className="font-serif-brand font-semibold text-white italic">
                     mid-market businesses
                   </em>{" "}
                   positioned to benefit from India’s industrial growth, infrastructure buildout,
-                </span>
-                <span className="block whitespace-nowrap">
                   rising domestic consumption, and transition toward a more sustainable economy.
                 </span>
-              </span>
-            </p>
+                <span aria-hidden="true" className="hidden lg:block xl:hidden">
+                  <span className="block whitespace-nowrap">
+                    We invest in established{" "}
+                    <em className="font-serif-brand font-semibold text-white italic">
+                      mid-market businesses
+                    </em>{" "}
+                    positioned to benefit from India’s industrial
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    growth, infrastructure buildout, rising domestic consumption, and transition
+                    toward
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    a more sustainable economy.
+                  </span>
+                </span>
+                <span aria-hidden="true" className="hidden xl:block">
+                  <span className="block whitespace-nowrap">
+                    We invest in established{" "}
+                    <em className="font-serif-brand font-semibold text-white italic">
+                      mid-market businesses
+                    </em>{" "}
+                    positioned to benefit from India’s industrial growth, infrastructure buildout,
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    rising domestic consumption, and transition toward a more sustainable economy.
+                  </span>
+                </span>
+              </p>
             </Reveal>
           </div>
 
