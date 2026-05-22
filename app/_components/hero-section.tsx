@@ -128,7 +128,7 @@ export function HeroSection() {
             loop
             playsInline
             preload="metadata"
-            poster="/images/hero-bg-thumbnail.png"
+            poster="/images/hero-bg-thumbnail.webp"
             aria-hidden="true"
             className="h-full w-full object-cover object-center"
           >

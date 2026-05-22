@@ -6,19 +6,19 @@ const opportunityCards = [
   {
     title: ["India’s structural", "growth"],
     copy: "India is entering a period of sustained industrial growth, infrastructure buildout, rising domestic consumption, and accelerating formalisation. Much of this value creation lies in the mid-market, which contributes to 30% of national GDP where businesses are scaling rapidly but remain underpenetrated by institutional capital.",
-    image: "/images/svg/opportunity-image1.svg",
+    image: "/images/opportunity-image1.webp",
     alt: "Aerial view of an Indian industrial corridor and roadway",
   },
   {
     title: ["The missing", "middle"],
     copy: "These growth-stage businesses remain underserved by institutional capital. Too large for early-stage investors. Too small for global buyout firms. They require strategic support, institutionalisation, and active partnership. They need partners that help them build.",
-    image: "/images/svg/opportunity-image2.svg",
+    image: "/images/opportunity-image2.webp",
     alt: "Industrial facility with manufacturing buildings",
   },
   {
     title: ["Climate as a", "commercial advantage"],
     copy: "India’s energy transition is one of the most significant scalable opportunities of this decade. One Planet Partners leverages its climate intelligence as an underwriting lens to identify businesses with stronger growth prospects, greater resilience, and superior exit potential.",
-    image: "/images/svg/opportunity-image3.svg",
+    image: "/images/opportunity-image3.webp",
     alt: "Aerial view of a concentrated solar power facility",
   },
 ];
