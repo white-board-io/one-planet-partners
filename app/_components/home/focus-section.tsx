@@ -271,7 +271,7 @@ export function FocusSection() {
           </Reveal>
 
           <div
-            className="grid touch-pan-y items-stretch gap-0 md:gap-12 lg:grid-cols-[0.9fr_1.2fr] lg:items-start lg:gap-16 xl:grid-cols-[0.8fr_1.2fr] xl:gap-24 2xl:grid-cols-[470px_762px] 2xl:gap-16"
+            className="grid touch-pan-y items-stretch gap-0 md:gap-12 lg:grid-cols-[0.9fr_1.2fr] lg:items-start lg:gap-10 xl:grid-cols-[0.8fr_1.2fr] xl:gap-16 2xl:grid-cols-[470px_762px] 2xl:gap-16"
             onPointerCancel={handleSlidePointerCancel}
             onPointerDown={handleSlidePointerDown}
             onPointerUp={handleSlidePointerUp}
@@ -280,17 +280,17 @@ export function FocusSection() {
               <Reveal>
                 <p
                   aria-live="polite"
-                  className="mb-8 hidden text-center font-serif-brand text-2xl leading-11 font-semibold tracking-normal md:block md:text-5xl md:leading-tight lg:text-left lg:text-6xl lg:leading-10"
+                  className="mb-8 hidden text-center font-serif-brand text-2xl leading-11 font-semibold tracking-normal md:block md:text-5xl md:leading-tight lg:text-left lg:leading-none xl:text-6xl xl:leading-tight"
                 >
                   {activeFocus.title}
                 </p>
               </Reveal>
               <Reveal delay={120}>
-                <p className="mx-auto mt-9 max-w-68 text-center font-sans-brand text-base text-xl leading-6 font-normal tracking-normal text-white md:mt-10 md:max-w-2xl md:min-h-0 lg:mx-0 lg:mt-16 lg:min-h-51 lg:max-w-118 lg:text-left lg:text-2xl lg:leading-8">
+                <p className="mx-auto mt-9 max-w-68 text-center font-sans-brand text-base text-xl leading-6 font-normal tracking-normal text-white md:mt-10 md:max-w-2xl md:min-h-0 lg:mx-0 lg:mt-8 lg:max-w-none lg:text-left lg:text-xl lg:leading-8 xl:mt-16 xl:min-h-51 xl:max-w-118 xl:text-2xl">
                   {renderFocusCopy(activeFocus.title, activeFocus.copy)}
                 </p>
               </Reveal>
-              <div className="mt-9 flex items-center justify-center gap-6 text-white md:mt-12 md:gap-4 lg:mt-24 lg:justify-start xl:w-75 xl:justify-between xl:gap-0">
+              <div className="mt-9 flex items-center justify-center gap-6 text-white md:mt-12 md:gap-4 lg:mt-10 lg:justify-start xl:mt-24 xl:w-75 xl:justify-between xl:gap-0">
                 <button
                   type="button"
                   aria-label="Previous focus"

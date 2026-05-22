@@ -33,7 +33,7 @@ export function OpportunitySection() {
               The Opportunity
             </h2>
           </Reveal>
-          <div className="grid gap-12 md:grid-cols-2 md:gap-10 lg:gap-10 xl:grid-cols-3 xl:gap-16 xl:px-16">
+          <div className="grid gap-12 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-8 xl:gap-16 xl:px-16">
             {opportunityCards.map((card, index) => (
               <Reveal key={card.title.join(" ")} delay={index * 140}>
                 <article className="flex min-w-0 flex-col">
@@ -42,9 +42,9 @@ export function OpportunitySection() {
                     height={504}
                     src={card.image}
                     alt={card.alt}
-                    className="mb-6 h-auto w-full rounded-sm lg:mb-12"
+                    className="mb-6 h-auto w-full rounded-sm lg:mb-8 xl:mb-12"
                   />
-                  <h3 className="mb-4 min-w-0 font-serif-brand text-2xl leading-tight font-normal tracking-normal sm:text-3xl sm:leading-6 md:text-[1.75rem] md:leading-7 lg:mb-7 lg:text-4xl lg:leading-8">
+                  <h3 className="mb-4 min-w-0 font-serif-brand text-2xl leading-tight font-normal tracking-normal sm:text-3xl sm:leading-6 md:text-[1.75rem] md:leading-7 lg:mb-5 lg:text-3xl lg:leading-tight xl:mb-7 xl:text-4xl xl:leading-8">
                     <span className="md:hidden">{card.title.join(" ")}</span>
                     <span className="hidden md:block">
                       {card.title.map((line) => (
@@ -54,7 +54,7 @@ export function OpportunitySection() {
                       ))}
                     </span>
                   </h3>
-                  <p className="min-w-0 font-sans-brand text-base text-xl leading-6 font-normal tracking-normal text-black/80 md:text-lg md:leading-7 lg:text-2xl lg:leading-8">
+                  <p className="min-w-0 font-sans-brand text-base text-xl leading-6 font-normal tracking-normal text-black/80 md:text-lg md:leading-7 lg:text-xl lg:leading-7 xl:text-2xl xl:leading-8">
                     {card.copy}
                   </p>
                 </article>
