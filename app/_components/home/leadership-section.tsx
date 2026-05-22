@@ -17,28 +17,28 @@ const leaders = [
     name: "Dr. Mukund Rajan",
     nameLines: ["Dr. Mukund", "Rajan"] as const,
     designation: "Founder & General Partner",
-    image: "/images/leadership/Mukund%20Rajan.png",
+    image: "/images/mukund.webp",
   },
   {
     id: "bobby",
     name: "Bobby Pauly",
     nameLines: ["Bobby", "Pauly"] as const,
     designation: "Founder & General Partner",
-    image: "/images/leadership/Bobby%20Pauly.png",
+    image: "/images/bobby.webp",
   },
   {
     id: "mrinalini",
     name: "Mrinalini Mirchandani",
     nameLines: ["Mrinalini", "Mirchandani"] as const,
     designation: "Founder & General Partner",
-    image: "/images/leadership/Mrinalini%20Mirchandani.png",
+    image: "/images/Mrinalini%20Mirchandani.webp",
   },
   {
     id: "sheetal",
     name: "Sheetal Thakkar",
     nameLines: ["Sheetal", "Thakkar"] as const,
     designation: "Founder & General Partner",
-    image: "/images/leadership/Sheetal%20Thakkar.png",
+    image: "/images/Sheetal%20Thakkar%20.webp",
   },
 ];
 

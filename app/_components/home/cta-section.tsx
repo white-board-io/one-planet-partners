@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Container } from "@/app/_components/container";
+import { EmailContactLink } from "@/app/_components/email-contact-link";
 import { Reveal } from "@/app/_components/reveal";
 
 export function CtaSection() {
@@ -50,10 +50,7 @@ export function CtaSection() {
           </p>
           </Reveal>
           <Reveal delay={280}>
-          <Link
-            href="mailto:info@oneplanetpartners.com"
-            className="group mt-20 inline-flex max-w-full transition-opacity hover:opacity-80 md:mt-15"
-          >
+          <EmailContactLink className="group mt-20 inline-flex max-w-full transition-opacity hover:opacity-80 md:mt-15">
             <Image
               width={646}
               height={74}
@@ -61,7 +58,7 @@ export function CtaSection() {
               src="/images/svg/info.svg"
               className="h-auto w-96 max-w-full transition-transform duration-300 ease-out group-hover:scale-150 group-focus-visible:scale-150 md:w-auto"
             />
-          </Link>
+          </EmailContactLink>
           </Reveal>
         </div>
       </Container>

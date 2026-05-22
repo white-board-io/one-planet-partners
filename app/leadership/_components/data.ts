@@ -20,7 +20,7 @@ export const people: Person[] = [
     id: "mukund",
     name: "Dr. Mukund Rajan",
     designation: "Founder & General Partner",
-    image: "/images/leadership/Mukund%20Rajan.png",
+    image: "/images/mukund.webp",
     bio: [
       "Mukund is one of India's earliest and best recognised professionals in sustainability and climate. Previously, he was Chairman of the Tata Global Sustainability Council, member of the apex Group Executive Council, and the first Brand Custodian of the Tata Group.",
       "In 2019, he founded ECube Investment Advisors, which evangelizes sustainability practices in India. Mukund is a member of the Steering Committee of FICCI (Federation of Indian Chambers of Commerce & Industry). He has served as Commissioner of the global Energy Transitions Commission, and has authored two books on climate policy and sustainability.",
@@ -36,7 +36,7 @@ export const people: Person[] = [
     id: "bobby",
     name: "Bobby Pauly",
     designation: "Founder & General Partner",
-    image: "/images/leadership/Bobby%20Pauly.png",
+    image: "/images/bobby.webp",
     bio: [
       "Bobby brings two decades of private equity leadership in India. He co-founded Tata's pioneering private equity business in 2007 as its first employee, having earlier authored the business plan adopted by Tata Capital. In 2010, he partnered with Mukund to launch the ~USD 600 Mn Tata Opportunities Fund (TOF) — a mid-market growth and buyout fund backed by marquee global investors with average commitments of USD 75 Mn. Bobby spent 15 years building a multi-strategy platform at Tata PE, leading landmark investments across industrials, automotive, logistics, hospitality and mobility, and serving on market-leading portfolio boards as Managing Partner.",
       "Earlier, Bobby was a senior leader at Tata Strategic Management Group, where he built new consumer and retail ventures for Tata and drove deep strategic initiatives across mobility, manufacturing, industrials and energy in India and overseas. He also led the firm's private equity practice.",
@@ -51,7 +51,7 @@ export const people: Person[] = [
     id: "mrinalini",
     name: "Mrinalini Mirchandani",
     designation: "Founder & General Partner",
-    image: "/images/leadership/Mrinalini%20Mirchandani.png",
+    image: "/images/Mrinalini%20Mirchandani.webp",
     bio: [
       "Mrinalini brings over two decades of experience advising leading Indian and global organisations on strategy, private equity, M&A, talent & business transformation.",
       "She is the first and only woman to be elected Senior Partner in McKinsey's 34-year history in India. Over 15+ years at the firm, she held multiple leadership roles, including heading McKinsey's Private Equity practice in India. In that capacity, she advised leading global and Indian PE funds on investment diligence and portfolio value creation.",
@@ -67,7 +67,7 @@ export const people: Person[] = [
     id: "sheetal",
     name: "Sheetal Thakkar",
     designation: "Founder & General Partner",
-    image: "/images/leadership/Sheetal%20Thakkar.png",
+    image: "/images/Sheetal%20Thakkar%20.webp",
     bio: [
       "Sheetal is an investment professional with over 15 years of experience in private equity investing and leveraged finance across the US and Emerging Markets. She worked with The Blackstone Group and Odyssey Investment Partners in New York, before moving to Mumbai to join Tata's inaugural Private Equity team along with Bobby and Mukund.",
       "More recently, Sheetal helped build the Global Sustainability Leadership Practice at Russell Reynolds in Washington DC, where she worked at the intersection of private equity and climate. She serves on the Steering Committee of Allocator Collective, where she leads initiatives enhancing diversity in asset management.",
@@ -83,7 +83,7 @@ export const people: Person[] = [
     id: "rajendra",
     name: 'Rajendra Bhinge',
     designation: "Senior Advisor",
-    image: "/images/leadership/Rajendra%20Bhinge.png",
+    image: "/images/Rajendra%20Bhinge.webp",
     bio: [
       'Rajendra is a veteran business strategist and corporate advisor with decades of experience working alongside some of India\'s leading business leaders and institutions. He previously served as Executive Director of Tata Industries, the strategic investment arm of the Tata Group, where he led transformational initiatives as a close advisor to Group Chairman Ratan Tata and served on multiple Tata Group company boards.',
       "Raju is also the Founder and former CEO of Tata Strategic Management Group (TSMG), the Tata Group's premier strategy consultancy, where he advised on business transformations, market entries, restructurings, and acquisitions across India and international markets. He additionally convened the Tata Business Review Committee, a high-level advisory group guiding business performance, strategy, and capital allocation across Tata companies.",
@@ -99,7 +99,7 @@ export const people: Person[] = [
     id: "ramesh",
     name: "Ramesh Subramanyam",
     designation: "Senior Advisor",
-    image: "/images/leadership/Ramesh%20Subramanyam.png",
+    image: "/images/Ramesh%20Subramanyam.webp",
     bio: [
       "Ramesh is a seasoned finance and business leader with more than 33 years of experience across corporate finance, treasury, M&A, governance, strategy, and business development. His career spans leadership roles across some of India's leading business groups and multinational corporations, including the Hinduja Group, Tata Group, Monsanto, Siemens, and Unilever.",
       "Ramesh last served as Group CFO and President of Hinduja Group Limited, where he led financial strategy and growth initiatives across the Group's diversified global portfolio. Prior to joining Hinduja Group, he spent nearly 15 years at Tata Group, serving as Senior Vice President at Tata Sons and Group CFO of Tata Power, where he played a key role in expanding the company's renewable energy, transmission, solar, and distribution businesses.",
@@ -115,7 +115,7 @@ export const people: Person[] = [
     id: "riki",
     name: "Riki Kojima",
     designation: "Senior Advisor",
-    image: "/images/leadership/Riki%20Kojima.png",
+    image: "/images/Riki%20Kojima.webp",
     bio: [
       "Riki is a global business leader with over 40 years of experience across private equity, energy, corporate transformation, and institutional investing in Asia, Europe, and North America.",
       "Most recently, Riki served as Executive Vice President, Chief Innovation Officer, and Board Member of Tokyo Electric Power Company Holdings (TEPCO), where he led the company's carbon-neutral transformation and strategic partnerships. He previously served as Executive Vice President and CFO of TEPCO Renewable Power, overseeing the expansion of Japan's largest renewable energy portfolio.",
@@ -131,7 +131,7 @@ export const people: Person[] = [
     id: "riaz",
     name: "Riaz Currimjee",
     designation: "Senior Advisor",
-    image: "/images/leadership/Riaz%20Currimjee.png",
+    image: "/images/Riaz%20Currimjee.webp",
     bio: [
       "Riaz is the Founder and Managing Partner of Surya Capital, a merchant banking, investment, and advisory firm focused on private market opportunities in India, driven by structural shifts across decarbonisation, demographics, and technology. Prior to its India focus, Surya Capital operated as a principal investment firm focused on East Africa.",
       "Earlier in his career, Riaz was a Partner at Arundel Partners, a hedge fund seeding platform, and worked as an investment banker at Lazard, specialising in mergers and acquisitions. He began his professional career at Arthur Andersen in London, where he qualified as a Chartered Accountant.",
