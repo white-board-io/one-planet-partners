@@ -10,19 +10,19 @@ const focusItems = [
   {
     title: "Energy",
     copy: "We invest in the businesses enabling India's shift to cleaner energy: renewable generation, battery storage, resource-efficient industrials, and the supply chains that make them possible. Where clean and competitive converge, returns follow.",
-    image: "/images/focus-image1.jpg",
+    image: "/images/focus-image1.webp",
     alt: "Solar power infrastructure and clean energy systems",
   },
   {
     title: "Mobility",
     copy: "We back the companies that are beneficiaries of — and architects of — how India moves: EV platforms, fleet operators, charging networks, and sustainable logistics. A billion-person mobility transition is one of the defining commercial opportunities of the next decade.",
-    image: "/images/svg/focus-image1.png",
+    image: "/images/focus-image2.webp",
     alt: "Road and logistics infrastructure across an industrial corridor",
   },
   {
     title: "Manufacturing",
     copy: "We partner with category leaders in discrete manufacturing, including within the supply chain, serving India and global markets. Businesses with the competitive position to capture India's manufacturing decade and a clear pathway to green that turns the transition into an edge.",
-    image: "/images/focus-image3.jpg",
+    image: "/images/focus-image3.webp",
     alt: "Manufacturing equipment and industrial automation",
   },
 ];
