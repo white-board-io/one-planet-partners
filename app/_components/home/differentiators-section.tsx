@@ -11,12 +11,12 @@ const differentiators = [
   },
   {
     title: "Institutional, Yet Entrepreneurial",
-    image: "/images/svg/differentiator-image2.svg",
+    image: "/images/differentiator-image2.webp",
     copy: "We combine big-firm discipline with start-up energy. Institutional rigour and governance, and entrepreneurial speed and flexibility.",
   },
   {
     title: "Climate Positive DNA",
-    image: "/images/svg/differentiator-image3.svg",
+    image: "/images/differentiator-image3.webp",
     copy: "We build businesses that outperform financially, with the firm conviction that good businesses are also responsible businesses.",
   },
 ];
