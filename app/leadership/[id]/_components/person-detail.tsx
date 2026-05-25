@@ -10,16 +10,6 @@ export function PersonDetail({ person }: { person: Person }) {
   return (
     <section className="py-16 md:py-24">
       <Container className="max-w-4xl">
-        <Reveal>
-          <Link
-            href="/leadership"
-            className="font-sans-brand mb-10 inline-flex items-center gap-2 text-sm text-black/60 transition-colors hover:text-black md:mb-12"
-          >
-            <span aria-hidden="true">←</span>
-            Back to Leadership
-          </Link>
-        </Reveal>
-
         {/* Top two-column row: portrait left, name + designation right */}
         <div className="grid gap-10 lg:grid-cols-[2fr_3fr] lg:items-center lg:gap-20">
           <Reveal className="flex justify-center lg:justify-start">
@@ -100,6 +90,18 @@ export function PersonDetail({ person }: { person: Person }) {
             )}
           </Reveal>
         )}
+
+        <Reveal className="mt-12 flex lg:mt-16 justify-start">
+          <Link
+            href="/leadership"
+            className="font-sans-brand group text-sm text-black/60 transition-colors hover:text-black"
+          >
+            <span className="inline-flex items-center gap-2  group-hover:decoration-current">
+              <span aria-hidden="true">←</span>
+              Back to Leadership
+            </span>
+          </Link>
+        </Reveal>
       </Container>
     </section>
   );

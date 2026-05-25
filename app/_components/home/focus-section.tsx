@@ -329,7 +329,7 @@ export function FocusSection() {
                 </button>
               </div>
             </div>
-            <div className="relative order-1 mx-auto aspect-[239/110] w-full max-w-sm overflow-hidden rounded-sm bg-white/5 md:aspect-[16/9] md:max-w-2xl lg:order-2 lg:mx-0 lg:aspect-[762/665] lg:h-auto lg:min-h-0 lg:max-w-190 lg:rounded-t-md lg:rounded-b-none">
+            <div className="relative order-1 mx-auto aspect-[239/160] w-full max-w-sm overflow-hidden rounded-sm bg-white/5 md:aspect-[16/9] md:max-w-2xl lg:order-2 lg:mx-0 lg:aspect-[762/665] lg:h-auto lg:min-h-0 lg:max-w-190 lg:rounded-t-md lg:rounded-b-none">
               <Image
                 key={activeFocus.image}
                 fill
