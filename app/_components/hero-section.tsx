@@ -132,7 +132,7 @@ export function HeroSection() {
             aria-hidden="true"
             className="h-full w-full object-cover object-center"
           >
-            <source src="/videos/hero-bg.mp4" type="video/mp4" />
+            <source src="/videos/hero-bg.webm" type="video/webm" />
           </video>
         </div>
         <div
