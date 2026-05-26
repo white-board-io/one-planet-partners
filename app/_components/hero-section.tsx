@@ -122,6 +122,11 @@ export function HeroSection() {
         className="sticky top-[5.5rem] h-[calc(100svh-5.5rem)] overflow-hidden"
       >
         <div className="absolute inset-0">
+          <div
+            aria-hidden="true"
+            className="h-full w-full bg-cover bg-center md:hidden"
+            style={{ backgroundImage: "url('/images/mobile-hero-bg.gif')" }}
+          />
           <video
             autoPlay
             muted
@@ -130,9 +135,10 @@ export function HeroSection() {
             preload="metadata"
             poster="/images/hero-bg-thumbnail.webp"
             aria-hidden="true"
-            className="h-full w-full object-cover object-center"
+            className="hidden h-full w-full object-cover object-center md:block"
           >
             <source src="/videos/hero-bg.webm" type="video/webm" />
+
           </video>
         </div>
         <div
@@ -182,3 +188,4 @@ export function HeroSection() {
     </section>
   );
 }
+
