@@ -166,13 +166,13 @@ export function LeadershipSection() {
               <h3 className="font-sans-brand text-2xl leading-8 font-semibold tracking-normal whitespace-nowrap">
                 A Proven Team Building Together Again
               </h3>
-              <p className="mt-5 font-sans-brand text-base leading-5 font-normal tracking-normal text-black/70 xl:text-2xl xl:leading-7">
+              <p className="mt-5 font-sans-brand text-2xl leading-7 font-normal tracking-normal text-black/70">
                 Belief in India&apos;s entrepreneurship unites us. We bring
-                <br className="xl:hidden" />{" "}
+                <br />
                 strong investment and value-creation expertise, deep
-                <br className="xl:hidden" />{" "}
+                <br />
                 history of working together, and marquee relationships
-                <br className="xl:hidden" />{" "}
+                <br />
                 across India&apos;s business landscape.
               </p>
             </Reveal>
