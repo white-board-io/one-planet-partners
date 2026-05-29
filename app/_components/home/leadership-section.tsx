@@ -162,18 +162,14 @@ export function LeadershipSection() {
                 Leadership
               </h2>
             </Reveal>
-            <Reveal delay={120} className="mt-18 w-full max-w-136">
+            <Reveal delay={120} className="mt-18 w-full">
               <h3 className="font-sans-brand text-2xl leading-8 font-semibold tracking-normal whitespace-nowrap">
                 A Proven Team Building Together Again
               </h3>
-              <p className="mt-5 font-sans-brand text-2xl leading-7 font-normal tracking-normal text-black/70">
-                Belief in India&apos;s entrepreneurship unites us. We bring
-                <br />
-                strong investment and value-creation expertise, deep
-                <br />
-                history of working together, and marquee relationships
-                <br />
-                across India&apos;s business landscape.
+              <p className="mt-5 xl:mr-24 font-sans-brand text-2xl leading-7 font-normal tracking-normal text-black/70">
+                Belief in India&apos;s entrepreneurship unites us. We bring strong investment and
+                value-creation expertise, deep history of working together, and marquee
+                relationships across India&apos;s business landscape.
               </p>
             </Reveal>
             <Reveal delay={240}>
