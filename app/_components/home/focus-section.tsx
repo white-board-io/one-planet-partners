@@ -16,7 +16,7 @@ const focusItems = [
   {
     title: "Mobility",
     copy: "We back the companies that are beneficiaries of — and architects of — how India moves: EV platforms, fleet operators, charging networks, and sustainable logistics. A billion-person mobility transition is one of the defining commercial opportunities of the next decade.",
-    image: "/images/focus-image2.webp",
+    image: "/images/mobility.webp",
     alt: "Road and logistics infrastructure across an industrial corridor",
   },
   {
