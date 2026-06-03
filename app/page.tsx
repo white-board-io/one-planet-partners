@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "One Planet Partners",
-  description: "Invest in India's rapidly growing mid-market.",
+  description: "One Planet Partners is an India-focused private equity firm investing in mid-market businesses where active ownership, operational expertise, and climate insight create enduring value.",
 };
 
 export default function Home() {

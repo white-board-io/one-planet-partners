@@ -38,14 +38,18 @@ export function SeniorAdvisors() {
   return (
     <section className="bg-neutral-50 py-16 md:py-24">
       <Container>
-      <Reveal>
+        <Reveal>
           <h2 className="text-center font-serif-brand text-4xl lg:text-7xl font-normal text-black">
             Senior Advisors
           </h2>
         </Reveal>
-        <div className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
+        <div className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-6 lg:gap-6">
           {advisors.map((advisor, i) => (
-            <Reveal key={advisor.id} delay={(i % 4) * 110}>
+            <Reveal
+              key={advisor.id}
+              className={`lg:col-span-2 ${i === 3 ? "lg:col-start-2" : ""}`}
+              delay={(i % 4) * 110}
+            >
               <AdvisorCard id={advisor.id} name={advisor.name} image={advisor.image} />
             </Reveal>
           ))}

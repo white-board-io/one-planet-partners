@@ -80,12 +80,27 @@ export const people: Person[] = [
   },
   // Senior Advisors
   {
+    id: "manoj",
+    name: "Manoj Kohli",
+    designation: "Senior Advisor",
+    image: "/images/ManojKohli.webp",
+    bio: [
+      "Manoj is a veteran financial services and technology business leader",
+      "Before joining Lightrock, Manoj most recently served as Head of India for SoftBank Group, where he was responsible for investments in Indian companies through the SoftBank Vision Fund. Prior to that, he was the Chief Executive Officer and Managing Director for Asia and Africa at Bharti Airtel, where he is credited with scaling the business into a global telecom leader.",
+      "He holds a Bachelor of Commerce from Shri Ram College of Commerce, an LLB from the University of Delhi, an MA in Human Resources Management from the Indian Society for Training & Development, and an MBA from the University of Delhi.",
+    ],
+    social: {
+      linkedin: "https://in.linkedin.com/in/manoj-kohli-34948b108",
+    },
+    category: "advisor",
+  },
+  {
     id: "rajendra",
-    name: 'Rajendra Bhinge',
+    name: "Rajendra Bhinge",
     designation: "Senior Advisor",
     image: "/images/Rajendra%20Bhinge.webp",
     bio: [
-      'Rajendra is a veteran business strategist and corporate advisor with decades of experience working alongside some of India\'s leading business leaders and institutions. He previously served as Executive Director of Tata Industries, the strategic investment arm of the Tata Group, where he led transformational initiatives as a close advisor to Group Chairman Ratan Tata and served on multiple Tata Group company boards.',
+      "Rajendra is a veteran business strategist and corporate advisor with decades of experience working alongside some of India's leading business leaders and institutions. He previously served as Executive Director of Tata Industries, the strategic investment arm of the Tata Group, where he led transformational initiatives as a close advisor to Group Chairman Ratan Tata and served on multiple Tata Group company boards.",
       "Raju is also the Founder and former CEO of Tata Strategic Management Group (TSMG), the Tata Group's premier strategy consultancy, where he advised on business transformations, market entries, restructurings, and acquisitions across India and international markets. He additionally convened the Tata Business Review Committee, a high-level advisory group guiding business performance, strategy, and capital allocation across Tata companies.",
       "He currently serves as Chairman of Antennae Ventures, a technology-focused startup accelerator supporting emerging ventures from early-stage through growth.",
       "Raju holds an MBA from IIM Ahmedabad and a B.Tech (Honors) in Electrical Engineering from IIT Bombay.",
