@@ -10,7 +10,7 @@ const focusItems = [
   {
     title: "Energy",
     copy: "We invest in the businesses enabling India's shift to cleaner energy: renewable generation, battery storage, resource-efficient industrials, and the supply chains that make them possible. Where clean and competitive converge, returns follow.",
-    image: "/images/focus-image1.webp",
+    image: "/images/focus1.webp",
     alt: "Solar power infrastructure and clean energy systems",
   },
   {
@@ -22,7 +22,7 @@ const focusItems = [
   {
     title: "Manufacturing",
     copy: "We partner with category leaders in discrete manufacturing, including within the supply chain, serving India and global markets. Businesses with the competitive position to capture India's manufacturing decade and a clear pathway to green that turns the transition into an edge.",
-    image: "/images/focus-image3.webp",
+    image: "/images/focus-3.webp",
     alt: "Manufacturing equipment and industrial automation",
   },
 ];

@@ -6,12 +6,12 @@ import { Reveal } from "@/app/_components/reveal";
 const differentiators = [
   {
     title: "Business Builders, Not Passive Capital",
-    image: "/images/differentiator-image1.webp",
+    image: "/images/differentiator1.webp",
     copy: "We take meaningful stakes and act as owners. Capital is just the start. What we bring beyond that — strategic insight, value creation mindset, operational expertise, governance, and deep networks — is where the value is built.",
   },
   {
     title: "Institutional, Yet Entrepreneurial",
-    image: "/images/differentiator-image2.webp",
+    image: "/images/differentiator2.webp",
     copy: "We combine big-firm discipline with start-up energy. Institutional rigour and governance, and entrepreneurial speed and flexibility.",
   },
   {
