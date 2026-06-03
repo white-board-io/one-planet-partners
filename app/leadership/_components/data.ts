@@ -86,7 +86,7 @@ export const people: Person[] = [
     image: "/images/ManojKohli.webp",
     bio: [
       "Manoj is a veteran financial services and technology business leader",
-      "Before joining Lightrock, Manoj most recently served as Head of India for SoftBank Group, where he was responsible for investments in Indian companies through the SoftBank Vision Fund. Prior to that, he was the Chief Executive Officer and Managing Director for Asia and Africa at Bharti Airtel, where he is credited with scaling the business into a global telecom leader.",
+      "Manoj most recently served as Head of India for SoftBank Group, where he was responsible for investments in Indian companies through the SoftBank Vision Fund. Prior to that, he was the Chief Executive Officer and Managing Director for Asia and Africa at Bharti Airtel, where he is credited with scaling the business into a global telecom leader.",
       "He holds a Bachelor of Commerce from Shri Ram College of Commerce, an LLB from the University of Delhi, an MA in Human Resources Management from the Indian Society for Training & Development, and an MBA from the University of Delhi.",
     ],
     social: {
