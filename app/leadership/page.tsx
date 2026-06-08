@@ -6,7 +6,7 @@ import { LeadershipGrid } from "./_components/leadership-grid";
 import { SeniorAdvisors } from "./_components/senior-advisors";
 
 export const metadata: Metadata = {
-  title: "Leadership | One Planet Partners",
+  title: "Leadership",
   description:
     "Meet the proven team behind One Planet Partners — a group of experienced investors and advisors building together again.",
 };

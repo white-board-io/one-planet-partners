@@ -18,7 +18,7 @@ export async function generateMetadata({
   const person = getPersonById(id);
   if (!person) return {};
   return {
-    title: `${person.name} | One Planet Partners`,
+    title: person.name,
     description: person.bio[0],
   };
 }
