@@ -85,9 +85,12 @@ export const people: Person[] = [
     designation: "Senior Advisor",
     image: "/images/ManojKohli.webp",
     bio: [
-      "Manoj is a veteran financial services and technology business leader",
-      "Manoj most recently served as Head of India for SoftBank Group, where he was responsible for investments in Indian companies through the SoftBank Vision Fund. Prior to that, he was the Chief Executive Officer and Managing Director for Asia and Africa at Bharti Airtel, where he is credited with scaling the business into a global telecom leader.",
-      "He holds a Bachelor of Commerce from Shri Ram College of Commerce, an LLB from the University of Delhi, an MA in Human Resources Management from the Indian Society for Training & Development, and an MBA from the University of Delhi.",
+      "Manoj Kohli is one of India’s most accomplished business leaders, with deep 47 years experience across telecommunications, technology, infrastructure, manufacturing, renewable energy, and venture investing.",
+      "He previously served as Country Head of SoftBank India, overseeing investments across more than 25 portfolio companies, including Lenskart, Zomato, Policybazaar etc",
+      "Prior to SoftBank, Manoj was Executive Chairman of SB Energy, where he led the development of over 7GW of solar, wind, and hybrid renewable energy projects. Under his leadership, SB Energy was sold to Adani Green Energy in what was then India’s largest renewable energy M&A transaction.",
+      "Earlier, as Managing Director and CEO of Bharti Airtel, Manoj played a transformational role in scaling the company from approximately 2 million to more than 400 million customers, making Airtel the world’s second largest telecom operator now with 650mn customers.",
+      "He also led Airtel’s expansion across 20 countries in Africa and Asia. He established Indus Towers creating one of the world’s largest telecom infrastructure platforms and Airtel TV as the market leader in DTH.",
+      "Manoj holds degrees in Law, Commerce and MBA from the University of Delhi, and has completed Advanced Management programs at Michigan Business School and The Wharton School.",
     ],
     social: {
       linkedin: "https://in.linkedin.com/in/manoj-kohli-34948b108",
