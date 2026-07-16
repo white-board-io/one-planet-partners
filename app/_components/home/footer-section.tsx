@@ -33,22 +33,18 @@ export function FooterSection() {
               {socialLinks.map((item) => {
                 const isExternal = item.href.startsWith("http");
                 return (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  aria-label={item.label}
-                  {...(isExternal
-                    ? { target: "_blank", rel: "noopener noreferrer" }
-                    : {})}
-                  className="grid h-[3.375rem] grid-cols-[4rem_minmax(0,1fr)] items-center border-b border-white/55 font-sans-brand text-xl leading-none text-white transition-colors hover:text-white/70 sm:text-2xl lg:h-15 lg:grid-cols-[3.5rem_minmax(0,1fr)] lg:border-white/50 lg:text-base lg:last:border-b-0 xl:text-2xl"
-                >
-                  <span className="flex h-4 w-4 pl-0 lg:ml-4 lg:h-6 lg:w-6">
-                    {item.icon}
-                  </span>
-                  <span className="min-w-0 truncate pl-0 pr-0 text-right lg:pl-36 lg:text-left">
-                    {item.handle}
-                  </span>
-                </Link>
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    aria-label={item.label}
+                    {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    className="grid h-[3.375rem] grid-cols-[4rem_minmax(0,1fr)] items-center border-b border-white/55 font-sans-brand text-xl leading-none text-white transition-colors hover:text-white/70 sm:text-2xl lg:h-15 lg:grid-cols-[3.5rem_minmax(0,1fr)] lg:border-white/50 lg:text-base lg:last:border-b-0 xl:text-2xl"
+                  >
+                    <span className="flex h-4 w-4 pl-0 lg:ml-4 lg:h-6 lg:w-6">{item.icon}</span>
+                    <span className="min-w-0 truncate pl-0 pr-0 text-right lg:pl-36 lg:text-left">
+                      {item.handle}
+                    </span>
+                  </Link>
                 );
               })}
             </div>
@@ -84,6 +80,16 @@ export function FooterSection() {
                 </div>
               </div>
             </address>
+
+            <div className="order-4 mt-12 w-full space-y-2 text-center font-sans-brand text-[15px] leading-5 font-light tracking-normal text-white lg:col-span-3 lg:mt-18">
+              <p>
+                One Planet Growth Advisors Private Limited is an Investment Manager of the below
+                listed SEBI registered Category II alternative investment fund (“AIF”):
+              </p>
+              <p>
+                Name of the AIF: One Planet Investment Trust &nbsp;|&nbsp; SEBI Registration Number: IN/AIF2/26-27/2225
+              </p>
+            </div>
           </div>
         </Container>
       </div>
