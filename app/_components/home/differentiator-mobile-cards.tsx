@@ -238,54 +238,54 @@ export function DifferentiatorMobileCards({ items }: { items: Differentiator[] }
 
         return (
           <Reveal key={item.title} delay={index * 130}>
-          <article className="overflow-hidden rounded-md bg-[#050505]">
-            <button
-              type="button"
-              ref={(element) => {
-                imageButtonRefs.current[index] = element;
-              }}
-              aria-controls={contentId}
-              aria-expanded={isOpen}
-              aria-label={`${isOpen ? "Hide" : "Show"} details for ${item.title}`}
-              className="relative block aspect-[606/648] w-full touch-pan-y overflow-hidden rounded-md border-0 bg-transparent p-0 text-left"
-              onClick={() => handleCardToggle(index)}
-              onPointerCancel={handleImagePointerCancel}
-              onPointerDown={(event) => handleImagePointerDown(event, index)}
-              onPointerMove={(event) => handleImageSwipe(event, index)}
-              onPointerUp={(event) => handleImagePointerUp(event, index)}
-              onTouchEnd={(event) => handleImageTouchEnd(event, index)}
-              onTouchMove={(event) => handleImageTouchMove(event, index)}
-              onTouchStart={(event) => handleImageTouchStart(event, index)}
-              onWheel={(event) => handleImageWheel(event, index)}
-            >
-              <Image
-                fill
-                sizes="calc(100vw - 2rem)"
-                src={item.image}
-                alt=""
-                loading="eager"
-                className="select-none object-cover"
-                draggable={false}
-              />
-              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/88 via-black/38 to-transparent" />
-            </button>
-            <div
-              id={contentId}
-              aria-hidden={!isOpen}
-              className={cn(
-                "grid transition-[grid-template-rows] duration-300 ease-out",
-                isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
-              )}
-            >
-              <div className="overflow-hidden">
-                <div className="bg-white px-8 py-12 text-black md:px-6 md:py-8">
-                  <p className="font-sans-brand text-xl leading-6 font-normal tracking-normal text-black md:text-lg">
-                    {item.copy}
-                  </p>
+            <article className="overflow-hidden rounded-md bg-[#050505]">
+              <button
+                type="button"
+                ref={(element) => {
+                  imageButtonRefs.current[index] = element;
+                }}
+                aria-controls={contentId}
+                aria-expanded={isOpen}
+                aria-label={`${isOpen ? "Hide" : "Show"} details for ${item.title}`}
+                className="relative block aspect-[606/648] w-full touch-pan-y overflow-hidden rounded-md border-0 bg-transparent p-0 text-left"
+                onClick={() => handleCardToggle(index)}
+                onPointerCancel={handleImagePointerCancel}
+                onPointerDown={(event) => handleImagePointerDown(event, index)}
+                onPointerMove={(event) => handleImageSwipe(event, index)}
+                onPointerUp={(event) => handleImagePointerUp(event, index)}
+                onTouchEnd={(event) => handleImageTouchEnd(event, index)}
+                onTouchMove={(event) => handleImageTouchMove(event, index)}
+                onTouchStart={(event) => handleImageTouchStart(event, index)}
+                onWheel={(event) => handleImageWheel(event, index)}
+              >
+                <Image
+                  fill
+                  sizes="calc(100vw - 2rem)"
+                  src={item.image}
+                  alt=""
+                  loading="eager"
+                  className="select-none object-cover"
+                  draggable={false}
+                />
+                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/88 via-black/38 to-transparent" />
+              </button>
+              <div
+                id={contentId}
+                aria-hidden={!isOpen}
+                className={cn(
+                  "grid transition-[grid-template-rows] duration-300 ease-out",
+                  isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
+                )}
+              >
+                <div className="overflow-hidden">
+                  <div className="bg-white px-8 py-12 text-black md:px-6 md:py-8">
+                    <p className="font-sans-brand text-xl leading-6 font-normal tracking-normal text-black md:text-lg">
+                      {item.copy}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </article>
+            </article>
           </Reveal>
         );
       })}

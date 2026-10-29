@@ -7,7 +7,8 @@ export const metadata: Metadata = {
   title: {
     absolute: "One Planet Partners",
   },
-  description: "One Planet Partners is an India-focused private equity firm investing in mid-market businesses where active ownership, operational expertise, and climate insight create enduring value.",
+  description:
+    "One Planet Partners is an India-focused private equity firm investing in mid-market businesses where active ownership, operational expertise, and climate insight create enduring value.",
   alternates: {
     canonical: "/",
   },

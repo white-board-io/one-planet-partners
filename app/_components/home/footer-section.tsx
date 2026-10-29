@@ -87,7 +87,8 @@ export function FooterSection() {
                 listed SEBI registered Category II alternative investment fund (“AIF”):
               </p>
               <p>
-                Name of the AIF: One Planet Investment Trust &nbsp;|&nbsp; SEBI Registration Number: IN/AIF2/26-27/2225
+                Name of the AIF: One Planet Investment Trust &nbsp;|&nbsp; SEBI Registration Number:
+                IN/AIF2/26-27/2225
               </p>
             </div>
           </div>

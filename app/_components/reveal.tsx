@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  useEffect,
-  useRef,
-  useState,
-  type ComponentPropsWithoutRef,
-} from "react";
+import { useEffect, useRef, useState, type ComponentPropsWithoutRef } from "react";
 import { cn } from "@/lib/utils";
 
 type RevealProps = ComponentPropsWithoutRef<"div"> & {

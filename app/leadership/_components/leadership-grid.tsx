@@ -18,8 +18,7 @@ function LeaderCard({
   image: string;
 }) {
   const { line1, line2 } = splitPersonName(name);
-  const { line1: designationLine1, line2: designationLine2 } =
-    splitDesignation(designation);
+  const { line1: designationLine1, line2: designationLine2 } = splitDesignation(designation);
 
   return (
     <Link
