@@ -6,7 +6,7 @@ import type { NavLink } from "@/app/_components/site-header";
 
 const routeActiveHrefs: Array<[pathPrefix: string, href: string]> = [
   ["/leadership", "#leadership"],
-  ["/press-release", "#press-release"],
+  ["/news", "#news"],
 ];
 
 function getRouteActiveHref() {

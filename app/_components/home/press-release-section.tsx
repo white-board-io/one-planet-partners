@@ -2,14 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/app/_components/container";
 import { Reveal } from "@/app/_components/reveal";
-import { getPressReleaseTitle, pressReleases } from "@/app/press-release/_components/data";
+import { getPressReleaseTitle, pressReleases } from "@/app/news/_components/data";
 
 export function PressReleaseSection() {
   const [release] = pressReleases;
 
   return (
     <section
-      id="press-release"
+      id="news"
       className="scroll-mt-10 bg-white pb-30 text-black md:pb-36 lg:scroll-mt-24 lg:pb-38"
     >
       <Container>
@@ -37,7 +37,7 @@ export function PressReleaseSection() {
               {release.subtitle}
             </p>
             <Link
-              href={`/press-release/${release.slug}`}
+              href={`/news/${release.slug}`}
               className="group mt-8 inline-flex h-11 items-center rounded-full border-[1.5px] border-black px-6.5 font-serif-brand text-[1.25rem] leading-none transition-colors hover:bg-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black xl:mt-10 xl:h-12 xl:px-7 xl:text-[1.4375rem]"
             >
               {/* Global `a { color: inherit }` is unlayered and beats color utilities on the link itself. */}

@@ -22,10 +22,11 @@ export const pressReleases: PressRelease[] = [
   {
     slug: "one-planet-partners-launches-maiden-private-equity-fund",
     titleLines: [
-      "One Planet Partners launches maiden private equity fund,",
-      "announces strategic partnership with Sumitomo Mitsui Trust Bank",
+      "One Planet Partners announces strategic partnership with",
+      "Sumitomo Mitsui Trust Bank and its first private equity investment in Yulu.",
     ],
-    subtitle: "Targets deployment of over INR 3,000 Cr; first close planned by mid-2027",
+    subtitle:
+      "Sumitomo Mitsui Trust Bank takes strategic equity stake in One Planet Partners and anchors a dedicated private equity investment vehicle managed by the firm.",
     image: "/images/press-release-founders.webp",
     imageAlt:
       "One Planet Partners founding partners Mukund Rajan, Bobby Pauly, Mrinalini Mirchandani and Sheetal Thakkar",

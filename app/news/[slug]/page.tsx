@@ -22,7 +22,7 @@ export async function generateMetadata({
     title: getPressReleaseTitle(release),
     description: release.subtitle,
     alternates: {
-      canonical: `/press-release/${release.slug}`,
+      canonical: `/news/${release.slug}`,
     },
   };
 }
