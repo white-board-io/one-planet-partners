@@ -16,7 +16,7 @@ export function PrimaryNav({ basePath = "", links }: PrimaryNavProps) {
   return (
     <nav
       aria-label="Primary navigation"
-      className="hidden items-center gap-6 font-sans-brand lg:flex"
+      className="hidden items-center gap-4 font-sans-brand lg:flex xl:gap-6"
     >
       {links.map((link) => {
         const isActive = activeHref === link.href;
@@ -26,7 +26,7 @@ export function PrimaryNav({ basePath = "", links }: PrimaryNavProps) {
             key={link.href}
             href={`${basePath}${link.href}`}
             aria-current={isActive ? "location" : undefined}
-            className={`text-right text-body-sm tracking-normal text-brand-black not-italic transition-colors hover:text-black/60 ${
+            className={`text-right text-base whitespace-nowrap tracking-normal xl:text-body-sm text-brand-black not-italic transition-colors hover:text-black/60 ${
               isActive ? "font-bold" : "font-normal"
             }`}
           >

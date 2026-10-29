@@ -4,6 +4,16 @@ import { useEffect, useMemo, useState } from "react";
 
 import type { NavLink } from "@/app/_components/site-header";
 
+const routeActiveHrefs: Array<[pathPrefix: string, href: string]> = [
+  ["/leadership", "#leadership"],
+  ["/press-release", "#press-release"],
+];
+
+function getRouteActiveHref() {
+  const { pathname } = window.location;
+  return routeActiveHrefs.find(([pathPrefix]) => pathname.startsWith(pathPrefix))?.[1] ?? null;
+}
+
 export function useActiveNavLink(links: NavLink[]) {
   const sectionIds = useMemo(
     () =>
@@ -27,7 +37,7 @@ export function useActiveNavLink(links: NavLink[]) {
           .filter((section): section is HTMLElement => Boolean(section));
 
         if (sections.length === 0) {
-          setActiveHref(window.location.pathname.startsWith("/leadership") ? "#leadership" : null);
+          setActiveHref(getRouteActiveHref());
           return;
         }
 
@@ -42,7 +52,7 @@ export function useActiveNavLink(links: NavLink[]) {
           return;
         }
 
-        setActiveHref(window.location.pathname.startsWith("/leadership") ? "#leadership" : null);
+        setActiveHref(getRouteActiveHref());
       });
     }
 

@@ -74,7 +74,7 @@ const sourceSerif = Source_Serif_4({
 const sourceSans = Source_Sans_3({
   subsets: ["latin"],
   display: "swap",
-  style: ["normal"],
+  style: ["normal", "italic"],
   variable: "--font-source-sans",
   fallback: ["Arial", "Helvetica", "sans-serif"],
 });

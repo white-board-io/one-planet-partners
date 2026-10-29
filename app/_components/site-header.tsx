@@ -15,6 +15,7 @@ export const navLinks: NavLink[] = [
   { label: "Leadership", href: "#leadership" },
   { label: "Our Edge", href: "#edge" },
   { label: "Value Creation", href: "#value-creation" },
+  { label: "Press Release", href: "#press-release" },
   { label: "Contact", href: "#contact" },
 ];
 

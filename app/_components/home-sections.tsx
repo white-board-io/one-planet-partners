@@ -4,6 +4,7 @@ import { FocusSection } from "@/app/_components/home/focus-section";
 import { FooterSection } from "@/app/_components/home/footer-section";
 import { LeadershipSection } from "@/app/_components/home/leadership-section";
 import { OpportunitySection } from "@/app/_components/home/opportunity-section";
+import { PressReleaseSection } from "@/app/_components/home/press-release-section";
 import { ValueCreationSection } from "@/app/_components/home/value-creation-section";
 
 export function HomeSections() {
@@ -14,6 +15,7 @@ export function HomeSections() {
       <LeadershipSection />
       <DifferentiatorsSection />
       <ValueCreationSection />
+      <PressReleaseSection />
       <CtaSection />
       <FooterSection />
     </>
