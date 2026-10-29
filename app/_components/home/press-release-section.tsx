@@ -28,7 +28,7 @@ export function PressReleaseSection() {
 
           <Reveal delay={140}>
             <p className="font-serif-brand text-lg leading-6 font-semibold tracking-normal xl:text-[1.25rem] xl:leading-7">
-              Press Release
+              News
             </p>
             <h2 className="mt-4 font-serif-brand text-[1.625rem] leading-8 font-normal tracking-normal lg:mt-5 xl:mt-6.5 xl:text-[1.875rem] xl:leading-9.5">
               {getPressReleaseTitle(release)}
