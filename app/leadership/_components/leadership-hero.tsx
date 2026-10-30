@@ -10,7 +10,7 @@ export function LeadershipHero() {
           fill
           alt=""
           priority
-          src="/images/leadership-hero.webp"
+          src="/images/leadership-hero-v2.webp"
           className="object-cover object-center"
           sizes="100vw"
         />
